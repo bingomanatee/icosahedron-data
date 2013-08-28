@@ -1,0 +1,28 @@
+{
+  "name": "icosahedron-data",
+  "version": "0.0.1",
+  "description": "Data management for icosahedron information",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bingomanatee/icosahedron-data.git"
+  },
+  "keywords": [
+    "icosahedron",
+    "data"
+  ],
+  "author": "David Edelhart",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/bingomanatee/icosahedron-data/issues"
+  },
+  "dependencies": {
+    "icosahedron": "0.0.2",
+    "zeromq": "0.0.1",
+    "underscore": "~1.5.1",
+    "gate": "~0.3.0"
+  }
+}
