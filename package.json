@@ -20,9 +20,12 @@
     "url": "https://github.com/bingomanatee/icosahedron-data/issues"
   },
   "dependencies": {
-    "icosahedron": "0.0.2",
+    "icosahedron": "0.0.4",
     "zeromq": "0.0.1",
     "underscore": "~1.5.1",
     "gate": "~0.3.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.4"
   }
 }
