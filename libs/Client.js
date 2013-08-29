@@ -28,7 +28,7 @@ function Client(sector) {
     this.responder.identity = 'sector-r-' + sector;
     this.responder.connect(config.respond_port);
 
-    this.points_loaded = false;
+    this.point_data = [];
 
     var self = this;
     process.nextTick(function () {
@@ -48,12 +48,13 @@ _.extend(Client.prototype, {
         }
     },
 
-    load_points: function (depth) {
+    load_points: function (detail) {
         var ico = require('icosahedron');
         var self = this;
-        ico.io.points(function () {
-
-        }, depth, this.sector);
+        ico.io.points(function (err, points) {
+            self.point_data[detail] = points;
+            self.send('points loaded', {detail: detail, points: points.length});
+        }, detail, this.sector);
     },
 
     send: function (type, data) {
@@ -86,14 +87,18 @@ _.extend(Client.prototype, {
         }
 
         switch (data.type) {
-            case 'depth':
-                var depth = data.value;
-                if (!_.isNumber(depth) && (depth < 0 && depth > 6)) {
-                    return this.error('invalid depth nust be integer 0..6', m);
+            case 'detail':
+                var detail = data.value;
+                if (!_.isNumber(detail) && (detail < 0 && detail > 6)) {
+                    return this.error('invalid detail nust be integer 0..6', m);
                 }
 
                 this.load_points(data.value);
 
+                break;
+
+            case 'load points':
+                this.load_points(data.value);
                 break;
 
             case 'shut down':

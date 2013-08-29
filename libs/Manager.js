@@ -44,6 +44,14 @@ _.extend(Manager.prototype, {
         return  this.ready.reduce(function (out, v) {  return v ? out + 1 : out;  }, 0);
     },
 
+    load_points: function(detail){
+        if (!this.load_point_state) {
+            this.load_point_state = [];
+        }
+        this.load_point_state[detail] = [];
+        this.send('all', 'load points', detail);
+    },
+
     listen: function (envelope, msg) {
         msg = msg.toString();
       if (_DEBUG_LISTEN)  console.log('manager got %s from %s', util.inspect(msg), envelope);
@@ -61,12 +69,27 @@ _.extend(Manager.prototype, {
                 this.client_ready(data.sector);
                 break;
 
+            case 'points loaded':
+                var detail = parseInt(data.data.detail);
+                var lpsd = this.load_point_state[detail];
+
+                lpsd.push(data);
+                if (this.load_point_state[detail].length >= 20){
+                    this.emit('sectors::points loaded', data.data.detail, this.load_point_state[detail]);
+                }
+                break;
+
             case 'shut down':
                 this.client_ready(data.sector, false);
 
                 if(this.ready_sectors() < 1){
-                    this.emit('sectors.::shut down');
+                    this.emit('sectors::shut down');
                 }
+                break;
+
+            case 'error':
+                console.log('error: %s', data.error);
+
                 break;
 
             default:
