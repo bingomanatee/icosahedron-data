@@ -1,0 +1,8 @@
+{
+    "field": "string",
+    "time": "number",
+    "sector": "number",
+    "ro": "number",
+    "detail": "number",
+    "value": "mixed"
+}

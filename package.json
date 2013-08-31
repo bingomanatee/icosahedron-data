@@ -23,7 +23,9 @@
     "icosahedron": "0.0.4",
     "zeromq": "0.0.1",
     "underscore": "~1.5.1",
-    "gate": "~0.3.0"
+    "gate": "~0.3.0",
+    "mongoose": "~3.6.18",
+    "async": "~0.2.9"
   },
   "devDependencies": {
     "tap": "~0.4.4"
