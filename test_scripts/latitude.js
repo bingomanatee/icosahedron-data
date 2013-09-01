@@ -10,12 +10,13 @@ var async = require('async');
  * Purpose: return the latitude for each point
  * @return void
  *
- * @param detail {posint}
+ * @param data {object}
  * @param client {Client}
  * @param callback {function}
  */
 
-function latitude(detail, client, callback) {
+function latitude(data, client, callback) {
+    var detail = data.detail;
     var latitudes = [];
 
     var scripts = client.point_data[detail].map(function (point) {

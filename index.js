@@ -21,22 +21,26 @@ module.exports = {
 
     Manager: require('./libs/Manager'),
 
-    init: function(){
-        if (cluster.isMaster) {
-            _.range(0, 20).forEach(function(sector_id){
-                cluster.fork({sector: sector_id});
-            });
-/*            cluster.on('death', function (worker) {
-                console.log('worker ' + worker.pid + ' died');
-            });*/
+    Manager_Message: require('./libs/Manager_Message.js'),
 
-            return new module.exports.Manager();
-        } else {
+    init_manager: function (callback) {
+        _.range(0, 20).forEach(function (sector_id) {
+            cluster.fork({sector: sector_id});
+
+        });
+
+        var manager = new module.exports.Manager();
+
+        if (callback){
+            manager.once('sectors::ready', function(){
+                callback(null, manager);
+            })
         }
 
+        return manager;
     },
 
-    init_child: function(){
-           return new module.exports.Client(cluster.worker.process.env.sector);
+    init_child: function () {
+        return new module.exports.Client(cluster.worker.process.env.sector);
     }
 }

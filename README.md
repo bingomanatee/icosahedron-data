@@ -71,7 +71,7 @@ index, and time.
 ### Client.time
 
 Simulation data is keyed by `time`, a field that starts at zero. All the get and set data methods will store and retrieve
-field data for the current time. What this number represents is up to you -- hours, days, unix timestamp, whatever. 
+field data for the current time. What this number represents is up to you -- hours, days, unix timestamp, whatever.
 
 You can update the time of all clients by calling `manager.set_time(time_number, callback)`.
 
@@ -105,10 +105,12 @@ with the following signature:
 
 ``` javascript
 
-module.exports = function (detail, client, callback) {
+module.exports = function (data, client, callback) {
 ...
 }
 ```
+the data parameter is the message that triggered the execution of the script.
+
 Note that since the script file is passed the client, it has access to all the clients' data i/o methods and can even
 send messages to the manager directly if necessary.
 

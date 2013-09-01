@@ -32,12 +32,10 @@ var SECTOR_COUNT = SECTOR_COUNTS[DETAIL];
 
 if (cluster.isMaster) {
 
-    var manager = icod.init();
+    icod.init_manager(function (err, manager) {
 
-    var connection = "mongodb://localhost/test_ico_data_" + Math.floor(Math.random() * 100000);
-    console.log('connected to %s', connection);
-
-    manager.on('sectors::ready', function () {
+        var connection = "mongodb://localhost/test_ico_data_" + Math.floor(Math.random() * 100000);
+        console.log('connected to %s', connection);
 
         tap.test('ico-data', {timeout: 1000 * 100000, skip: false }, function (suite) {
 
@@ -86,7 +84,7 @@ if (cluster.isMaster) {
                                     console.log('results of lat/lon: %s', JSON.stringify(results, true).substr(0, 100));
 
                                     var t2 = new Date().getTime();
-                                    console.log('total parallel execution time: %s secs', Math.round((t2 - time)/1000));
+                                    console.log('total parallel execution time: %s secs', Math.round((t2 - time) / 1000));
                                     manager.shut_down();
 
                                     manager.on('sectors::shut down', function () {
@@ -151,6 +149,7 @@ if (cluster.isMaster) {
 
             suite.test('serial time', {skip: true, timeout: 1000 * 1000}, function (st_test) {
                 var client = new icod.Client(21, true);
+                client.time = 1;
                 var ico = require('icosahedron');
                 ico.io.points(function (err, data) {
                     client.point_data[DETAIL] = data;
@@ -175,7 +174,7 @@ if (cluster.isMaster) {
                             case '3':
                                 var done_time = new Date().getTime();
                                 console.log('lat lon serial done in %s sec: result = %s',
-                                    Math.round( (done_time - time)/1000),
+                                    Math.round((done_time - time) / 1000),
                                     util.inspect(data.value).substr(0, 100)
                                 );
                                 st_test.end();
@@ -222,7 +221,6 @@ if (cluster.isMaster) {
             suite.end();
 
         });
-
 
     });
 

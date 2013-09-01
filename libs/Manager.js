@@ -6,10 +6,12 @@ var fs = require('fs');
 var zmq = require('zmq');
 var config = require('./../config.json');
 var events = require('events');
+var Gate = require('gate');
+
+var Manager_Message = require('./Manager_Message.js');
 
 var _DEBUG_LISTEN = false;
 var _DEBUG_SEND = false;
-var _DEBUG_LO = false;
 
 function Manager() {
     this.ready = _.range(0, 20).map(function () {
@@ -26,7 +28,13 @@ function Manager() {
     this.listener.bindSync(config.respond_port);
     this.listener.on('message', _.bind(this.listen, this));
 
-    this.client_feedback_listeners = [];
+    var self = this;
+    this.on('sectors::shut down', function () {
+        self.listener.close();
+        self.publisher.close();
+    });
+
+    this.sent_messages = [];
 }
 
 var _script_id = 0;
@@ -35,25 +43,30 @@ util.inherits(Manager, events.EventEmitter);
 
 _.extend(Manager.prototype, {
 
-    client_ready: function (sector_id) {
-        var id = parseInt(sector_id);
+    client_ready: function (sector) {
+        var id = parseInt(sector);
         this.ready[id] = arguments.length > 1 ? arguments[1] : true;
 
-        //console.log('sector %s ready: total ready %s', sector_id, this.ready_sectors());
+     //   console.log('sector %s ready: total ready %s', sector, this.ready_sectors());
         if (this.ready_sectors() == 20) {
             this.emit('sectors::ready');
         }
     },
 
-    do: function (script_path, detail, callback) {
-        var script_id = ++_script_id;
-
-        this.collect_client_feedback(script_id, callback);
+    do: function (script_path, callback, detail) {
+        var done = 0;
         this.send('all', 'do', {
-            script_id: script_id,
             detail: detail,
             script: script_path
+        }, function (err, results) {
+            ++done;
+            if (done > 1) throw new Error('overdoing it');
+            callback(err, _.pluck(results, 'response'));
         });
+    },
+
+    set_param: function (name, value, callback) {
+        this.send('all', 'set param', {name: name, value: value}, callback);
     },
 
     ready_sectors: function () {
@@ -80,126 +93,55 @@ _.extend(Manager.prototype, {
         this.send('all', 'mongo connect', connection);
     },
 
-    collect_client_feedback: function (type, callback) {
-        this.client_feedback_listeners.push({type: type, values: [], feedback: [], responses: 0, callback: callback});
-    },
+    set_time: function (time, callback) {
+        this.send('all', 'set time', time, callback);
 
-    set_time: function(time, callback){
-        this.collect_client_feedback()
-        this.send('all', 'set time', time);
-
-    },
-
-    /**
-     * @TODO: use event emitters
-     * @param data {object}
-     */
-    update_listeners: function (data) {
-
-        //   console.log('listeners: %s', util.inspect(this.client_feedback_listeners));
-
-        var listeners = this.client_feedback_listeners.filter(function (cfl) {
-            return (cfl.type == data.type) && (!cfl.done);
-        });
-
-        if (listeners.length) {
-
-            if (!data.hasOwnProperty('sector')) {
-                throw new Error('listener response has no sector: ' + util.inspect(data));
-            }
-            if (_.isString(data.sector) && data.sector) {
-                if (!/^[\d]{1,2}$/.test(data.sector)) {
-                    throw new Error('bad sector for data: ' + util.inspect(data));
-                }
-                data.sector = parseInt(data.sector);
-            }
-
-            if (_.isNaN(data.sector)){
-                throw new Error('bad sector for data: ' + util.inspect(data));
-            }
-
-            listeners.forEach(function (cfl) {
-
-                if (!cfl.feedback[data.sector]) {
-                    if (_DEBUG_LO)  console.log('data for cfl %s', data.type, util.inspect(data.data.value));
-
-                    cfl.values[data.sector] = data.data.value;
-                    cfl.feedback[data.sector] = true;
-                    ++cfl.responses;
-
-                    if (cfl.responses >= 20) {
-                        cfl.done = true;
-                        cfl.callback(null, cfl.values);
-                    }
-                }
-            });
-
-            this.client_feedback_listeners = _.reject(this.client_feedback_listeners, function (cfl) {
-                return cfl.done;
-            });
-        }
-
-        return listeners.length;
     },
 
     listen: function (envelope, msg) {
         msg = msg.toString();
         if (_DEBUG_LISTEN)  console.log('manager got %s from %s', util.inspect(msg), envelope);
 
-        var data;
-        try {
-            data = JSON.parse(msg);
-        } catch (err) {
-            console.log('cannot parse %s: err', msg, err);
-            return;
-        }
+        var responded = _.find(this.sent_messages, function (message) {
+            return message.respond(msg);
+        });
 
-        var update_count = this.update_listeners(data);
+        if (_DEBUG_LISTEN) console.log('responded: %s', util.inspect(responded, true, 0));
 
-        switch (data.type) {
-            case 'ready':
-                this.client_ready(data.sector);
-                break;
+        if (!responded) {
+            try {
+                var msg_json = JSON.parse(msg);
 
-            case 'points loaded':
-                var detail = parseInt(data.data.detail);
-                var lpsd = this.load_point_state[detail];
+                if (!msg_json.type) return console.log('error: message JSON has no type');
 
-                lpsd.push(data);
-                if (this.load_point_state[detail].length >= 20) {
-                    this.emit('sectors::points loaded', data.data.detail, this.load_point_state[detail]);
+                switch(msg_json.type){
+
+                    case 'ready':
+                        this.client_ready(msg_json.sector);
+                    break;
+
+
                 }
-                break;
-
-            case 'shut down':
-                this.client_ready(data.sector, false);
-
-                if (this.ready_sectors() < 1) {
-                    this.emit('sectors::shut down');
-                }
-                break;
-
-            case 'error':
-                console.log('error: %s --- %s', data.error, util.inspect(data));
-                break;
-
-            default:
-                if (!update_count) {
-                    console.log('got unknown type %s', data.type);
-                }
+            } catch (err) {
+                console.log('error parsing message: %s %s', msg, err);
+            }
         }
     },
 
-    send: function (sector_id, msg, data) {
-        if (data) {
-            msg = JSON.stringify({type: msg, value: data});
-        }
-        if (_DEBUG_SEND)  console.log('manager sending %s to ', msg, sector_id);
-        this.publisher.send(util.format('%s %s', sector_id, msg));
+    send: function (target, type, data, callback) {
+        var message = new Manager_Message(target, type, data, callback);
+        this.sent_messages.push(message);
+        var out = message.output();
+        if (_DEBUG_SEND) console.log('sending %s', out);
+        this.publisher.send(out);
     },
 
-    shut_down: function () {
-        this.send('all', 'shut down', true);
+    shut_down: function (callback) {
+        var self = this;
+        this.send('all', 'shut down', true, function () {
+            self.emit('sectors::shut down');
+            callback();
+        });
     }
 });
 
