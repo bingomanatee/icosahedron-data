@@ -34,6 +34,9 @@ _.extend(Client_Message.prototype, {
     },
 
     error: function (err) {
+        if (err.hasOwnProperty('message')) {
+            err = err.message;
+        }
         var output = this.response();
         output.error = err;
         this.feedback(output);

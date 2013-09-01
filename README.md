@@ -117,7 +117,8 @@ send messages to the manager directly if necessary.
 Executing a script across all sectors is triggered by the manager:
 
 ``` javascript
- manager.do(path.resolve(my_script_js_file, detail, function (err, results) { ... });
+ manager.do(path.resolve(my_script_js_file, {foo: 1, bar: 2}, function (err, results) { ... });
 ```
+The second parameter is sent to all the scripts as their first parameter.
 
-the results will be an array of 20 values aggregated from the execution of the script file.
+the results will be an ordered array of 20 values aggregated from the execution of the script file.

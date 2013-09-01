@@ -4,6 +4,10 @@ var path = require('path');
 var fs = require('fs');
 var tap = require('tap');
 
+/**
+ * unit tests for the manager message class.
+ */
+
 tap.test('ico_data', {timeout: 1000 * 10, skip: false }, function (suite) {
     var icod = require('./../index.js');
 

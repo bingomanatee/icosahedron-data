@@ -30,6 +30,10 @@ var SECTOR_COUNTS = [
 
 var SECTOR_COUNT = SECTOR_COUNTS[DETAIL];
 
+/**
+ * Testing receipt of errors from scripts
+ */
+
 if (cluster.isMaster) {
 
     icod.init_manager(function (err, manager) {
@@ -38,7 +42,7 @@ if (cluster.isMaster) {
 
             suite.test('set param', {timeout: 1000 * 100, skip: false }, function (param_test) {
                 manager.set_param('foo', 3, function (err, feedback) {
-                    param_test.deepEqual(feedback, [
+                    param_test.deepEqual(_.pluck(feedback, 'value'), [
                         { name: 'foo', value: 3 },
                         { name: 'foo', value: 3 },
                         { name: 'foo', value: 3 },
@@ -64,10 +68,19 @@ if (cluster.isMaster) {
                     param_test.test('script error test', function (script_test) {
 
                         manager.do(path.resolve(SCRIPTS_ROOT, 'error_gen.js'), function (err, feedback) {
-                            console.log('feedback error: %s', util.inspect(err));
-                            script_test.deepEqual(feedback,
-                                [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38 ],
-                                'feedback from sectorx2');
+                            script_test.deepEqual(err, [ { sector: 3, error: 'Error in sector 3' },
+                                { sector: 6, error: 'Error in sector 6' } ], 'received errors');
+                            feedback.forEach(function(value, sector){
+                                switch(sector){
+                                    case 3:
+                                        case 6:
+                                        script_test.ok(!value, 'no value for 3 and 6');
+                                        break;
+
+                                    default:
+                                        script_test.equal(value, 2 * sector, 'value for ' + sector + ' is 2 x sector');
+                                }
+                            });
 
                             manager.shut_down(function () {
                                 cluster.disconnect(function () {

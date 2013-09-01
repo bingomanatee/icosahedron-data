@@ -30,6 +30,10 @@ var SECTOR_COUNTS = [
 
 var SECTOR_COUNT = SECTOR_COUNTS[DETAIL];
 
+/**
+ * testing execution of scripts with no errors.
+ */
+
 if (cluster.isMaster) {
 
     icod.init_manager(function (err, manager) {
