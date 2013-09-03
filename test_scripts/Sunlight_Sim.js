@@ -59,7 +59,7 @@ _.extend(Sunlight_Sim.prototype, {
 
     rotate_planet: function () {
         var solar_orbit_angle = this.hours * Math.PI * 2 / ( 365 * 24);
-        this.planet_sphere.rotation.y = (hours % 24) * Math.PI / 12;
+        this.planet_sphere.rotation.y = (this.hours % 24) * Math.PI / 12;
         this.sun_center.rotation.y = solar_orbit_angle;
         this.planet_anchor.rotation.y = -solar_orbit_angle;
     },
@@ -77,29 +77,10 @@ _.extend(Sunlight_Sim.prototype, {
         this.sun.updateMatrixWorld();
         this.matrix = this.planet_sphere.matrixWorld;
         this.planet_center = new THREE.Vector3().applyProjection(this.planet_sphere.matrixWorld);
-        var self = this;
-        this.planet.vertices(function(vertex){
-            self.solar_energy(vertex);
-        })
     },
 
     sun_normal: function(){
         return this.sunlight_vector.position.clone().sub(this.planet_center).normalize();
-    },
-
-    /**
-     * the amount of total solar energy that effects a point on Earth.
-     * @param vertex {THREE.Vector3} a point on Earth, as a normaiized vertex.
-     * @param sun_normal {THREE.Vector3} the position of the sun, as a normalized vertex
-     * @returns {float} 0..1
-     */
-    solar_energy: function (vertex, sun_normal) {
-        var v_rel = vertex.clone().applyProjection(this.matrix);
-        var v_sub = v_rel.clone().sub(this.planet_center);
-        var v_normal = v_sub.normalize();
-
-        var cos = v_normal.dot(sun_normal || this.sun_normal());
-        return Math.max(0, cos);
     }
 
 });

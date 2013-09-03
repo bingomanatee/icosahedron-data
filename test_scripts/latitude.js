@@ -16,24 +16,19 @@ var async = require('async');
  */
 
 function latitude(data, client, callback) {
-    var detail = data.detail;
+    var detail = data.data;
     var latitudes = [];
-
-    var scripts = client.point_data[detail].map(function (point) {
-        return function (done) {
-            var v_extent = point.uv[1];
-            var degree = 90 - Math.round(180 * v_extent);
-            client.queue_point_data('latitude', detail, point.ro, degree);
-            latitudes.push({ro: point.ro, value: degree});
-            done();
-        }
-    });
-
-    async.parallel(scripts, function () {
-        client.save_point_data_queue('latitude', detail, function(){
-            callback(null, latitudes);
-        });
-    });
+    client.point_script(function(point, done){
+        var v_extent = point.uv[1];
+        var degree = 90 - Math.round(180 * v_extent);
+        client.queue_point_data('latitude', detail, point.ro, degree);
+        latitudes.push({ro: point.ro, value: degree});
+        done();
+    }, detail, function(err, result){
+     //   console.log('result of point_script: %s, %s', util.inspect(err), util.inspect(result));
+        if (err) callback(err);
+        callback(null, latitudes);
+    })
 }
 
 /* -------------- EXPORT --------------- */

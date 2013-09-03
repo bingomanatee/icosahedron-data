@@ -9,6 +9,7 @@ var events = require('events');
 var Gate = require('gate');
 
 var Manager_Message = require('./Manager_Message.js');
+var mongoose = require('mongoose');
 
 var _DEBUG_LISTEN = false;
 var _DEBUG_SEND = false;
@@ -47,16 +48,16 @@ _.extend(Manager.prototype, {
         var id = parseInt(sector);
         this.ready[id] = arguments.length > 1 ? arguments[1] : true;
 
-     //   console.log('sector %s ready: total ready %s', sector, this.ready_sectors());
+        //   console.log('sector %s ready: total ready %s', sector, this.ready_sectors());
         if (this.ready_sectors() == 20) {
             this.emit('sectors::ready');
         }
     },
 
-    do: function (script_path, callback, detail) {
+    do: function (script_path, callback, data) {
         var done = 0;
         this.send('all', 'do', {
-            detail: detail,
+            data: data,
             script: script_path
         }, function (err, results) {
             ++done;
@@ -75,12 +76,8 @@ _.extend(Manager.prototype, {
         }, 0);
     },
 
-    load_points: function (detail) {
-        if (!this.load_point_state) {
-            this.load_point_state = [];
-        }
-        this.load_point_state[detail] = [];
-        this.send('all', 'load points', detail);
+    load_points: function (detail, callback) {
+        this.send('all', 'load points', detail, callback);
     },
 
     /**
@@ -89,13 +86,37 @@ _.extend(Manager.prototype, {
      * @param callback {function}
      */
     connect: function (connection, callback) {
-        this.collect_client_feedback('mongo connect', callback);
-        this.send('all', 'mongo connect', connection);
+        mongoose.connect(connection);
+        this.send('all', 'mongo connect', connection, callback);
+
     },
 
     set_time: function (time, callback) {
         this.send('all', 'set time', time, callback);
 
+    },
+
+    rationalize_multiple_values: function (sector, params, callback) {
+        console.log('rmv: %s', util.inspect(params));
+        this.send(sector, 'rationalize multiple values', params, callback);
+    },
+
+    /**
+     * send a map reduce imperative to dump a field to a collection.
+     * note that this is an update reduce -- it will repeatedly add to the same collection.
+     *
+     * @param sector
+     * @param params {object}
+     *      field {string}
+     *      time {int|'all'}  - which time to dump out
+     *      sector {int|'all'} - You can dump all the fields from a request to a single sector, or only its own data.
+     *      detail {int|'all'} - the level of detail of data to export
+     *      output_collection {string} - the collection to save data into.
+     *
+     * @param callback
+     */
+    map_reduce_sector_data: function (sector, params, callback) {
+        this.send(sector, 'map reduce sector data', params, callback);
     },
 
     listen: function (envelope, msg) {
@@ -112,13 +133,13 @@ _.extend(Manager.prototype, {
             try {
                 var msg_json = JSON.parse(msg);
 
-                if (!msg_json.type) return console.log('error: message JSON has no type');
+                if (!msg_json.type) return console.log('error: message JSON has no type .. ' + msg);
 
-                switch(msg_json.type){
+                switch (msg_json.type) {
 
                     case 'ready':
                         this.client_ready(msg_json.sector);
-                    break;
+                        break;
 
 
                 }
@@ -143,6 +164,7 @@ _.extend(Manager.prototype, {
             callback();
         });
     }
-});
+})
+;
 
 module.exports = Manager;

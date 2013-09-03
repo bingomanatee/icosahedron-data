@@ -43,20 +43,7 @@ if (cluster.isMaster) {
 
                 init_test.equal(manager.ready_sectors(), 20, '20 sectors are ready');
 
-                manager.load_points(DETAIL);
-
-                manager.once('sectors::points loaded', function (detail, data) {
-                    //    console.log('points loaded at detail %s: %s', detail, util.inspect(data));
-
-                    init_test.equal(data.length, 20);
-                    init_test.deepEqual(
-                        _.pluck(
-                            _.pluck(data, 'data'), 'points'),
-                        _.range(0, 20).map(function () {
-                            return SECTOR_COUNT
-                        }),
-                        'all sectors have ' + SECTOR_COUNT + ' points'
-                    );
+                manager.load_points(DETAIL, function(){
 
                     manager.connect(connection, function () {
 

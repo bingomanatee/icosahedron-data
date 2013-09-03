@@ -42,6 +42,11 @@ _.extend(Client_Message.prototype, {
         this.feedback(output);
     },
 
+    respond_with: function(value){
+      var response = this.response(value);
+        this.feedback(response);
+    },
+
     response: function (response) {
         var out = {
             type: this.type(),

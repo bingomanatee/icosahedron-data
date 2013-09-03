@@ -6,6 +6,7 @@ var zeromq = require('zmq');
 var config = require('./../config.json');
 var events = require('events');
 var mongoose = require('mongoose');
+var async = require('async');
 var pd = require('./Point_Data');
 
 var Client_Message = require('./Client_Message.js');
@@ -71,14 +72,19 @@ _.extend(Client.prototype, {
         }
     },
 
-    load_points: function (detail) {
+    load_points: function (message) {
+        var detail = parseInt(message.value());
         var ico = require('icosahedron');
         var self = this;
         ico.io.points(function (err, points) {
             self.point_data[detail] = points;
-            self.send('points loaded', {detail: detail, points: points.length});
+            message.respond_with(self.point_data[detail].length);
         }, detail, this.sector);
     },
+
+    map_reduce_sector_data: require('./Client/map_reduce_sector_data'),
+
+    rationalize_overlap_values: require('./Client/rationalize_multple_values.js'),
 
     /**
      * sends a message object to the manager
@@ -111,12 +117,21 @@ _.extend(Client.prototype, {
         }
     },
 
-    mongo_connect: function (conn) {
-        mongoose.connect(conn);
-        this.send('mongo connect', true);
+    /**
+     * connect to a mongoose URL.
+     *
+     * Note, there is no direct feedback/callback from mongo/mongoose.
+     * Its expected that the feedback comes from attempts to do mongo activity.
+     *
+     * @param message
+     */
+    mongo_connect: function (message) {
+        mongoose.connect(message.value());
+
         this.once('shut down', function () {
             mongoose.connection.close();
         })
+        message.feedback();
     },
 
     /**
@@ -146,39 +161,76 @@ _.extend(Client.prototype, {
         return this.ro_indexes[detail];
     },
 
-    queue_point_data: function (field, detail, ro, value) {
-        this.index_ros(detail);
+    point_script: function(fn, detail, callback, max_time){
+        if (isNaN(detail)){
+            throw new Error('non numeric detail');
+        }
+        var output = [];
+        if (!max_time) max_time = 5000;
+        var time_error = false;
+
+        var queue = async.queue(function(point, done){
+            fn(point, function(err, result){
+                if (err){
+                    output.push(null);
+                    done(err);
+                } else {
+                    output.push(result);
+                    done();
+                }
+            });
+        }, 10);
+
+
+
+        if (!this.point_data[detail]) return callback(new Error('no points at detail ' + detail));
+       // console.log('doing point script %s with detail %s (%s points)', fn.toString(), detail, this.point_data[detail].length);
+
+        queue.drain = function(err){
+            if (time_error) return;
+            clearTimeout(t);
+            callback(err, output);
+        };
+
+        queue.push(this.point_data[detail]);
+
+        var t = setTimeout(function(){
+            time_error = true;
+            callback(new Error('script took too long', + util.inspect(fn)))
+        }, max_time);
+    },
+
+    queue_point_data: function (field, detail, ro, value, time) {
+        if(!time) time = this.time;
         if (!this.data_queue[detail]) this.data_queue[detail] = {};
         if (!this.data_queue[detail][field]) this.data_queue[detail][field] = [];
-        var index = _.indexOf(this.ro_indexes[detail], ro, true);
-        //  console.log('index of %s: %s', ro, index);
-        this.data_queue[detail][field][index] = value;
+        var info = {time: time, ro: ro, value: value};
+       // console.log('pushing %s into field %s, detail %s', util.inspect(info), field, detail);
+        this.data_queue[detail][field].push(info);
     },
 
     save_point_data_queue: function (field, detail, callback) {
         data = this.data_queue[detail][field];
-        ros = this.ro_indexes[detail];
-        var time = this.time;
+        if (!data) {
+            console.log('found no records for field %s, detail %s', field, detail);
+            return callback(null, []);
+        } // may have been cleaned out by another iteration
         var sector = this.sector;
 
         var records = data.reduce(function (out, value, index) {
-            var data = {
-                ro: ros[index],
+            var data = _.extend({
                 detail: detail,
                 field: field,
-                time: time,
-                sector: sector,
-                value: value
-            };
+                sector: sector
+            }, value);
 
             //  console.log('pushing data %s', util.inspect(data));
             out.push(data);
             return out;
         }, []);
-
-        var self = this;
+        console.log('saving %s records of field %s', field, records.length);
+        delete this.data_queue[detail][field];
         Point_Data.collection.insert(records, {multi: true}, function () {
-            delete self.data_queue[detail][field];
             callback(null, records);
         });
     },
@@ -315,14 +367,23 @@ _.extend(Client.prototype, {
                 send_feedback = false;
                 break;
 
+            case 'map reduce sector data':
+                this.map_reduce_sector_data(message);
+                break;
+
             case 'mongo connect':
-                this.mongo_connect(data.value);
+                this.mongo_connect(message);
+                break;
+
+            case 'rationalize multiple values':
+                this.rationalize_overlap_values(message);
                 break;
 
             case 'set time':
                 this.time = data.value;
                 this.emit('time', data.value);
-                this.send('set time', data.value);
+                console.log('.... set time to %s', data.value);
+                message.feedback();
                 break;
 
             case 'set param':
@@ -334,7 +395,7 @@ _.extend(Client.prototype, {
                 break;
 
             case 'load points':
-                this.load_points(data.value);
+                this.load_points(message);
                 break;
 
             case 'shut down':
