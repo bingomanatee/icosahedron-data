@@ -104,8 +104,10 @@ _.extend(Manager.prototype, {
     /**
      * send a map reduce imperative to dump a field to a collection.
      * note that this is an update reduce -- it will repeatedly add to the same collection.
+     * note that one sector can call a map reduce to update its own data, or the entire dataset;
+     * its more efficient to call map reduce once on all the points' fields.
      *
-     * @param sector
+     * @param sector {int} -- the sector that will update the collection.
      * @param params {object}
      *      field {string}
      *      time {int|'all'}  - which time to dump out

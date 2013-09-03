@@ -51,16 +51,19 @@ function finalize(key, values) {
 
 function mrsd(message) {
 
-    var value = message.value;
+    var value = message.value();
     var field = value.field;
     var time = value.time || 'all';
     var detail = value.detail || 'all';
     var output_collection = value.output_collection;
 
+    console.log('mrsd: %s', util.inspect(value));
+
     if (!field) return message.error('map reduce with no field');
     if (!output_collection) return message.error('map reduce with no output_collection');
 
-    var query = {sector: this.sector, field: field};
+    var query = {field: field};
+    if (value.sector != 'all') query.sector = value.sector;
     if (time != 'all') query.time = time;
     if (detail != 'all') query.detail = detail;
 
@@ -79,8 +82,8 @@ function mrsd(message) {
 
     var pd = new Point_Data();
     try {
-        pd.mapReduce(def, function(err, result){
-            if (err){
+        pd.mapReduce(def, function (err, result) {
+            if (err) {
                 message.error(err);
             } else {
                 message.feedback();

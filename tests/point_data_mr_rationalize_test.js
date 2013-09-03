@@ -50,6 +50,7 @@ if (cluster.isMaster) {
                                        time: time
                                    }, function(){
                                        console.log('M/R for time %s', time);
+
                                        manager.map_reduce_sector_data(0, {
                                            field: 'sxt'
                                            , detail: DETAIL
