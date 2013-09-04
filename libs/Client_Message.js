@@ -3,8 +3,7 @@ var util = require('util');
 var path = require('path');
 var fs = require('fs');
 
-var message_id = 0;
-
+var client_message_id = 0;
 /**
  * This handled the clients' receipt and response of a message from a manager.
  *
@@ -15,6 +14,11 @@ var message_id = 0;
  */
 
 function Client_Message(client, message) {
+    this.id = ++client_message_id;
+    var self = this;
+    this.t = setTimeout(function () {
+        console.log('hanging timeout for client %s message id %s:  %s', client.sector, self.id, util.inspect(message));
+    }, 1000 * 5);
     this.client = client;
     if (!_.isString(message)) {
         message = message.toString();
@@ -30,7 +34,7 @@ _.extend(Client_Message.prototype, {
 
     value: function (property) {
         return this.message ?
-            (property? this.message.value[property] : this.message.value) : null;
+            (property ? this.message.value[property] : this.message.value) : null;
     },
 
     error: function (err) {
@@ -42,8 +46,8 @@ _.extend(Client_Message.prototype, {
         this.feedback(output);
     },
 
-    respond_with: function(value){
-      var response = this.response(value);
+    respond_with: function (value) {
+        var response = this.response(value);
         this.feedback(response);
     },
 
@@ -55,14 +59,15 @@ _.extend(Client_Message.prototype, {
         if (this.message.hasOwnProperty('message_id')) {
             out.message_id = this.message.message_id;
         }
-        if (arguments.length){
+        if (arguments.length) {
             out.response = response;
         }
         return out;
     },
 
     feedback: function (response) {
-        if (this.responded){
+        clearTimeout(this.t);
+        if (this.responded) {
             console.log('attempt to respond to the same message twice: %s', util.inspect(this));
             return;
         }

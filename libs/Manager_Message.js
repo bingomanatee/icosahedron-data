@@ -5,6 +5,8 @@ var fs = require('fs');
 
 var message_id = 0;
 
+var _DEBUG_COUNT = false;
+
 /**
  * an object that transmits a message via zeromq and waits for the response.
  *
@@ -92,6 +94,10 @@ _.extend(Manager_Message.prototype, {
             this.sector_responses[response.sector] = response;
 
             ++this.count;
+
+            if (_DEBUG_COUNT) {
+                console.log('response to message %s: count %s', this.type, this.count);
+            }
 
             if (error) {
                 this.sector_errors.push({sector: response.sector, error: error});

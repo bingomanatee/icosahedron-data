@@ -2,64 +2,93 @@ var _ = require('underscore');
 var util = require('util');
 var path = require('path');
 var fs = require('fs');
-var Point_Data = require('./../Point_Data.js');
+var po = require('./../Point_Data.js');
 var async = require('async');
+var Point_Data = po();
 
 /* ------------ CLOSURE --------------- */
 
+/**
+ * replace data from each of the passed-in points with the average value.
+ * WARNING: point data must be numeric.
+ *
+ * @param point_data [{Point_Data}]
+ * @param callback {function}
+ * @returns {void}
+ */
+function merge_point_data(point_data, callback) {
+    if (point_data[0].ro == 53) console.log('merge point data merging %s', util.inspect(point_data));
+
+    var value = _.pluck(point_data, 'value').reduce(function (out, value) {
+        return out + value;
+    }, 0);
+    value /= point_data.length;
+    if (point_data[0].ro == 53)   console.log('average value for points %s: %s', _.pluck(point_data, 'ro'), value);
+
+    /**
+     * save each point with the averaged value
+     * @type {*}
+     */
+    var queue = async.queue(function (point, callback) {
+        point.value = value;
+        point.save(callback);
+    });
+
+    queue.drain = callback;
+
+    queue.push(point_data);
+}
+
+/**
+ * reconciles divergent points at borders of sectors
+ *
+ * @param message {Client_Message}
+ * @returns {*}
+ */
 function rationalize_multiple_values(message) {
 
-    var value = message.value;
+    var value = message.value();
     var field = value.field;
-    var time = value.time || 'all';
-    var detail = value.detail || 'all';
+    var time = value.time || this.time;
+    var detail = value.detail;
 
     if (!field) return message.error('map reduce with no field');
-
-    if (!merge_method) {
-        merge_method = function (pd, ro) {
-            var value = _.pluck(pd, 'value').reduce(function (out, value) { return out + value;  }, 0);
-            return merge_method/pd.length;
-        }
-    }
 
     var self = this;
 
     // these are the point_datas that overlap other sectors, and for which this is the lowest sector number of the overlap.
+    //  console.log('checking overlap for field %s at detail %s of sector %s at time %s', field, detail, this.sector, time);
 
-    var overlap_points = this.point_data[detail].filter(function (point) {
-        return point.sectors.length > 0 && _.min(point.sectors, _.identity) == self.sector;
+    var overlap_points = this.points(detail).filter(function (point) {
+        return point.s.length > 1 && _.min(point.s, _.identity) == self.sector;
     });
 
-    var ros = _.pluck(overlap_points, 'ro');
+    if (!overlap_points.length) {
 
-    Point_Data.find({field: field, detail: detail, time: time, ro: {$in: ros}},
+        return message.feedback();
 
-        function (overlaps) {
-            var by_ro = _.groupBy(overlaps, 'ro');
+    }
 
-            _.each(by_ro, function (point_datas, ro) {
-                ro = point_datas[0].ro;
+    // console.log(' ================ sector %s overlap points: %s', this.sector, util.inspect(overlap_points));
 
-                var shared_value = merge_method(point_datas, ro);
-                
-                point_datas.forEach(function(pd){
-                    pd.value = shared_value;
-                })
-            });
-            
-            var q = async.queue(function(pd, callback){
-                pd.save(callback);
-            }, 10);
-            
-            q.push(overlaps);
-            
-            q.drain = function(){
-                message.feedback();
-            };
+    /**
+     * find the point data for each point that belongs to more than one neighbor.
+     *
+     * @type {*}
+     */
+    var q = async.queue(function (point, callback) {
+        Point_Data.find({detail: detail, ro: point.ro, time: time, field: field}, function (err, point_data) {
+            merge_point_data(point_data, callback);
         });
+    }, 10);
 
-    
+    q.push(overlap_points);
+
+    q.drain = function () {
+        //  console.log(' >>>>>> done with overlaps for sector %s, detail %s, time %s', self.sector, detail, time);
+        message.feedback();
+    };
+
 }
 
 /* -------------- EXPORT --------------- */

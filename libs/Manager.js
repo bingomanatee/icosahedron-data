@@ -10,6 +10,7 @@ var Gate = require('gate');
 
 var Manager_Message = require('./Manager_Message.js');
 var mongoose = require('mongoose');
+var async = require('async');
 
 var _DEBUG_LISTEN = false;
 var _DEBUG_SEND = false;
@@ -76,9 +77,11 @@ _.extend(Manager.prototype, {
         }, 0);
     },
 
-    load_points: function (detail, callback) {
-        this.send('all', 'load points', detail, callback);
+    set_borders: function (detail, sector, points, done) {
+        this.send(sector, 'border points', {detail: detail, points: points}, done);
     },
+
+    load_points: require('./Manager/load_points'),
 
     /**
      * tell clients to connect to mongo.
@@ -96,8 +99,21 @@ _.extend(Manager.prototype, {
 
     },
 
+    /**
+     * Tell sectors to average (or otherwise rationalize) contradictory data for sector edge values.
+     *
+     * @param sector {int} -- the sector that will update the collection.
+     * @param params {object}
+     *      field {string}
+     *      time {int|'all'}  - which time to dump out
+     *      sector {int|'all'} - You can dump all the fields from a request to a single sector, or only its own data.
+     *      detail {int|'all'} - the level of detail of data to export
+     *
+     * @param callback {function}
+     */
+
     rationalize_multiple_values: function (sector, params, callback) {
-        console.log('rmv: %s', util.inspect(params));
+        if (!_.isFunction(callback)) throw new Error('no callback to rmv');
         this.send(sector, 'rationalize multiple values', params, callback);
     },
 
@@ -151,8 +167,17 @@ _.extend(Manager.prototype, {
         }
     },
 
-    send: function (target, type, data, callback) {
-        var message = new Manager_Message(target, type, data, callback);
+    send: function (target, type, data, callback, delay) {
+
+        if (!delay) delay = 40 * 1000;
+        var t = setTimeout(function () {
+            console.log('hanging action: %s, %s %s', target, type, util.inspect(data));
+        }, delay);
+
+        var message = new Manager_Message(target, type, data, function (err, result) {
+            clearTimeout(t);
+            callback(err, result);
+        });
         this.sent_messages.push(message);
         var out = message.output();
         if (_DEBUG_SEND) console.log('sending %s', out);

@@ -7,7 +7,6 @@ var config = require('./../config.json');
 var events = require('events');
 var mongoose = require('mongoose');
 var async = require('async');
-var pd = require('./Point_Data');
 
 var Client_Message = require('./Client_Message.js');
 
@@ -17,6 +16,7 @@ var _DEBUG_PARAM = false;
 var _DEBUG_WORKER = false;
 var _DEBUG_MESSAGE = false;
 
+var pd = require('./Point_Data');
 var Point_Data = pd();
 
 /**
@@ -78,7 +78,7 @@ _.extend(Client.prototype, {
         var self = this;
         ico.io.points(function (err, points) {
             self.point_data[detail] = points;
-            message.respond_with(self.point_data[detail].length);
+            message.respond_with({sector: self.sector, points: points});
         }, detail, this.sector);
     },
 
@@ -208,31 +208,7 @@ _.extend(Client.prototype, {
         this.data_queue[detail][field].push(info);
     },
 
-    save_point_data_queue: function (field, detail, callback) {
-        data = this.data_queue[detail][field];
-        if (!data) {
-            console.log('found no records for field %s, detail %s', field, detail);
-            return callback(null, []);
-        } // may have been cleaned out by another iteration
-        var sector = this.sector;
-
-        var records = data.reduce(function (out, value, index) {
-            var data = _.extend({
-                detail: detail,
-                field: field,
-                sector: sector
-            }, value);
-
-            //  console.log('pushing data %s', util.inspect(data));
-            out.push(data);
-            return out;
-        }, []);
-        console.log('saving records of field %s', records.length, field);
-        delete this.data_queue[detail][field];
-        Point_Data.collection.insert(records, {multi: true}, function () {
-            callback(null, records);
-        });
-    },
+    save_point_data_queue: require('./Client/save_point_data_queue'),
 
     /**
      * Returns data for a single point
@@ -327,6 +303,36 @@ _.extend(Client.prototype, {
         this.send('feedback', {message_id: data.message_id, value: data.value});
     },
 
+    points: function (detail) {
+        return this.point_data[detail];
+    },
+
+    set_border_points: function (message) {
+        var value = message.value();
+
+        var detail = value.detail;
+        var sector_points = value.points;
+
+        var points = this.points(detail);
+
+        if (!points) {
+            return message.error('cannot get points at detail ' + detail);
+        }
+
+        var self = this;
+        points.forEach(function (point) {
+            var sector_point = _.find(sector_points, function (sp) {
+                return point.ro == sp.ro;
+            });
+          //  console.log('point %s sector point %s', util.inspect(point), util.inspect(sector_point));
+            point.s = sector_point ? sector_point.sectors : [self.sector];
+        });
+
+      //  console.log('........ border points set for sector %s: %s', this.sector, util.inspect(points, 1, 3));
+
+        message.feedback();
+    },
+
     shut_down: function (message) {
         this.emit('shut down');
         var cluster = require('cluster');
@@ -366,6 +372,10 @@ _.extend(Client.prototype, {
                 send_feedback = false;
                 break;
 
+            case 'border points':
+                this.set_border_points(message);
+                break;
+
             case 'map reduce sector data':
                 this.map_reduce_sector_data(message);
                 break;
@@ -381,7 +391,6 @@ _.extend(Client.prototype, {
             case 'set time':
                 this.time = data.value;
                 this.emit('time', data.value);
-                console.log('.... set time to %s', data.value);
                 message.feedback();
                 break;
 

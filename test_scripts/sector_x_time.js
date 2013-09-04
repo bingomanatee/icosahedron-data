@@ -24,7 +24,6 @@ function sxd(data, client, callback) {
         //   console.log('set point %s of sector %s to %s at time %s', point.ro, client.sector, sxt, client.time);
         done();
     }, detail, function (err) {
-        console.log('done with sector %s time %s', client.sector, client.time);
         if (err) return callback(err);
         client.save_point_data_queue('sxt', detail, callback);
 

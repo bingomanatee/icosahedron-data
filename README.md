@@ -122,3 +122,8 @@ Executing a script across all sectors is triggered by the manager:
 The second parameter is sent to all the scripts as their first parameter.
 
 the results will be an ordered array of 20 values aggregated from the execution of the script file.
+
+## A note on the tests
+
+Because each of the TAP tests uses the same IP addresses for a network (though they use different Mongo databases),
+you can't run all the tests as a batch job; each test must be run individually.

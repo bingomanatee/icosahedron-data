@@ -38,43 +38,51 @@ if (cluster.isMaster) {
 
     icod.init_manager(function (err, manager) {
 
-        tap.test('ico-data', {timeout: 1000 * 100, skip: false }, function (suite) {
+            tap.test('ico-data', {timeout: 1000 * 100, skip: false }, function (suite) {
 
-            suite.test('loading points', function (lp_test) {
+                suite.test('loading points', function (lp_test) {
 
-                manager.load_points(0, function (err, data) {
-                    var response = _.pluck(data, 'response');
-                    //console.log('done loading points.... %s', util.inspect(response));
-
-                    lp_test.deepEqual(_.range(0, 20)
-                        .map(function () {
-                            return 3
-                        }), response, 'three points loaded for each zero level sector');
-
-                    manager.load_points(6, function (err, data) {
+                    manager.load_points(0, function (err, data) {
                         var response = _.pluck(data, 'response');
 
-                        lp_test.deepEqual(_.range(0, 20)
-                            .map(function () {
-                                return 2145
-                            }), response, '2145 points loaded for each 6 level sector');
+                        manager.load_points(1, function (err, data) {
+                           // console.log('done loading points.... %s', util.inspect(data, true, 5));
 
-                        manager.shut_down(function () {
-                            cluster.disconnect(function () {
-                                lp_test.end();
+                            var responses = _.pluck(data, 'response');
+
+                            responses.forEach(function(response){
+                                lp_test.equal(response.points.length, 6, 'six points at level one sectors');
+                                var sector_counts = response.points.reduce(function(out, point){
+                                    if (out[point.s.length]){
+                                        ++out[point.s.length];
+                                    } else {
+                                        out[point.s.length] = 1;
+                                    }
+                                    return out;
+                                }, []);
+
+                                lp_test.equal(sector_counts[2], 3, 'three two-sector points');
+                                lp_test.equal(sector_counts[5], 3, 'three five-sector points');
+
                             });
 
-                        });
-                    })
+                            manager.shut_down(function () {
+                                cluster.disconnect(function () {
+                                    lp_test.end();
+                                });
+
+                            });
+                        })
+                    }, true);
+
                 });
+
+                suite.end();
 
             });
 
-            suite.end();
-
-        });
-
-    });
+        }
+    );
 
 } else {
     icod.init_child();

@@ -8,7 +8,7 @@ var Point_Data = require('./../Point_Data.js');
 
 function map() {
     emit('field ' + this.field + ' time ' + this.time + ' sector ' + this.sector, {data: [
-        {ro: this.ro, sector: this.sector, time: this.time, value: this.value}
+        {detail: this.detail, ro: this.ro, sector: this.sector, time: this.time, value: this.value}
     ]});
 }
 
@@ -27,7 +27,8 @@ function finalize(key, values) {
 
     var out = {
         time: values.data[0].time,
-        sector: values.data[0].sector
+        sector: values.data[0].sector,
+        detail: values.data[0].detail
     };
 
     out.data = values.data.map(function (data) {
@@ -57,8 +58,6 @@ function mrsd(message) {
     var detail = value.detail || 'all';
     var output_collection = value.output_collection;
 
-    console.log('mrsd: %s', util.inspect(value));
-
     if (!field) return message.error('map reduce with no field');
     if (!output_collection) return message.error('map reduce with no output_collection');
 
@@ -69,7 +68,7 @@ function mrsd(message) {
 
     var out = {reduce: output_collection};
 
-    console.log('setting mrsd %s, collection %s', util.inspect(query), output_collection);
+ //   console.log('setting mrsd %s, collection %s', util.inspect(query), output_collection);
 
     var def = {
         query: query,
