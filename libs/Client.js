@@ -161,43 +161,7 @@ _.extend(Client.prototype, {
         return this.ro_indexes[detail];
     },
 
-    point_script: function (fn, detail, callback, max_time) {
-        if (isNaN(detail)) {
-            throw new Error('non numeric detail');
-        }
-        var output = [];
-        if (!max_time) max_time = 5000;
-        var time_error = false;
-
-        var queue = async.queue(function (point, done) {
-            fn(point, function (err, result) {
-                if (err) {
-                    output.push(null);
-                    done(err);
-                } else {
-                    output.push(result);
-                    done();
-                }
-            });
-        }, 10);
-
-
-        if (!this.point_data[detail]) return callback(new Error('no points at detail ' + detail));
-        // console.log('doing point script %s with detail %s (%s points)', fn.toString(), detail, this.point_data[detail].length);
-
-        queue.drain = function (err) {
-            if (time_error) return;
-            clearTimeout(t);
-            callback(err, output);
-        };
-
-        queue.push(this.point_data[detail]);
-
-        var t = setTimeout(function () {
-            time_error = true;
-            callback(new Error('script took too long', +util.inspect(fn)))
-        }, max_time);
-    },
+    point_script: require('./Client/point_script'),
 
     queue_point_data: function (field, detail, ro, value, time) {
         if (!time) time = this.time;

@@ -129,6 +129,7 @@ _.extend(Manager.prototype, {
      *      time {int|'all'}  - which time to dump out
      *      sector {int|'all'} - You can dump all the fields from a request to a single sector, or only its own data.
      *      detail {int|'all'} - the level of detail of data to export
+     *      comp_value {string} [optional] - a script to reduce multiple point values into a single (average) value.
      *      output_collection {string} - the collection to save data into.
      *
      * @param callback

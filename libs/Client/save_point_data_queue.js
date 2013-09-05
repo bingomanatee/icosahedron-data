@@ -32,7 +32,7 @@ function save_piont_data_queue (field, detail, callback) {
         out.push(data);
         return out;
     }, []);
-   // console.log('saving records of field %s', records.length, field);
+    // console.log('saving records of field %s', util.inspect(records), field);
     delete this.data_queue[detail][field];
     Point_Data.collection.insert(records, {multi: true}, function () {
         callback(null, records);

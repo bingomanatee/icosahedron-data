@@ -26,7 +26,10 @@
     "gate": "~0.3.0",
     "mongoose": "~3.6.18",
     "async": "~0.2.9",
-    "three": "~0.58.9"
+    "three": "~0.58.9",
+    "icosahedron-draw": "0.0.1",
+    "pad": "0.0.4",
+    "color": "~0.4.4"
   },
   "devDependencies": {
     "tap": "~0.4.4"

@@ -18,7 +18,7 @@ function Client_Message(client, message) {
     var self = this;
     this.t = setTimeout(function () {
         console.log('hanging timeout for client %s message id %s:  %s', client.sector, self.id, util.inspect(message));
-    }, 1000 * 5);
+    }, 1000 * 10);
     this.client = client;
     if (!_.isString(message)) {
         message = message.toString();

@@ -8,27 +8,26 @@ var Point_Data = po();
 
 /* ------------ CLOSURE --------------- */
 
+function _average_point_value(point_data) {
+    return _.pluck(point_data, 'value').reduce(function (out, value) {
+        return out + value;
+    }, 0) / point_data.length;
+}
+
 /**
  * replace data from each of the passed-in points with the average value.
  * WARNING: point data must be numeric.
  *
  * @param point_data [{Point_Data}]
  * @param callback {function}
+ * @param comp_value {function} optional
  * @returns {void}
  */
-function merge_point_data(point_data, callback) {
+function merge_point_data(point_data, callback, comp_value) {
     if (point_data[0].ro == 53) console.log('merge point data merging %s', util.inspect(point_data));
 
-    var value = _.pluck(point_data, 'value').reduce(function (out, value) {
-        return out + value;
-    }, 0);
-    value /= point_data.length;
-    if (point_data[0].ro == 53)   console.log('average value for points %s: %s', _.pluck(point_data, 'ro'), value);
+    var value = comp_value ? comp_value(point_data) : _average_point_value(point_data);
 
-    /**
-     * save each point with the averaged value
-     * @type {*}
-     */
     var queue = async.queue(function (point, callback) {
         point.value = value;
         point.save(callback);
@@ -51,6 +50,14 @@ function rationalize_multiple_values(message) {
     var field = value.field;
     var time = value.time || this.time;
     var detail = value.detail;
+    var comp_value = false;
+
+    if (value.hasOwnProperty('comp_value')) {
+        comp_value = require(value.comp_value);
+      //  console.log('comp_value: %s', util.inspect(comp_value));
+    } else {
+      //  console.log('no comp value in %s', util.inspect(value));
+    }
 
     if (!field) return message.error('map reduce with no field');
 
@@ -69,7 +76,7 @@ function rationalize_multiple_values(message) {
 
     }
 
-    // console.log(' ================ sector %s overlap points: %s', this.sector, util.inspect(overlap_points));
+   // console.log(' ================ detail %s sector %s overlap points: %s - %s', detail, this.sector, overlap_points.length, _.pluck(overlap_points, 'ro').join(', '));
 
     /**
      * find the point data for each point that belongs to more than one neighbor.
@@ -77,8 +84,15 @@ function rationalize_multiple_values(message) {
      * @type {*}
      */
     var q = async.queue(function (point, callback) {
-        Point_Data.find({detail: detail, ro: point.ro, time: time, field: field}, function (err, point_data) {
-            merge_point_data(point_data, callback);
+        var query =  {detail: detail, ro: point.ro, time: time, field: field};
+        Point_Data.find(query, function (err, point_data) {
+
+            if (!point_data.length){
+                console.log('cannot find points with query %s', util.inspect(query));
+                callback(new Error('no points for field + field'));
+            } else {
+                merge_point_data(point_data, callback, comp_value);
+            }
         });
     }, 10);
 

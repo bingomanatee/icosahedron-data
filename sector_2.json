@@ -1,0 +1,1654 @@
+Last login: Fri Aug 30 08:11:36 on ttys000
+Daves-MacBook-Pro:~ dave$ mongo
+MongoDB shell version: 2.4.5
+connecting to: test
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+wll	0.203125GB
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_17713	0.203125GB
+test_ico_data_31731	0.203125GB
+test_ico_data_32408	0.203125GB
+test_ico_data_37244	0.203125GB
+test_ico_data_520	0.203125GB
+test_ico_data_7563	0.203125GB
+test_ico_data_93912	0.203125GB
+wll	0.203125GB
+> use test_ico_data_37244
+switched to db test_ico_data_37244
+> show collections
+point_datas
+system.indexes
+> db.point_datas.find()
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f80"), "detail" : 4, "field" : "latitude", "ro" : 0, "sector" : 0, "time" : 0, "value" : -58.28252558853899 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f81"), "detail" : 4, "field" : "latitude", "ro" : 0, "sector" : 3, "time" : 0, "value" : -58.28252558853899 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f82"), "detail" : 4, "field" : "latitude", "ro" : 7, "sector" : 3, "time" : 0, "value" : -31.71747441146104 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f83"), "detail" : 4, "field" : "latitude", "ro" : 58, "sector" : 3, "time" : 0, "value" : -59.790094692779775 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f84"), "detail" : 4, "field" : "latitude", "ro" : 68, "sector" : 3, "time" : 0, "value" : -36.000000000000014 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f85"), "detail" : 4, "field" : "latitude", "ro" : 229, "sector" : 3, "time" : 0, "value" : -57.85621548007873 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f86"), "detail" : 4, "field" : "latitude", "ro" : 246, "sector" : 3, "time" : 0, "value" : -53.047356934700844 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f87"), "detail" : 4, "field" : "latitude", "ro" : 251, "sector" : 3, "time" : 0, "value" : -34.64703090143303 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f88"), "detail" : 4, "field" : "latitude", "ro" : 256, "sector" : 3, "time" : 0, "value" : -22.44159601163811 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f89"), "detail" : 4, "field" : "latitude", "ro" : 261, "sector" : 3, "time" : 0, "value" : -27.993698454135156 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8a"), "detail" : 4, "field" : "latitude", "ro" : 266, "sector" : 3, "time" : 0, "value" : -16.433707724631006 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8b"), "detail" : 4, "field" : "latitude", "ro" : 873, "sector" : 3, "time" : 0, "value" : -59.99930160742994 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8c"), "detail" : 4, "field" : "latitude", "ro" : 943, "sector" : 3, "time" : 0, "value" : -40.04032934176314 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8d"), "detail" : 4, "field" : "latitude", "ro" : 10, "sector" : 7, "time" : 0, "value" : 0 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8e"), "detail" : 4, "field" : "latitude", "ro" : 11, "sector" : 0, "time" : 0, "value" : 0 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f8f"), "detail" : 4, "field" : "latitude", "ro" : 9, "sector" : 10, "time" : 0, "value" : 0 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f90"), "detail" : 4, "field" : "latitude", "ro" : 43, "sector" : 0, "time" : 0, "value" : -13.81900920605176 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f91"), "detail" : 4, "field" : "latitude", "ro" : 48, "sector" : 0, "time" : 0, "value" : -36.000000000000014 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f92"), "detail" : 4, "field" : "latitude", "ro" : 164, "sector" : 0, "time" : 0, "value" : -21.75277476542152 }
+{ "_id" : ObjectId("5220c7c7cdf5e355c0811f93"), "detail" : 4, "field" : "latitude", "ro" : 169, "sector" : 0, "time" : 0, "value" : -45.29921172961116 }
+Type "it" for more
+> use test_ico_data_91205
+switched to db test_ico_data_91205
+> show collections
+point_datas
+system.indexes
+> db.point_datas.find()
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 1, "value" : -58, "_id" : ObjectId("5220e16854cfea7624000001"), "__v" : 0 }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 0, "value" : -58, "_id" : ObjectId("5220e1686825457524000001"), "__v" : 0 }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 12, "value" : 58, "_id" : ObjectId("5220e168bcdd3a8124000001"), "__v" : 0 }
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 5, "value" : -58, "_id" : ObjectId("5220e1687190be7a24000001"), "__v" : 0 }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 3, "value" : -58, "_id" : ObjectId("5220e16898e4637824000001"), "__v" : 0 }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 7, "value" : 58, "_id" : ObjectId("5220e168ef15dd7c24000001"), "__v" : 0 }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 10, "value" : 58, "_id" : ObjectId("5220e168f867727f24000001"), "__v" : 0 }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 2, "value" : -58, "_id" : ObjectId("5220e168fd73e07724000001"), "__v" : 0 }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 13, "value" : 58, "_id" : ObjectId("5220e1680b59df8224000001"), "__v" : 0 }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 16, "value" : 58, "_id" : ObjectId("5220e16885d7ee8524000001"), "__v" : 0 }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 17, "value" : 58, "_id" : ObjectId("5220e168d3e5108624000001"), "__v" : 0 }
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 9, "value" : -58, "_id" : ObjectId("5220e168d7f6b37e24000001"), "__v" : 0 }
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 19, "value" : -58, "_id" : ObjectId("5220e168c7e34b8924000001"), "__v" : 0 }
+{ "ro" : 6, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 8, "value" : 32, "_id" : ObjectId("5220e1685076197d24000001"), "__v" : 0 }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 4, "value" : -58, "_id" : ObjectId("5220e16839d3337924000001"), "__v" : 0 }
+{ "ro" : 6, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 18, "value" : 32, "_id" : ObjectId("5220e16851c9168724000001"), "__v" : 0 }
+{ "ro" : 4, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 6, "value" : 32, "_id" : ObjectId("5220e1681c90b47b24000001"), "__v" : 0 }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 14, "value" : 58, "_id" : ObjectId("5220e168ae75128324000001"), "__v" : 0 }
+{ "ro" : 4, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 15, "value" : 32, "_id" : ObjectId("5220e1688777a38424000001"), "__v" : 0 }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : 11, "value" : 58, "_id" : ObjectId("5220e168312efa8024000001"), "__v" : 0 }
+> use test_ico_data_90001
+switched to db test_ico_data_90001
+> db.point_datas.find()
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "19", "value" : -58, "_id" : ObjectId("5220e2d9a1b0f1d324000001") }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "0", "value" : -58, "_id" : ObjectId("5220e2d918f404c024000001") }
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "5", "value" : -58, "_id" : ObjectId("5220e2d9e73d48c524000001") }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "10", "value" : 58, "_id" : ObjectId("5220e2d9682e91ca24000001") }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "17", "value" : 58, "_id" : ObjectId("5220e2d9e24507d124000001") }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "13", "value" : 58, "_id" : ObjectId("5220e2d9ac793ecd24000001") }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -58, "_id" : ObjectId("5220e2d940dc15c224000001") }
+{ "ro" : 1, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "9", "value" : -58, "_id" : ObjectId("5220e2d912a1f2c924000001") }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "7", "value" : 58, "_id" : ObjectId("5220e2d92a2af5c724000001") }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "3", "value" : -58, "_id" : ObjectId("5220e2d95d3a04c324000001") }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "12", "value" : 58, "_id" : ObjectId("5220e2d9da9319cc24000001") }
+{ "ro" : 4, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "6", "value" : 32, "_id" : ObjectId("5220e2d9b5d0b3c624000001") }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "16", "value" : 58, "_id" : ObjectId("5220e2d9ac335ed024000001") }
+{ "ro" : 6, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "8", "value" : 32, "_id" : ObjectId("5220e2d9d99b71c824000001") }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "1", "value" : -58, "_id" : ObjectId("5220e2d9d86b7ac124000001") }
+{ "ro" : 4, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "15", "value" : 32, "_id" : ObjectId("5220e2d908d78ccf24000001") }
+{ "ro" : 0, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "4", "value" : -58, "_id" : ObjectId("5220e2d9ece441c424000001") }
+{ "ro" : 3, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "14", "value" : 58, "_id" : ObjectId("5220e2d96caf7ece24000001") }
+{ "ro" : 2, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "11", "value" : 58, "_id" : ObjectId("5220e2d9bb4026cb24000001") }
+{ "ro" : 6, "detail" : 4, "field" : "latitude", "time" : 0, "sector" : "18", "value" : 32, "_id" : ObjectId("5220e2d9d2cc23d224000001") }
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_13246	0.203125GB
+test_ico_data_14893	0.203125GB
+test_ico_data_14985	0.203125GB
+test_ico_data_16276	0.203125GB
+test_ico_data_17713	0.203125GB
+test_ico_data_20750	0.203125GB
+test_ico_data_23194	0.203125GB
+test_ico_data_25093	0.203125GB
+test_ico_data_25843	0.203125GB
+test_ico_data_27896	0.203125GB
+test_ico_data_282	0.203125GB
+test_ico_data_28845	0.203125GB
+test_ico_data_29364	0.203125GB
+test_ico_data_31556	0.203125GB
+test_ico_data_31731	0.203125GB
+test_ico_data_32408	0.203125GB
+test_ico_data_34828	0.203125GB
+test_ico_data_37244	0.203125GB
+test_ico_data_37981	0.203125GB
+test_ico_data_38576	0.203125GB
+test_ico_data_41907	0.203125GB
+test_ico_data_43318	0.203125GB
+test_ico_data_44437	0.203125GB
+test_ico_data_45244	0.203125GB
+test_ico_data_46995	0.203125GB
+test_ico_data_47473	0.203125GB
+test_ico_data_483	0.203125GB
+test_ico_data_520	0.203125GB
+test_ico_data_52648	0.203125GB
+test_ico_data_53639	0.203125GB
+test_ico_data_53880	0.203125GB
+test_ico_data_60141	0.203125GB
+test_ico_data_63779	0.203125GB
+test_ico_data_66431	0.203125GB
+test_ico_data_68856	0.203125GB
+test_ico_data_69759	0.203125GB
+test_ico_data_71351	0.203125GB
+test_ico_data_7140	0.203125GB
+test_ico_data_72799	0.203125GB
+test_ico_data_73391	0.203125GB
+test_ico_data_7563	0.203125GB
+test_ico_data_76623	0.203125GB
+test_ico_data_78289	0.203125GB
+test_ico_data_81048	0.203125GB
+test_ico_data_82239	0.203125GB
+test_ico_data_8503	0.203125GB
+test_ico_data_86156	0.203125GB
+test_ico_data_86564	0.203125GB
+test_ico_data_90001	0.203125GB
+test_ico_data_90101	0.203125GB
+test_ico_data_90417	0.203125GB
+test_ico_data_91205	0.203125GB
+test_ico_data_93912	0.203125GB
+test_ico_data_94098	0.203125GB
+test_ico_data_94307	0.203125GB
+test_ico_data_97147	0.203125GB
+test_ico_data_97949	0.203125GB
+test_ico_data_98274	0.203125GB
+test_ico_data_98304	0.203125GB
+test_ico_data_98731	0.203125GB
+test_ico_data_991	0.203125GB
+wll	0.203125GB
+> use ico
+switched to db ico
+> show collections
+faces
+neighbors
+points
+sectors
+system.indexes
+> db.sectors.find()
+{ "order" : 0, "_id" : "detail_0_order_0", "detail" : 0, "points" : [ 	"point_detail_0_order11", 	"point_detail_0_order5", 	"point_detail_0_order0" ], "__v" : 0 }
+{ "order" : 1, "_id" : "detail_0_order_1", "detail" : 0, "points" : [ 	"point_detail_0_order5", 	"point_detail_0_order1", 	"point_detail_0_order0" ], "__v" : 0 }
+{ "order" : 2, "_id" : "detail_0_order_2", "detail" : 0, "points" : [ 	"point_detail_0_order1", 	"point_detail_0_order7", 	"point_detail_0_order0" ], "__v" : 0 }
+{ "order" : 3, "_id" : "detail_0_order_3", "detail" : 0, "points" : [ 	"point_detail_0_order7", 	"point_detail_0_order10", 	"point_detail_0_order0" ], "__v" : 0 }
+{ "order" : 4, "_id" : "detail_0_order_4", "detail" : 0, "points" : [ 	"point_detail_0_order10", 	"point_detail_0_order11", 	"point_detail_0_order0" ], "__v" : 0 }
+{ "order" : 5, "_id" : "detail_0_order_5", "detail" : 0, "points" : [ 	"point_detail_0_order5", 	"point_detail_0_order9", 	"point_detail_0_order1" ], "__v" : 0 }
+{ "order" : 6, "_id" : "detail_0_order_6", "detail" : 0, "points" : [ 	"point_detail_0_order11", 	"point_detail_0_order4", 	"point_detail_0_order5" ], "__v" : 0 }
+{ "order" : 7, "_id" : "detail_0_order_7", "detail" : 0, "points" : [ 	"point_detail_0_order10", 	"point_detail_0_order2", 	"point_detail_0_order11" ], "__v" : 0 }
+{ "order" : 8, "_id" : "detail_0_order_8", "detail" : 0, "points" : [ 	"point_detail_0_order7", 	"point_detail_0_order6", 	"point_detail_0_order10" ], "__v" : 0 }
+{ "order" : 9, "_id" : "detail_0_order_9", "detail" : 0, "points" : [ 	"point_detail_0_order1", 	"point_detail_0_order8", 	"point_detail_0_order7" ], "__v" : 0 }
+{ "order" : 10, "_id" : "detail_0_order_10", "detail" : 0, "points" : [ 	"point_detail_0_order9", 	"point_detail_0_order4", 	"point_detail_0_order3" ], "__v" : 0 }
+{ "order" : 11, "_id" : "detail_0_order_11", "detail" : 0, "points" : [ 	"point_detail_0_order4", 	"point_detail_0_order2", 	"point_detail_0_order3" ], "__v" : 0 }
+{ "order" : 12, "_id" : "detail_0_order_12", "detail" : 0, "points" : [ 	"point_detail_0_order2", 	"point_detail_0_order6", 	"point_detail_0_order3" ], "__v" : 0 }
+{ "order" : 13, "_id" : "detail_0_order_13", "detail" : 0, "points" : [ 	"point_detail_0_order6", 	"point_detail_0_order8", 	"point_detail_0_order3" ], "__v" : 0 }
+{ "order" : 14, "_id" : "detail_0_order_14", "detail" : 0, "points" : [ 	"point_detail_0_order8", 	"point_detail_0_order9", 	"point_detail_0_order3" ], "__v" : 0 }
+{ "order" : 15, "_id" : "detail_0_order_15", "detail" : 0, "points" : [ 	"point_detail_0_order9", 	"point_detail_0_order5", 	"point_detail_0_order4" ], "__v" : 0 }
+{ "order" : 16, "_id" : "detail_0_order_16", "detail" : 0, "points" : [ 	"point_detail_0_order4", 	"point_detail_0_order11", 	"point_detail_0_order2" ], "__v" : 0 }
+{ "order" : 17, "_id" : "detail_0_order_17", "detail" : 0, "points" : [ 	"point_detail_0_order2", 	"point_detail_0_order10", 	"point_detail_0_order6" ], "__v" : 0 }
+{ "order" : 18, "_id" : "detail_0_order_18", "detail" : 0, "points" : [ 	"point_detail_0_order6", 	"point_detail_0_order7", 	"point_detail_0_order8" ], "__v" : 0 }
+{ "order" : 19, "_id" : "detail_0_order_19", "detail" : 0, "points" : [ 	"point_detail_0_order8", 	"point_detail_0_order1", 	"point_detail_0_order9" ], "__v" : 0 }
+Type "it" for more
+> db.sectors.find({detail: 1})
+{ "_id" : "detail_1_order_0", "order" : 0, "detail" : 1, "points" : [ 	"point_detail_1_order0", 	"point_detail_1_order11", 	"point_detail_1_order5", 	"point_detail_1_order12", 	"point_detail_1_order13", 	"point_detail_1_order14" ], "__v" : 0 }
+{ "_id" : "detail_1_order_5", "order" : 5, "detail" : 1, "points" : [ 	"point_detail_1_order1", 	"point_detail_1_order5", 	"point_detail_1_order9", 	"point_detail_1_order16", 	"point_detail_1_order22", 	"point_detail_1_order23" ], "__v" : 0 }
+{ "_id" : "detail_1_order_14", "order" : 14, "detail" : 1, "points" : [ 	"point_detail_1_order3", 	"point_detail_1_order8", 	"point_detail_1_order9", 	"point_detail_1_order32", 	"point_detail_1_order39", 	"point_detail_1_order41" ], "__v" : 0 }
+{ "_id" : "detail_1_order_3", "order" : 3, "detail" : 1, "points" : [ 	"point_detail_1_order0", 	"point_detail_1_order10", 	"point_detail_1_order7", 	"point_detail_1_order17", 	"point_detail_1_order19", 	"point_detail_1_order20" ], "__v" : 0 }
+{ "_id" : "detail_1_order_7", "order" : 7, "detail" : 1, "points" : [ 	"point_detail_1_order10", 	"point_detail_1_order11", 	"point_detail_1_order2", 	"point_detail_1_order21", 	"point_detail_1_order27", 	"point_detail_1_order26" ], "__v" : 0 }
+{ "_id" : "detail_1_order_11", "order" : 11, "detail" : 1, "points" : [ 	"point_detail_1_order2", 	"point_detail_1_order3", 	"point_detail_1_order4", 	"point_detail_1_order35", 	"point_detail_1_order36", 	"point_detail_1_order33" ], "__v" : 0 }
+{ "_id" : "detail_1_order_18", "order" : 18, "detail" : 1, "points" : [ 	"point_detail_1_order6", 	"point_detail_1_order7", 	"point_detail_1_order8", 	"point_detail_1_order29", 	"point_detail_1_order40", 	"point_detail_1_order30" ], "__v" : 0 }
+{ "_id" : "detail_1_order_2", "order" : 2, "detail" : 1, "points" : [ 	"point_detail_1_order0", 	"point_detail_1_order1", 	"point_detail_1_order7", 	"point_detail_1_order15", 	"point_detail_1_order17", 	"point_detail_1_order18" ], "__v" : 0 }
+{ "_id" : "detail_1_order_8", "order" : 8, "detail" : 1, "points" : [ 	"point_detail_1_order10", 	"point_detail_1_order6", 	"point_detail_1_order7", 	"point_detail_1_order20", 	"point_detail_1_order28", 	"point_detail_1_order29" ], "__v" : 0 }
+{ "_id" : "detail_1_order_10", "order" : 10, "detail" : 1, "points" : [ 	"point_detail_1_order3", 	"point_detail_1_order4", 	"point_detail_1_order9", 	"point_detail_1_order32", 	"point_detail_1_order33", 	"point_detail_1_order34" ], "__v" : 0 }
+{ "_id" : "detail_1_order_1", "order" : 1, "detail" : 1, "points" : [ 	"point_detail_1_order0", 	"point_detail_1_order1", 	"point_detail_1_order5", 	"point_detail_1_order13", 	"point_detail_1_order15", 	"point_detail_1_order16" ], "__v" : 0 }
+{ "_id" : "detail_1_order_6", "order" : 6, "detail" : 1, "points" : [ 	"point_detail_1_order11", 	"point_detail_1_order4", 	"point_detail_1_order5", 	"point_detail_1_order14", 	"point_detail_1_order25", 	"point_detail_1_order24" ], "__v" : 0 }
+{ "_id" : "detail_1_order_13", "order" : 13, "detail" : 1, "points" : [ 	"point_detail_1_order3", 	"point_detail_1_order6", 	"point_detail_1_order8", 	"point_detail_1_order37", 	"point_detail_1_order39", 	"point_detail_1_order40" ], "__v" : 0 }
+{ "_id" : "detail_1_order_15", "order" : 15, "detail" : 1, "points" : [ 	"point_detail_1_order4", 	"point_detail_1_order5", 	"point_detail_1_order9", 	"point_detail_1_order24", 	"point_detail_1_order34", 	"point_detail_1_order23" ], "__v" : 0 }
+{ "_id" : "detail_1_order_16", "order" : 16, "detail" : 1, "points" : [ 	"point_detail_1_order11", 	"point_detail_1_order2", 	"point_detail_1_order4", 	"point_detail_1_order25", 	"point_detail_1_order26", 	"point_detail_1_order36" ], "__v" : 0 }
+{ "_id" : "detail_1_order_4", "order" : 4, "detail" : 1, "points" : [ 	"point_detail_1_order0", 	"point_detail_1_order10", 	"point_detail_1_order11", 	"point_detail_1_order12", 	"point_detail_1_order19", 	"point_detail_1_order21" ], "__v" : 0 }
+{ "_id" : "detail_1_order_9", "order" : 9, "detail" : 1, "points" : [ 	"point_detail_1_order1", 	"point_detail_1_order7", 	"point_detail_1_order8", 	"point_detail_1_order18", 	"point_detail_1_order31", 	"point_detail_1_order30" ], "__v" : 0 }
+{ "_id" : "detail_1_order_12", "order" : 12, "detail" : 1, "points" : [ 	"point_detail_1_order2", 	"point_detail_1_order3", 	"point_detail_1_order6", 	"point_detail_1_order35", 	"point_detail_1_order38", 	"point_detail_1_order37" ], "__v" : 0 }
+{ "_id" : "detail_1_order_17", "order" : 17, "detail" : 1, "points" : [ 	"point_detail_1_order10", 	"point_detail_1_order2", 	"point_detail_1_order6", 	"point_detail_1_order27", 	"point_detail_1_order28", 	"point_detail_1_order38" ], "__v" : 0 }
+{ "_id" : "detail_1_order_19", "order" : 19, "detail" : 1, "points" : [ 	"point_detail_1_order1", 	"point_detail_1_order8", 	"point_detail_1_order9", 	"point_detail_1_order22", 	"point_detail_1_order31", 	"point_detail_1_order41" ], "__v" : 0 }
+> db.sectors.find({detail: 1})[0].points.length
+6
+> db.sectors.find({detail: 2})[0].points.length
+15
+> db.sectors.find({detail: 3})[0].points.length
+45
+> db.sectors.find({detail: 4})[0].points.length
+153
+> db.sectors.find({detail: 5})[0].points.length
+561
+> db.sectors.find({detail: 6})[0].points.length
+2145
+> use test_ico_data_27510
+switched to db test_ico_data_27510
+> show collections
+point_datas
+system.indexes
+> db.point_datas.find();
+{ "ro" : 0, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -58, "_id" : ObjectId("52216b4e0bb2abb72b000001") }
+{ "ro" : 1, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -58, "_id" : ObjectId("52216b4e0bb2abb72b000002") }
+{ "ro" : 7, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -32, "_id" : ObjectId("52216b4e0bb2abb72b000003") }
+{ "ro" : 15, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -90, "_id" : ObjectId("52216b4e0bb2abb72b000004") }
+{ "ro" : 17, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -54, "_id" : ObjectId("52216b4e0bb2abb72b000005") }
+{ "ro" : 18, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -54, "_id" : ObjectId("52216b4e0bb2abb72b000006") }
+{ "ro" : 51, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -73, "_id" : ObjectId("52216b4e0bb2abb72b000007") }
+{ "ro" : 56, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -73, "_id" : ObjectId("52216b4e0bb2abb72b000008") }
+{ "ro" : 58, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -60, "_id" : ObjectId("52216b4e0bb2abb72b000009") }
+{ "ro" : 59, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -60, "_id" : ObjectId("52216b4e0bb2abb72b00000a") }
+{ "ro" : 60, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -72, "_id" : ObjectId("52216b4e0bb2abb72b00000b") }
+{ "ro" : 61, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -72, "_id" : ObjectId("52216b4e0bb2abb72b00000c") }
+{ "ro" : 62, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -58, "_id" : ObjectId("52216b4e0bb2abb72b00000d") }
+{ "ro" : 63, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -43, "_id" : ObjectId("52216b4e0bb2abb72b00000e") }
+{ "ro" : 64, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -43, "_id" : ObjectId("52216b4e0bb2abb72b00000f") }
+{ "ro" : 192, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -65, "_id" : ObjectId("52216b4e0bb2abb72b000010") }
+{ "ro" : 203, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -81, "_id" : ObjectId("52216b4e0bb2abb72b000011") }
+{ "ro" : 211, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -81, "_id" : ObjectId("52216b4e0bb2abb72b000012") }
+{ "ro" : 216, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -65, "_id" : ObjectId("52216b4e0bb2abb72b000013") }
+{ "ro" : 218, "detail" : 3, "field" : "latitude", "time" : 0, "sector" : "2", "value" : -60, "_id" : ObjectId("52216b4e0bb2abb72b000014") }
+Type "it" for more
+> db.point_datas.find({ point: 12, field: 'latitude', detail: 3, time: 0 })
+>  load('/Users/dave/Documents/node/ico-data/libs/drop_test_dbs.js')
+dropping db test_ico_data_12299
+dropping db test_ico_data_13246
+dropping db test_ico_data_14893
+dropping db test_ico_data_14985
+dropping db test_ico_data_16276
+dropping db test_ico_data_17713
+dropping db test_ico_data_20316
+dropping db test_ico_data_20535
+dropping db test_ico_data_20641
+dropping db test_ico_data_20750
+dropping db test_ico_data_21584
+dropping db test_ico_data_22475
+dropping db test_ico_data_23082
+dropping db test_ico_data_23090
+dropping db test_ico_data_23194
+dropping db test_ico_data_23248
+dropping db test_ico_data_25093
+dropping db test_ico_data_25754
+dropping db test_ico_data_25843
+dropping db test_ico_data_25934
+dropping db test_ico_data_26599
+dropping db test_ico_data_27510
+dropping db test_ico_data_27896
+dropping db test_ico_data_282
+dropping db test_ico_data_28845
+dropping db test_ico_data_29364
+dropping db test_ico_data_31556
+dropping db test_ico_data_31731
+dropping db test_ico_data_32081
+dropping db test_ico_data_32225
+dropping db test_ico_data_32408
+dropping db test_ico_data_3455
+dropping db test_ico_data_34828
+dropping db test_ico_data_37244
+dropping db test_ico_data_3755
+dropping db test_ico_data_37981
+dropping db test_ico_data_38576
+dropping db test_ico_data_39174
+dropping db test_ico_data_41907
+dropping db test_ico_data_43318
+dropping db test_ico_data_43564
+dropping db test_ico_data_44250
+dropping db test_ico_data_44437
+dropping db test_ico_data_45244
+dropping db test_ico_data_46701
+dropping db test_ico_data_46995
+dropping db test_ico_data_47473
+dropping db test_ico_data_483
+dropping db test_ico_data_49303
+dropping db test_ico_data_49384
+dropping db test_ico_data_51356
+dropping db test_ico_data_520
+dropping db test_ico_data_52333
+dropping db test_ico_data_52648
+dropping db test_ico_data_52677
+dropping db test_ico_data_52968
+dropping db test_ico_data_53082
+dropping db test_ico_data_53639
+dropping db test_ico_data_53820
+dropping db test_ico_data_53880
+dropping db test_ico_data_54508
+dropping db test_ico_data_60141
+dropping db test_ico_data_60210
+dropping db test_ico_data_61808
+dropping db test_ico_data_63338
+dropping db test_ico_data_63779
+dropping db test_ico_data_66382
+dropping db test_ico_data_66431
+dropping db test_ico_data_66591
+dropping db test_ico_data_66980
+dropping db test_ico_data_68856
+dropping db test_ico_data_6895
+dropping db test_ico_data_69759
+dropping db test_ico_data_71186
+dropping db test_ico_data_71351
+dropping db test_ico_data_7140
+dropping db test_ico_data_72437
+dropping db test_ico_data_72799
+dropping db test_ico_data_73391
+dropping db test_ico_data_73867
+dropping db test_ico_data_74792
+dropping db test_ico_data_75
+dropping db test_ico_data_7563
+dropping db test_ico_data_76623
+dropping db test_ico_data_76965
+dropping db test_ico_data_78289
+dropping db test_ico_data_78293
+dropping db test_ico_data_79139
+dropping db test_ico_data_79524
+dropping db test_ico_data_80896
+dropping db test_ico_data_81048
+dropping db test_ico_data_82239
+dropping db test_ico_data_83024
+dropping db test_ico_data_83283
+dropping db test_ico_data_8503
+dropping db test_ico_data_85592
+dropping db test_ico_data_86156
+dropping db test_ico_data_86564
+dropping db test_ico_data_88381
+dropping db test_ico_data_89335
+dropping db test_ico_data_90001
+dropping db test_ico_data_90068
+dropping db test_ico_data_90101
+dropping db test_ico_data_90417
+dropping db test_ico_data_91205
+dropping db test_ico_data_92990
+dropping db test_ico_data_9333
+dropping db test_ico_data_93912
+dropping db test_ico_data_94098
+dropping db test_ico_data_94307
+dropping db test_ico_data_95672
+dropping db test_ico_data_97147
+dropping db test_ico_data_97949
+dropping db test_ico_data_98218
+dropping db test_ico_data_98274
+dropping db test_ico_data_98304
+dropping db test_ico_data_98731
+dropping db test_ico_data_991
+dropping db test_ico_data_9942
+dropping db test_ico_data_99688
+dropping db test_ico_data_99982
+true
+> load('/Users/dave/Documents/node/ico-data/libs/drop_test_dbs.js')
+dropping db test_ico_data_10502
+dropping db test_ico_data_11405
+dropping db test_ico_data_35566
+dropping db test_ico_data_63733
+dropping db test_ico_data_6545
+dropping db test_ico_data_75446
+dropping db test_ico_data_7787
+dropping db test_ico_data_79695
+true
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_7389	0.203125GB
+test_ico_data_78215	0.203125GB
+test_ico_data_85425	0.203125GB
+wll	0.203125GB
+> load('/Users/dave/Documents/node/ico-data/libs/drop_test_dbs.js')
+dropping db test_ico_data_7389
+dropping db test_ico_data_78215
+dropping db test_ico_data_85188
+dropping db test_ico_data_85425
+true
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_28581	0.203125GB
+wll	0.203125GB
+> use test_ico_data_28581
+switched to db test_ico_data_28581
+> show collections
+point_datas
+system.indexes
+> db.point_datas.find()
+{ "ro" : 0, "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba349d80de1a4f000001") }
+{ "ro" : 5, "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba349d80de1a4f000002") }
+{ "ro" : 11, "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 1439, "value" : 0.8876586259641788, "_id" : ObjectId("5224ba349d80de1a4f000003") }
+{ "ro" : 4, "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba34308ed7204f000001") }
+{ "ro" : 5, "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba34308ed7204f000002") }
+{ "ro" : 11, "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 1439, "value" : 0.8876586259641788, "_id" : ObjectId("5224ba34308ed7204f000003") }
+{ "ro" : 0, "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba34b841931d4f000001") }
+{ "ro" : 7, "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34b841931d4f000002") }
+{ "ro" : 10, "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 1439, "value" : -0.014912574292863967, "_id" : ObjectId("5224ba34b841931d4f000003") }
+{ "ro" : 3, "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34be0fce244f000001") }
+{ "ro" : 4, "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba34be0fce244f000002") }
+{ "ro" : 9, "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 1439, "value" : 0.01491257429286319, "_id" : ObjectId("5224ba34be0fce244f000003") }
+{ "ro" : 0, "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba346e1bb11c4f000001") }
+{ "ro" : 1, "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba346e1bb11c4f000002") }
+{ "ro" : 7, "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba346e1bb11c4f000003") }
+{ "ro" : 0, "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba34ca7a061b4f000001") }
+{ "ro" : 1, "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34ca7a061b4f000002") }
+{ "ro" : 5, "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba34ca7a061b4f000003") }
+{ "ro" : 1, "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34b88e90234f000001") }
+{ "ro" : 7, "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34b88e90234f000002") }
+Type "it" for more
+> it
+{ "ro" : 8, "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1439, "value" : -0.8876586259641797, "_id" : ObjectId("5224ba34b88e90234f000003") }
+{ "ro" : 2, "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba341ea562254f000001") }
+{ "ro" : 3, "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba341ea562254f000002") }
+{ "ro" : 4, "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba341ea562254f000003") }
+{ "ro" : 1, "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba3424081c1f4f000001") }
+{ "ro" : 5, "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba3424081c1f4f000002") }
+{ "ro" : 9, "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1439, "value" : 0.01491257429286319, "_id" : ObjectId("5224ba3424081c1f4f000003") }
+{ "ro" : 6, "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba3422fd022c4f000001") }
+{ "ro" : 7, "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba3422fd022c4f000002") }
+{ "ro" : 8, "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 1439, "value" : -0.8876586259641797, "_id" : ObjectId("5224ba3422fd022c4f000003") }
+{ "ro" : 3, "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34947765274f000001") }
+{ "ro" : 6, "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34947765274f000002") }
+{ "ro" : 8, "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1439, "value" : -0.8876586259641797, "_id" : ObjectId("5224ba34947765274f000003") }
+{ "ro" : 0, "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba344b4e121e4f000001") }
+{ "ro" : 10, "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1439, "value" : -0.014912574292863967, "_id" : ObjectId("5224ba344b4e121e4f000002") }
+{ "ro" : 11, "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1439, "value" : 0.8876586259641788, "_id" : ObjectId("5224ba344b4e121e4f000003") }
+{ "ro" : 2, "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba346b8747264f000001") }
+{ "ro" : 3, "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba346b8747264f000002") }
+{ "ro" : 6, "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba346b8747264f000003") }
+{ "ro" : 6, "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34a27751224f000001") }
+Type "it" for more
+> it
+{ "ro" : 7, "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34a27751224f000002") }
+{ "ro" : 10, "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1439, "value" : -0.014912574292863967, "_id" : ObjectId("5224ba34a27751224f000003") }
+{ "ro" : 3, "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34e3ff61284f000001") }
+{ "ro" : 8, "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 1439, "value" : -0.8876586259641797, "_id" : ObjectId("5224ba34e3ff61284f000002") }
+{ "ro" : 9, "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 1439, "value" : 0.01491257429286319, "_id" : ObjectId("5224ba34e3ff61284f000003") }
+{ "ro" : 2, "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba34234120214f000001") }
+{ "ro" : 10, "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 1439, "value" : -0.014912574292863967, "_id" : ObjectId("5224ba34234120214f000002") }
+{ "ro" : 11, "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 1439, "value" : 0.8876586259641788, "_id" : ObjectId("5224ba34234120214f000003") }
+{ "ro" : 1, "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 1439, "value" : -0.26969336174007275, "_id" : ObjectId("5224ba34ca3c192d4f000001") }
+{ "ro" : 8, "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 1439, "value" : -0.8876586259641797, "_id" : ObjectId("5224ba34ca3c192d4f000002") }
+{ "ro" : 9, "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 1439, "value" : 0.01491257429286319, "_id" : ObjectId("5224ba34ca3c192d4f000003") }
+{ "ro" : 2, "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba341311602a4f000001") }
+{ "ro" : 4, "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba341311602a4f000002") }
+{ "ro" : 11, "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 1439, "value" : 0.8876586259641788, "_id" : ObjectId("5224ba341311602a4f000003") }
+{ "ro" : 2, "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 1439, "value" : 0.2696933617400722, "_id" : ObjectId("5224ba34ebcbdc2b4f000001") }
+{ "ro" : 6, "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 1439, "value" : -0.7301954396413417, "_id" : ObjectId("5224ba34ebcbdc2b4f000002") }
+{ "ro" : 10, "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 1439, "value" : -0.014912574292863967, "_id" : ObjectId("5224ba34ebcbdc2b4f000003") }
+{ "ro" : 4, "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba342c955d294f000001") }
+{ "ro" : 5, "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 1439, "value" : 0.730195439641341, "_id" : ObjectId("5224ba342c955d294f000002") }
+{ "ro" : 9, "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 1439, "value" : 0.01491257429286319, "_id" : ObjectId("5224ba342c955d294f000003") }
+> db.point_datas.find().count();
+60
+> db.point_datas.find().count();
+60
+> load('/Users/dave/Documents/node/ico-data/libs/drop_test_dbs.js')
+dropping db test_ico_data_28581
+true
+> use test_ico_data_84953
+switched to db test_ico_data_84953
+> db.point_datas.find().count()
+76837
+> db.point_datas.find()
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f67ebd45bc4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f67ebd45bc4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f67ebd45bc4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 0, "value" : 0.5257309768853624, "_id" : ObjectId("5224c1f67ebd45bc4f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 1, "value" : -0.5257309768853629, "_id" : ObjectId("5224c1f67ebd45bc4f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 5, "value" : 0.0006101365314830076, "_id" : ObjectId("5224c1f67ebd45bc4f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 2, "ro" : 0, "value" : 0.5257305711841035, "_id" : ObjectId("5224c1f67ebd45bc4f000007") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 2, "ro" : 1, "value" : -0.5257305711841038, "_id" : ObjectId("5224c1f67ebd45bc4f000008") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 2, "ro" : 5, "value" : 0.00122027276660297, "_id" : ObjectId("5224c1f67ebd45bc4f000009") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 3, "ro" : 0, "value" : 0.5257298950154081, "_id" : ObjectId("5224c1f67ebd45bc4f00000a") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 3, "ro" : 1, "value" : -0.5257298950154086, "_id" : ObjectId("5224c1f67ebd45bc4f00000b") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 3, "ro" : 5, "value" : 0.0018304084921030306, "_id" : ObjectId("5224c1f67ebd45bc4f00000c") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 4, "ro" : 0, "value" : 0.5257289483798975, "_id" : ObjectId("5224c1f67ebd45bc4f00000d") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 4, "ro" : 1, "value" : -0.5257289483798977, "_id" : ObjectId("5224c1f67ebd45bc4f00000e") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 4, "ro" : 5, "value" : 0.0024405431512974918, "_id" : ObjectId("5224c1f67ebd45bc4f00000f") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 5, "ro" : 0, "value" : 0.5257277312780811, "_id" : ObjectId("5224c1f67ebd45bc4f000010") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 5, "ro" : 1, "value" : -0.5257277312780815, "_id" : ObjectId("5224c1f67ebd45bc4f000011") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 5, "ro" : 5, "value" : 0.003050676494884552, "_id" : ObjectId("5224c1f67ebd45bc4f000012") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 6, "ro" : 0, "value" : 0.5257262437100662, "_id" : ObjectId("5224c1f67ebd45bc4f000013") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 6, "ro" : 1, "value" : -0.5257262437100663, "_id" : ObjectId("5224c1f67ebd45bc4f000014") }
+Type "it" for more
+> db.point_datas.find(),sort({time: 1})
+Mon Sep  2 09:56:33.772 JavaScript execution failed: ReferenceError: sort is not defined
+> db.point_datas.find().sort({time: 1})
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f67ebd45bc4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f67ebd45bc4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f67ebd45bc4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 0, "ro" : 6, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f666082ac44f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 0, "ro" : 7, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f666082ac44f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 0, "ro" : 10, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f666082ac44f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f6c3641fc54f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 0, "ro" : 7, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6c3641fc54f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 0, "ro" : 8, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f6c3641fc54f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f6549dcac04f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6549dcac04f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 0, "ro" : 9, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f6549dcac04f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 0, "ro" : 3, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f60d5fb2c94f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 0, "ro" : 6, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f60d5fb2c94f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 0, "ro" : 8, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f60d5fb2c94f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f614a99dbf4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 0, "ro" : 10, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f614a99dbf4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 0, "ro" : 11, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f614a99dbf4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f68b8b04bb4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f68b8b04bb4f000002") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 0, "ro" : 11, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f68b8b04bb4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f65b151abe4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 0, "ro" : 7, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f65b151abe4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 3, "time" : 0, "ro" : 10, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f65b151abe4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 0, "ro" : 0, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f65b30f0bd4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f65b30f0bd4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 2, "time" : 0, "ro" : 7, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f65b30f0bd4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 0, "ro" : 2, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f6bc2076c74f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 0, "ro" : 3, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f6bc2076c74f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 11, "time" : 0, "ro" : 4, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6bc2076c74f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 0, "ro" : 1, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f68d0330cf4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 0, "ro" : 8, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f68d0330cf4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 19, "time" : 0, "ro" : 9, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f68d0330cf4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 0, "ro" : 3, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f6bd77a2ca4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 0, "ro" : 8, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f6bd77a2ca4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 14, "time" : 0, "ro" : 9, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f6bd77a2ca4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 0, "ro" : 2, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f6f4f3cec84f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 0, "ro" : 3, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f6f4f3cec84f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 12, "time" : 0, "ro" : 6, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6f4f3cec84f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 0, "ro" : 4, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6148f74c14f000001") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6148f74c14f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 6, "time" : 0, "ro" : 11, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f6148f74c14f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 0, "ro" : 2, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f6bee53cc34f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 0, "ro" : 10, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f6bee53cc34f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 7, "time" : 0, "ro" : 11, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f6bee53cc34f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 0, "ro" : 2, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f6f9407acc4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 0, "ro" : 4, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6f9407acc4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 16, "time" : 0, "ro" : 11, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f6f9407acc4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 0, "ro" : 2, "value" : 0.5257311121191335, "_id" : ObjectId("5224c1f67810a7cd4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 0, "ro" : 6, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f67810a7cd4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 17, "time" : 0, "ro" : 10, "value" : 0.8506508083520399, "_id" : ObjectId("5224c1f67810a7cd4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 0, "ro" : 3, "value" : -0.5257311121191339, "_id" : ObjectId("5224c1f634a8c7c64f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 0, "ro" : 4, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f634a8c7c64f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 10, "time" : 0, "ro" : 9, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f634a8c7c64f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 0, "ro" : 4, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6063ae6cb4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 0, "ro" : 5, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f6063ae6cb4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 15, "time" : 0, "ro" : 9, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f6063ae6cb4f000003") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 0, "ro" : 6, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f73b5aa4ce4f000001") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 0, "ro" : 7, "value" : -2.220446049250313e-16, "_id" : ObjectId("5224c1f73b5aa4ce4f000002") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 18, "time" : 0, "ro" : 8, "value" : -0.8506508083520403, "_id" : ObjectId("5224c1f73b5aa4ce4f000003") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 0, "value" : 0.5257309768853624, "_id" : ObjectId("5224c1f67ebd45bc4f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 1, "value" : -0.5257309768853629, "_id" : ObjectId("5224c1f67ebd45bc4f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 1, "time" : 1, "ro" : 5, "value" : 0.0006101365314830076, "_id" : ObjectId("5224c1f67ebd45bc4f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1, "ro" : 6, "value" : -0.0006101365314834517, "_id" : ObjectId("5224c1f666082ac44f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1, "ro" : 7, "value" : -0.0006101365314834517, "_id" : ObjectId("5224c1f666082ac44f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 8, "time" : 1, "ro" : 10, "value" : 0.8502735044249674, "_id" : ObjectId("5224c1f666082ac44f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1, "ro" : 1, "value" : -0.5257309768853629, "_id" : ObjectId("5224c1f6c3641fc54f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1, "ro" : 7, "value" : -0.0006101365314834517, "_id" : ObjectId("5224c1f6c3641fc54f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 9, "time" : 1, "ro" : 8, "value" : -0.8510276746534371, "_id" : ObjectId("5224c1f6c3641fc54f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1, "ro" : 1, "value" : -0.5257309768853629, "_id" : ObjectId("5224c1f6549dcac04f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1, "ro" : 5, "value" : 0.0006101365314830076, "_id" : ObjectId("5224c1f6549dcac04f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 5, "time" : 1, "ro" : 9, "value" : -0.8502735044249679, "_id" : ObjectId("5224c1f6549dcac04f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1, "ro" : 3, "value" : -0.5257309768853629, "_id" : ObjectId("5224c1f60d5fb2c94f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1, "ro" : 6, "value" : -0.0006101365314834517, "_id" : ObjectId("5224c1f60d5fb2c94f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 13, "time" : 1, "ro" : 8, "value" : -0.8510276746534371, "_id" : ObjectId("5224c1f60d5fb2c94f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1, "ro" : 0, "value" : 0.5257309768853624, "_id" : ObjectId("5224c1f614a99dbf4f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1, "ro" : 10, "value" : 0.8502735044249674, "_id" : ObjectId("5224c1f614a99dbf4f000005") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 4, "time" : 1, "ro" : 11, "value" : 0.8510276746534366, "_id" : ObjectId("5224c1f614a99dbf4f000006") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 1, "ro" : 0, "value" : 0.5257309768853624, "_id" : ObjectId("5224c1f68b8b04bb4f000004") }
+{ "detail" : 0, "field" : "sun_cos", "sector" : 0, "time" : 1, "ro" : 5, "value" : 0.0006101365314830076, "_id" : ObjectId("5224c1f68b8b04bb4f000005") }
+Type "it" for more
+> show dbs
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_25102	0.203125GB
+test_ico_data_28081	0.203125GB
+test_ico_data_34095	0.203125GB
+test_ico_data_47538	0.203125GB
+test_ico_data_84953	0.203125GB
+wll	0.203125GB
+> var out = {query: {sector: 0, detail: 0}
+... }
+>     function map() {
+...         emit('field ' + field + ' time ' + this.time + ' sector ' + this.sector, {ro: this.ro, time: this.time, value: this.value});
+...     }
+>
+>     function reduce(key, values) {
+...         return values;
+...     }
+>
+>     function finalize(key, values) {
+...         if (!values.length) return {};
+...
+...         var out = {
+...             time: values[0].time
+...         };
+...
+...         out.forEach(function (data) {
+...             delete data.time;
+...         });
+...
+...         out.sorted_values = values.sort(function (a, b) {
+...             return a.time - b.time;
+...         });
+...
+...         return out;
+...     }
+>     var def = {
+...         map: map,
+...         reduce: reduce,
+...         finalize: finalize,
+...         out: out
+...     };
+> db.point_datas.mapReduce(def)
+assert failed : need to supply an optionsOrOutString
+Error: Printing Stack Trace
+at printStackTrace (src/mongo/shell/utils.js:37:15)
+at doassert (src/mongo/shell/assert.js:6:5)
+at assert (src/mongo/shell/assert.js:14:5)
+at DBCollection.mapReduce (src/mongo/shell/collection.js:960:5)
+at (shell):1:16
+Mon Sep  2 10:49:03.844 JavaScript execution failed: assert failed : need to supply an optionsOrOutString at src/mongo/shell/assert.js:L7
+> out
+{ "query" : { "sector" : 0, "detail" : 0 } }
+> out.out = {reduce: 'pcst'}
+{ "reduce" : "pcst" }
+> db.point_datas.mapReduce(def)
+assert failed : need to supply an optionsOrOutString
+Error: Printing Stack Trace
+at printStackTrace (src/mongo/shell/utils.js:37:15)
+at doassert (src/mongo/shell/assert.js:6:5)
+at assert (src/mongo/shell/assert.js:14:5)
+at DBCollection.mapReduce (src/mongo/shell/collection.js:960:5)
+at (shell):1:16
+Mon Sep  2 10:49:45.609 JavaScript execution failed: assert failed : need to supply an optionsOrOutString at src/mongo/shell/assert.js:L7
+> def
+{
+"map" : function map() {
+emit('field ' + field + ' time ' + this.time + ' sector ' + this.sector, {ro: this.ro, time: this.time, value: this.value});
+},
+"reduce" : function reduce(key, values) {
+return values;
+},
+"finalize" : function finalize(key, values) {
+if (!values.length) return {};
+
+var out = {
+time: values[0].time
+};
+
+out.forEach(function (data) {
+delete data.time;
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+},
+"out" : {
+"query" : {
+"sector" : 0,
+"detail" : 0
+},
+"out" : {
+"reduce" : "pcst"
+}
+}
+}
+> out
+{
+"query" : {
+"sector" : 0,
+"detail" : 0
+},
+"out" : {
+"reduce" : "pcst"
+}
+}
+> out.finalize = finalize;
+function finalize(key, values) {
+if (!values.length) return {};
+
+var out = {
+time: values[0].time
+};
+
+out.forEach(function (data) {
+delete data.time;
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+> ut
+Mon Sep  2 10:52:00.427 JavaScript execution failed: ReferenceError: ut is not defined
+> out
+{
+"query" : {
+"sector" : 0,
+"detail" : 0
+},
+"out" : {
+"reduce" : "pcst"
+},
+"finalize" : function finalize(key, values) {
+if (!values.length) return {};
+
+var out = {
+time: values[0].time
+};
+
+out.forEach(function (data) {
+delete data.time;
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+}
+> out.finalize = finalize
+function finalize(key, values) {
+if (!values.length) return {};
+
+var out = {
+time: values[0].time
+};
+
+out.forEach(function (data) {
+delete data.time;
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+> out
+{
+"query" : {
+"sector" : 0,
+"detail" : 0
+},
+"out" : {
+"reduce" : "pcst"
+},
+"finalize" : function finalize(key, values) {
+if (!values.length) return {};
+
+var out = {
+time: values[0].time
+};
+
+out.forEach(function (data) {
+delete data.time;
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+}
+> db.point_datas.mapReduce(map, reduce, out)
+Mon Sep  2 10:52:52.151 JavaScript execution failed: map reduce failed:{
+"errmsg" : "exception: JavaScript execution failed: ReferenceError: field is not defined near 'field ' + field + ' time ' + this.time + '  (line 2)",
+"code" : 16722,
+"ok" : 0
+} at src/mongo/shell/collection.js:L970
+>     function map() {
+...         emit('field ' + this.field + ' time ' + this.time + ' sector ' + this.sector, {ro: this.ro, time: this.time, value: this.value});
+...     }
+> db.point_datas.mapReduce(map, reduce, out)
+Mon Sep  2 10:53:38.628 JavaScript execution failed: map reduce failed:{
+"errmsg" : "exception: reduce -> multiple not supported yet",
+"code" : 10075,
+"ok" : 0
+} at src/mongo/shell/collection.js:L970
+>
+>     function map() {
+...         emit('field ' + this.field + ' time ' + this.time + ' sector ' + this.sector, {data: [{ro: this.ro, time: this.time, value: this.value}]});
+...     }
+>
+>     function reduce(key, values) {
+...         var out = {data: []};
+...
+...         values.forEach(function(item){
+...             out.data = out.data.concat(item.data);
+...         });
+...
+...         return out;
+...     }
+>
+>     function finalize(key, values) {
+...         if (!values.data.length) return {};
+...
+...         var out = {
+...             time: values.data[0].time
+...         };
+...
+...         out.data = values.data.map(function (data) {
+...             return {
+...                 ro: data.ro,
+...                 value: data.value
+...             };
+...         });
+...
+...         out.sorted_values = values.sort(function (a, b) {
+...             return a.time - b.time;
+...         });
+...
+...         return out;
+...     }
+> out.finalize = finalize
+function finalize(key, values) {
+if (!values.data.length) return {};
+
+var out = {
+time: values.data[0].time
+};
+
+out.data = values.data.map(function (data) {
+return {
+ro: data.ro,
+value: data.value
+};
+});
+
+out.sorted_values = values.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+> db.point_datas.mapReduce(map, reduce, out)
+Mon Sep  2 10:57:47.435 JavaScript execution failed: map reduce failed:{
+"errmsg" : "exception: JavaScript execution failed: TypeError: Object [object Object] has no method 'sort' near '= values.sort(function (a, b) '  (line 15)",
+"code" : 16722,
+"ok" : 0
+} at src/mongo/shell/collection.js:L970
+>
+>
+>     function finalize(key, values) {
+...         if (!values.data.length) return {};
+...
+...         var out = {
+...             time: values.data[0].time
+...         };
+...
+...         out.data = values.data.map(function (data) {
+...             return {
+...                 ro: data.ro,
+...                 value: data.value
+...             };
+...         });
+...
+...         out.data = out.data.sort(function (a, b) {
+...             return a.time - b.time;
+...         });
+...
+...         return out;
+...     }
+> out.finalize = finalize
+function finalize(key, values) {
+if (!values.data.length) return {};
+
+var out = {
+time: values.data[0].time
+};
+
+out.data = values.data.map(function (data) {
+return {
+ro: data.ro,
+value: data.value
+};
+});
+
+out.data = out.data.sort(function (a, b) {
+return a.time - b.time;
+});
+
+return out;
+}
+> db.point_datas.mapReduce(map, reduce, out)
+{
+"result" : "pcst",
+"timeMillis" : 457,
+"counts" : {
+"input" : 3817,
+"emit" : 3817,
+"reduce" : 1272,
+"output" : 1273
+},
+"ok" : 1,
+}
+> show collections
+pcst
+point_datas
+system.indexes
+> db.pcst.find()
+{ "_id" : "field sun_cos time 0 sector 0", "value" : { "time" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 1 sector 0", "value" : { "time" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257309768853624 }, 	{ 	"ro" : 5, 	"value" : 0.0006101365314830076 }, 	{ 	"ro" : 11, 	"value" : 0.8510276746534366 } ] } }
+{ "_id" : "field sun_cos time 10 sector 0", "value" : { "time" : 10, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257175888000568 }, 	{ 	"ro" : 5, 	"value" : 0.006101313381365436 }, 	{ 	"ro" : 11, 	"value" : 0.8543997462078314 } ] } }
+{ "_id" : "field sun_cos time 100 sector 0", "value" : { "time" : 100, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5243793537439905 }, 	{ 	"ro" : 5, 	"value" : 0.06096136294681809 }, 	{ 	"ro" : 11, 	"value" : 0.8861398116581333 } ] } }
+{ "_id" : "field sun_cos time 1000 sector 0", "value" : { "time" : 1000, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3961965037148537 }, 	{ 	"ro" : 5, 	"value" : 0.5591508129135493 }, 	{ 	"ro" : 11, 	"value" : 0.9866336164522147 } ] } }
+{ "_id" : "field sun_cos time 1001 sector 0", "value" : { "time" : 1001, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3959485435064659 }, 	{ 	"ro" : 5, 	"value" : 0.5596104600511328 }, 	{ 	"ro" : 11, 	"value" : 0.9865164859610439 } ] } }
+{ "_id" : "field sun_cos time 1002 sector 0", "value" : { "time" : 1002, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3957003641097574 }, 	{ 	"ro" : 5, 	"value" : 0.5600698479824497 }, 	{ 	"ro" : 11, 	"value" : 0.9863988406174374 } ] } }
+{ "_id" : "field sun_cos time 1003 sector 0", "value" : { "time" : 1003, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39545199332475445 }, 	{ 	"ro" : 5, 	"value" : 0.5605289252354522 }, 	{ 	"ro" : 11, 	"value" : 0.9862806935913077 } ] } }
+{ "_id" : "field sun_cos time 1004 sector 0", "value" : { "time" : 1004, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39520340507725626 }, 	{ 	"ro" : 5, 	"value" : 0.5609877399972152 }, 	{ 	"ro" : 11, 	"value" : 0.9861620324749615 } ] } }
+{ "_id" : "field sun_cos time 1005 sector 0", "value" : { "time" : 1005, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3949546376516294 }, 	{ 	"ro" : 5, 	"value" : 0.5614462216474634 }, 	{ 	"ro" : 11, 	"value" : 0.9860428755680749 } ] } }
+{ "_id" : "field sun_cos time 1006 sector 0", "value" : { "time" : 1006, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3947056405187668 }, 	{ 	"ro" : 5, 	"value" : 0.5619044633025448 }, 	{ 	"ro" : 11, 	"value" : 0.9859231986619033 } ] } }
+{ "_id" : "field sun_cos time 1007 sector 0", "value" : { "time" : 1007, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39445645033396803 }, 	{ 	"ro" : 5, 	"value" : 0.5623623974379628 }, 	{ 	"ro" : 11, 	"value" : 0.9858030193335333 } ] } }
+{ "_id" : "field sun_cos time 1008 sector 0", "value" : { "time" : 1008, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3942070565303366 }, 	{ 	"ro" : 5, 	"value" : 0.5628200435096277 }, 	{ 	"ro" : 11, 	"value" : 0.9856823325097804 } ] } }
+{ "_id" : "field sun_cos time 1009 sector 0", "value" : { "time" : 1009, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39395746974243573 }, 	{ 	"ro" : 5, 	"value" : 0.5632773820390846 }, 	{ 	"ro" : 11, 	"value" : 0.9855611433593834 } ] } }
+{ "_id" : "field sun_cos time 101 sector 0", "value" : { "time" : 101, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.524352195723433 }, 	{ 	"ro" : 5, 	"value" : 0.06156990528370143 }, 	{ 	"ro" : 11, 	"value" : 0.8864719689055915 } ] } }
+{ "_id" : "field sun_cos time 1010 sector 0", "value" : { "time" : 1010, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39370767772680537 }, 	{ 	"ro" : 5, 	"value" : 0.5637344354898812 }, 	{ 	"ro" : 11, 	"value" : 0.985439445955243 } ] } }
+{ "_id" : "field sun_cos time 1011 sector 0", "value" : { "time" : 1011, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3934576697435097 }, 	{ 	"ro" : 5, 	"value" : 0.5641912234498924 }, 	{ 	"ro" : 11, 	"value" : 0.9853172350257504 } ] } }
+{ "_id" : "field sun_cos time 1012 sector 0", "value" : { "time" : 1012, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39320746883280355 }, 	{ 	"ro" : 5, 	"value" : 0.5646477038068551 }, 	{ 	"ro" : 11, 	"value" : 0.9851945218240111 } ] } }
+{ "_id" : "field sun_cos time 1013 sector 0", "value" : { "time" : 1013, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3929570642389769 }, 	{ 	"ro" : 5, 	"value" : 0.5651038962161412 }, 	{ 	"ro" : 11, 	"value" : 0.985071301094609 } ] } }
+{ "_id" : "field sun_cos time 1014 sector 0", "value" : { "time" : 1014, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39270646678238086 }, 	{ 	"ro" : 5, 	"value" : 0.5655597809961668 }, 	{ 	"ro" : 11, 	"value" : 0.9849475781813518 } ] } }
+Type "it" for more
+> db.pcst.find().limit(1)
+{ "_id" : "field sun_cos time 0 sector 0", "value" : { "time" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+> show collections
+pcst
+point_datas
+system.indexes
+>
+>     function map() {
+...         emit('field ' + this.field + ' time ' + this.time + ' sector ' + this.sector, {data: [{ro: this.ro, sector: this.sector, time: this.time, value: this.value}]});
+...     }
+>
+>     function reduce(key, values) {
+...         var out = {data: []};
+...
+...         values.forEach(function(item){
+...             out.data = out.data.concat(item.data);
+...         });
+...
+...         return out;
+...     }
+>
+>     function finalize(key, values) {
+...         if (!values.data.length) return {};
+...
+...         var out = {
+...             time: values.data[0].time,
+...             sector: values.data[0].sector
+...         };
+...
+...         out.data = values.data.map(function (data) {
+...             return {
+...                 ro: data.ro,
+...                 value: data.value
+...             };
+...         });
+...
+...         out.data = out.data.sort(function (a, b) {
+...             return a.time - b.time;
+...         });
+...
+...         return out;
+...     }
+> var def = {
+... map: map,
+... reduce: reduce,
+... }
+> var out = {
+... out: {reduce: 'mrsto'},
+... finalize: finalize
+... }
+> db.point_datas.mapReduce(map, reduce, out)
+{
+"result" : "mrsto",
+"timeMillis" : 7684,
+"counts" : {
+"input" : 76837,
+"emit" : 76837,
+"reduce" : 25638,
+"output" : 25620
+},
+"ok" : 1,
+}
+> db.mrsto.find()
+{ "_id" : "field sun_cos time 0 sector 0", "value" : { "time" : 0, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 1", "value" : { "time" : 0, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 1, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 } ] } }
+{ "_id" : "field sun_cos time 0 sector 10", "value" : { "time" : 0, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 4, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 9, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 11", "value" : { "time" : 0, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 3, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 4, 	"value" : -2.220446049250313e-16 } ] } }
+{ "_id" : "field sun_cos time 0 sector 12", "value" : { "time" : 0, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 3, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 6, 	"value" : -2.220446049250313e-16 } ] } }
+{ "_id" : "field sun_cos time 0 sector 13", "value" : { "time" : 0, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 6, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 8, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 14", "value" : { "time" : 0, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 8, 	"value" : -0.8506508083520403 }, 	{ 	"ro" : 9, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 15", "value" : { "time" : 0, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 9, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 16", "value" : { "time" : 0, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 4, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 17", "value" : { "time" : 0, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 6, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 10, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 18", "value" : { "time" : 0, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 7, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 8, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 19", "value" : { "time" : 0, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 8, 	"value" : -0.8506508083520403 }, 	{ 	"ro" : 9, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 2", "value" : { "time" : 0, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 1, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 7, 	"value" : -2.220446049250313e-16 } ] } }
+{ "_id" : "field sun_cos time 0 sector 3", "value" : { "time" : 0, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 7, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 10, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 4", "value" : { "time" : 0, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 10, 	"value" : 0.8506508083520399 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 5", "value" : { "time" : 0, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 9, 	"value" : -0.8506508083520403 } ] } }
+{ "_id" : "field sun_cos time 0 sector 6", "value" : { "time" : 0, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 7", "value" : { "time" : 0, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 10, 	"value" : 0.8506508083520399 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 8", "value" : { "time" : 0, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 7, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 10, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 0 sector 9", "value" : { "time" : 0, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : -0.5257311121191339 }, 	{ 	"ro" : 7, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 8, 	"value" : -0.8506508083520403 } ] } }
+Type "it" for more
+> db.mrsto.find().count()
+25620
+> show dbs
+admin	(empty)
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_25102	0.203125GB
+test_ico_data_28081	0.203125GB
+test_ico_data_34095	0.203125GB
+test_ico_data_47538	0.203125GB
+test_ico_data_84953	0.203125GB
+wll	0.203125GB
+> load('/Users/dave/Documents/node/ico-data/libs/drop_test_dbs.js')
+dropping db test_ico_data_25102
+dropping db test_ico_data_28081
+dropping db test_ico_data_34095
+dropping db test_ico_data_47538
+dropping db test_ico_data_84953
+true
+> show collections
+> show dbs
+admin	(empty)
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_50189	0.203125GB
+test_ico_data_84953	(empty)
+wll	0.203125GB
+> show dbs
+admin	(empty)
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_50189	0.203125GB
+test_ico_data_84953	(empty)
+wll	0.203125GB
+> use test_ico_data_50189
+switched to db test_ico_data_50189
+> show collections
+point_datas
+system.indexes
+> show collections
+point_datas
+system.indexes
+> show collections
+point_datas
+sun_cosines
+system.indexes
+> db.sun_cosines.find()
+{ "_id" : "field sun_cos time 0 sector 0", "value" : { "time" : 0, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257311121191335 }, 	{ 	"ro" : 5, 	"value" : -2.220446049250313e-16 }, 	{ 	"ro" : 11, 	"value" : 0.8506508083520399 } ] } }
+{ "_id" : "field sun_cos time 1 sector 0", "value" : { "time" : 1, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257309768853624 }, 	{ 	"ro" : 5, 	"value" : 0.0006101365314830076 }, 	{ 	"ro" : 11, 	"value" : 0.8510276746534366 } ] } }
+{ "_id" : "field sun_cos time 10 sector 0", "value" : { "time" : 10, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5257175888000568 }, 	{ 	"ro" : 5, 	"value" : 0.006101313381365436 }, 	{ 	"ro" : 11, 	"value" : 0.8543997462078314 } ] } }
+{ "_id" : "field sun_cos time 100 sector 0", "value" : { "time" : 100, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.5243793537439905 }, 	{ 	"ro" : 5, 	"value" : 0.06096136294681809 }, 	{ 	"ro" : 11, 	"value" : 0.8861398116581333 } ] } }
+{ "_id" : "field sun_cos time 1000 sector 0", "value" : { "time" : 1000, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3961965037148537 }, 	{ 	"ro" : 5, 	"value" : 0.5591508129135493 }, 	{ 	"ro" : 11, 	"value" : 0.9866336164522147 } ] } }
+{ "_id" : "field sun_cos time 1001 sector 0", "value" : { "time" : 1001, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3959485435064659 }, 	{ 	"ro" : 5, 	"value" : 0.5596104600511328 }, 	{ 	"ro" : 11, 	"value" : 0.9865164859610439 } ] } }
+{ "_id" : "field sun_cos time 1002 sector 0", "value" : { "time" : 1002, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3957003641097574 }, 	{ 	"ro" : 5, 	"value" : 0.5600698479824497 }, 	{ 	"ro" : 11, 	"value" : 0.9863988406174374 } ] } }
+{ "_id" : "field sun_cos time 1003 sector 0", "value" : { "time" : 1003, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39545199332475445 }, 	{ 	"ro" : 5, 	"value" : 0.5605289252354522 }, 	{ 	"ro" : 11, 	"value" : 0.9862806935913077 } ] } }
+{ "_id" : "field sun_cos time 1004 sector 0", "value" : { "time" : 1004, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39520340507725626 }, 	{ 	"ro" : 5, 	"value" : 0.5609877399972152 }, 	{ 	"ro" : 11, 	"value" : 0.9861620324749615 } ] } }
+{ "_id" : "field sun_cos time 1005 sector 0", "value" : { "time" : 1005, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3949546376516294 }, 	{ 	"ro" : 5, 	"value" : 0.5614462216474634 }, 	{ 	"ro" : 11, 	"value" : 0.9860428755680749 } ] } }
+{ "_id" : "field sun_cos time 1006 sector 0", "value" : { "time" : 1006, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3947056405187668 }, 	{ 	"ro" : 5, 	"value" : 0.5619044633025448 }, 	{ 	"ro" : 11, 	"value" : 0.9859231986619033 } ] } }
+{ "_id" : "field sun_cos time 1007 sector 0", "value" : { "time" : 1007, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39445645033396803 }, 	{ 	"ro" : 5, 	"value" : 0.5623623974379628 }, 	{ 	"ro" : 11, 	"value" : 0.9858030193335333 } ] } }
+{ "_id" : "field sun_cos time 1008 sector 0", "value" : { "time" : 1008, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3942070565303366 }, 	{ 	"ro" : 5, 	"value" : 0.5628200435096277 }, 	{ 	"ro" : 11, 	"value" : 0.9856823325097804 } ] } }
+{ "_id" : "field sun_cos time 1009 sector 0", "value" : { "time" : 1009, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39395746974243573 }, 	{ 	"ro" : 5, 	"value" : 0.5632773820390846 }, 	{ 	"ro" : 11, 	"value" : 0.9855611433593834 } ] } }
+{ "_id" : "field sun_cos time 101 sector 0", "value" : { "time" : 101, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.524352195723433 }, 	{ 	"ro" : 5, 	"value" : 0.06156990528370143 }, 	{ 	"ro" : 11, 	"value" : 0.8864719689055915 } ] } }
+{ "_id" : "field sun_cos time 1010 sector 0", "value" : { "time" : 1010, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39370767772680537 }, 	{ 	"ro" : 5, 	"value" : 0.5637344354898812 }, 	{ 	"ro" : 11, 	"value" : 0.985439445955243 } ] } }
+{ "_id" : "field sun_cos time 1011 sector 0", "value" : { "time" : 1011, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3934576697435097 }, 	{ 	"ro" : 5, 	"value" : 0.5641912234498924 }, 	{ 	"ro" : 11, 	"value" : 0.9853172350257504 } ] } }
+{ "_id" : "field sun_cos time 1012 sector 0", "value" : { "time" : 1012, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39320746883280355 }, 	{ 	"ro" : 5, 	"value" : 0.5646477038068551 }, 	{ 	"ro" : 11, 	"value" : 0.9851945218240111 } ] } }
+{ "_id" : "field sun_cos time 1013 sector 0", "value" : { "time" : 1013, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.3929570642389769 }, 	{ 	"ro" : 5, 	"value" : 0.5651038962161412 }, 	{ 	"ro" : 11, 	"value" : 0.985071301094609 } ] } }
+{ "_id" : "field sun_cos time 1014 sector 0", "value" : { "time" : 1014, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0.39270646678238086 }, 	{ 	"ro" : 5, 	"value" : 0.5655597809961668 }, 	{ 	"ro" : 11, 	"value" : 0.9849475781813518 } ] } }
+Type "it" for more
+> use test_ico_data_62904
+switched to db test_ico_data_62904
+> show collections
+> show colections
+Mon Sep  2 21:02:34.034 JavaScript execution failed: don't know how to show [colections] at src/mongo/shell/utils.js:L847
+> show colections
+Mon Sep  2 21:02:40.167 JavaScript execution failed: don't know how to show [colections] at src/mongo/shell/utils.js:L847
+> show collections
+> show dbs
+admin	(empty)
+ico	0.453125GB
+local	0.078125GB
+mongoose_model_tests_16800	0.203125GB
+test_ico_data_50189	0.203125GB
+test_ico_data_62904	(empty)
+test_ico_data_84953	(empty)
+wll	0.203125GB
+> use test_ico_data_40894
+switched to db test_ico_data_40894
+> show collections
+point_datas
+system.indexes
+> db.point_datas.find()
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 0, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602d6f5376525f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 0, "ro" : 10, "value" : 0, "_id" : ObjectId("5225602d6f5376525f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 0, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602d6f5376525f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 0, "ro" : 2, "value" : 0, "_id" : ObjectId("5225602d67ce1f5a5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 0, "ro" : 3, "value" : 0, "_id" : ObjectId("5225602d67ce1f5a5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 0, "ro" : 4, "value" : 0, "_id" : ObjectId("5225602d67ce1f5a5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 0, "ro" : 6, "value" : 0, "_id" : ObjectId("5225602d458a66575f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 0, "ro" : 7, "value" : 0, "_id" : ObjectId("5225602d458a66575f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 0, "ro" : 10, "value" : 0, "_id" : ObjectId("5225602d458a66575f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 0, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602d84462a4e5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 0, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602d84462a4e5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 0, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602d84462a4e5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 0, "ro" : 1, "value" : 0, "_id" : ObjectId("5225602d13aa6b625f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 0, "ro" : 8, "value" : 0, "_id" : ObjectId("5225602d13aa6b625f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 0, "ro" : 9, "value" : 0, "_id" : ObjectId("5225602d13aa6b625f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 0, "ro" : 1, "value" : 0, "_id" : ObjectId("5225602d9fff66535f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 0, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602d9fff66535f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 0, "ro" : 9, "value" : 0, "_id" : ObjectId("5225602d9fff66535f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 0, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602d344c29505f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 0, "ro" : 1, "value" : 0, "_id" : ObjectId("5225602d344c29505f000002") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 0, "ro" : 7, "value" : 0, "_id" : ObjectId("5225602d344c29505f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 0, "ro" : 3, "value" : 0, "_id" : ObjectId("5225602d88df81595f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 0, "ro" : 4, "value" : 0, "_id" : ObjectId("5225602d88df81595f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 0, "ro" : 9, "value" : 0, "_id" : ObjectId("5225602d88df81595f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 0, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602d99abe3515f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 0, "ro" : 7, "value" : 0, "_id" : ObjectId("5225602d99abe3515f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 0, "ro" : 10, "value" : 0, "_id" : ObjectId("5225602d99abe3515f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 0, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602dd2650b4f5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 0, "ro" : 1, "value" : 0, "_id" : ObjectId("5225602dd2650b4f5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 0, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602dd2650b4f5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 0, "ro" : 4, "value" : 0, "_id" : ObjectId("5225602df821825e5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 0, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602df821825e5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 0, "ro" : 9, "value" : 0, "_id" : ObjectId("5225602df821825e5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 0, "ro" : 1, "value" : 0, "_id" : ObjectId("5225602d388ad3585f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 0, "ro" : 7, "value" : 0, "_id" : ObjectId("5225602d388ad3585f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 0, "ro" : 8, "value" : 0, "_id" : ObjectId("5225602d388ad3585f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 0, "ro" : 4, "value" : 0, "_id" : ObjectId("5225602de1ead4555f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 0, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602de1ead4555f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 0, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602de1ead4555f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 0, "ro" : 2, "value" : 0, "_id" : ObjectId("5225602d346621605f000001") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 0, "ro" : 6, "value" : 0, "_id" : ObjectId("5225602d346621605f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 0, "ro" : 10, "value" : 0, "_id" : ObjectId("5225602d346621605f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 0, "ro" : 3, "value" : 0, "_id" : ObjectId("5225602d2c93985d5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 0, "ro" : 8, "value" : 0, "_id" : ObjectId("5225602d2c93985d5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 0, "ro" : 9, "value" : 0, "_id" : ObjectId("5225602d2c93985d5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 0, "ro" : 6, "value" : 0, "_id" : ObjectId("5225602d026e88615f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 0, "ro" : 7, "value" : 0, "_id" : ObjectId("5225602d026e88615f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 0, "ro" : 8, "value" : 0, "_id" : ObjectId("5225602d026e88615f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 0, "ro" : 2, "value" : 0, "_id" : ObjectId("5225602de3e34f565f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 0, "ro" : 10, "value" : 0, "_id" : ObjectId("5225602de3e34f565f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 0, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602de3e34f565f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 0, "ro" : 2, "value" : 0, "_id" : ObjectId("5225602dff67405b5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 0, "ro" : 3, "value" : 0, "_id" : ObjectId("5225602dff67405b5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 0, "ro" : 6, "value" : 0, "_id" : ObjectId("5225602dff67405b5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 0, "ro" : 3, "value" : 0, "_id" : ObjectId("5225602d70965a5c5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 0, "ro" : 6, "value" : 0, "_id" : ObjectId("5225602d70965a5c5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 0, "ro" : 8, "value" : 0, "_id" : ObjectId("5225602d70965a5c5f000003") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 0, "ro" : 2, "value" : 0, "_id" : ObjectId("5225602dc766145f5f000001") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 0, "ro" : 4, "value" : 0, "_id" : ObjectId("5225602dc766145f5f000002") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 0, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602dc766145f5f000003") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 1, "ro" : 0, "value" : 0, "_id" : ObjectId("5225602e84462a4e5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 1, "ro" : 5, "value" : 0, "_id" : ObjectId("5225602e84462a4e5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 0, "time" : 1, "ro" : 11, "value" : 0, "_id" : ObjectId("5225602e84462a4e5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 1, "ro" : 2, "value" : 11, "_id" : ObjectId("5225602e67ce1f5a5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 1, "ro" : 3, "value" : 11, "_id" : ObjectId("5225602e67ce1f5a5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 11, "time" : 1, "ro" : 4, "value" : 11, "_id" : ObjectId("5225602e67ce1f5a5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 1, "ro" : 4, "value" : 6, "_id" : ObjectId("5225602ee1ead4555f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 1, "ro" : 5, "value" : 6, "_id" : ObjectId("5225602ee1ead4555f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 6, "time" : 1, "ro" : 11, "value" : 6, "_id" : ObjectId("5225602ee1ead4555f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 1, "ro" : 1, "value" : 19, "_id" : ObjectId("5225602e13aa6b625f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 1, "ro" : 8, "value" : 19, "_id" : ObjectId("5225602e13aa6b625f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 19, "time" : 1, "ro" : 9, "value" : 19, "_id" : ObjectId("5225602e13aa6b625f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 1, "ro" : 2, "value" : 12, "_id" : ObjectId("5225602eff67405b5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 1, "ro" : 3, "value" : 12, "_id" : ObjectId("5225602eff67405b5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 12, "time" : 1, "ro" : 6, "value" : 12, "_id" : ObjectId("5225602eff67405b5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 1, "ro" : 0, "value" : 1, "_id" : ObjectId("5225602ed2650b4f5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 1, "ro" : 1, "value" : 1, "_id" : ObjectId("5225602ed2650b4f5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 1, "time" : 1, "ro" : 5, "value" : 1, "_id" : ObjectId("5225602ed2650b4f5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 1, "ro" : 3, "value" : 10, "_id" : ObjectId("5225602e88df81595f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 1, "ro" : 4, "value" : 10, "_id" : ObjectId("5225602e88df81595f000005") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sxt", "sector" : 10, "time" : 1, "ro" : 9, "value" : 10, "_id" : ObjectId("5225602e88df81595f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 1, "ro" : 2, "value" : 16, "_id" : ObjectId("5225602ec766145f5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 1, "ro" : 4, "value" : 16, "_id" : ObjectId("5225602ec766145f5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 16, "time" : 1, "ro" : 11, "value" : 16, "_id" : ObjectId("5225602ec766145f5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 1, "ro" : 4, "value" : 15, "_id" : ObjectId("5225602ef821825e5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 1, "ro" : 5, "value" : 15, "_id" : ObjectId("5225602ef821825e5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 15, "time" : 1, "ro" : 9, "value" : 15, "_id" : ObjectId("5225602ef821825e5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 1, "ro" : 1, "value" : 9, "_id" : ObjectId("5225602e388ad3585f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 1, "ro" : 7, "value" : 9, "_id" : ObjectId("5225602e388ad3585f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 9, "time" : 1, "ro" : 8, "value" : 9, "_id" : ObjectId("5225602e388ad3585f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 1, "ro" : 2, "value" : 17, "_id" : ObjectId("5225602e346621605f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 1, "ro" : 6, "value" : 17, "_id" : ObjectId("5225602e346621605f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 17, "time" : 1, "ro" : 10, "value" : 17, "_id" : ObjectId("5225602e346621605f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 1, "ro" : 0, "value" : 4, "_id" : ObjectId("5225602e6f5376525f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 1, "ro" : 10, "value" : 4, "_id" : ObjectId("5225602e6f5376525f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 4, "time" : 1, "ro" : 11, "value" : 4, "_id" : ObjectId("5225602e6f5376525f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 1, "ro" : 1, "value" : 5, "_id" : ObjectId("5225602e9fff66535f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 1, "ro" : 5, "value" : 5, "_id" : ObjectId("5225602e9fff66535f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 5, "time" : 1, "ro" : 9, "value" : 5, "_id" : ObjectId("5225602e9fff66535f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 1, "ro" : 3, "value" : 13, "_id" : ObjectId("5225602e70965a5c5f000004") }
+Type "it" for more
+> it
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 1, "ro" : 6, "value" : 13, "_id" : ObjectId("5225602e70965a5c5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 13, "time" : 1, "ro" : 8, "value" : 13, "_id" : ObjectId("5225602e70965a5c5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 1, "ro" : 0, "value" : 2, "_id" : ObjectId("5225602e344c29505f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 1, "ro" : 1, "value" : 2, "_id" : ObjectId("5225602e344c29505f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 2, "time" : 1, "ro" : 7, "value" : 2, "_id" : ObjectId("5225602e344c29505f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 1, "ro" : 3, "value" : 14, "_id" : ObjectId("5225602e2c93985d5f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 1, "ro" : 8, "value" : 14, "_id" : ObjectId("5225602e2c93985d5f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 14, "time" : 1, "ro" : 9, "value" : 14, "_id" : ObjectId("5225602e2c93985d5f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 1, "ro" : 2, "value" : 7, "_id" : ObjectId("5225602ee3e34f565f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 1, "ro" : 10, "value" : 7, "_id" : ObjectId("5225602ee3e34f565f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 7, "time" : 1, "ro" : 11, "value" : 7, "_id" : ObjectId("5225602ee3e34f565f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 1, "ro" : 0, "value" : 3, "_id" : ObjectId("5225602e99abe3515f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 1, "ro" : 7, "value" : 3, "_id" : ObjectId("5225602e99abe3515f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 3, "time" : 1, "ro" : 10, "value" : 3, "_id" : ObjectId("5225602e99abe3515f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 1, "ro" : 6, "value" : 8, "_id" : ObjectId("5225602e458a66575f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 1, "ro" : 7, "value" : 8, "_id" : ObjectId("5225602e458a66575f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 8, "time" : 1, "ro" : 10, "value" : 8, "_id" : ObjectId("5225602e458a66575f000006") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 1, "ro" : 6, "value" : 18, "_id" : ObjectId("5225602e026e88615f000004") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 1, "ro" : 7, "value" : 18, "_id" : ObjectId("5225602e026e88615f000005") }
+{ "detail" : 0, "field" : "sxt", "sector" : 18, "time" : 1, "ro" : 8, "value" : 18, "_id" : ObjectId("5225602e026e88615f000006") }
+Type "it" for more
+> show collections
+point_datas
+system.indexes
+> show collections
+point_datas
+system.indexes
+> use test_ico_data_83638
+switched to db test_ico_data_83638
+> show collections
+point_datas
+sxt
+system.indexes
+> db.sxt.find()
+{ "_id" : "field sxt time 0 sector 0", "value" : { "time" : 0, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 1 sector 0", "value" : { "time" : 1, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 2 sector 0", "value" : { "time" : 2, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 3 sector 0", "value" : { "time" : 3, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 4 sector 0", "value" : { "time" : 4, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 5 sector 0", "value" : { "time" : 5, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 6 sector 0", "value" : { "time" : 6, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 7 sector 0", "value" : { "time" : 7, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 8 sector 0", "value" : { "time" : 8, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 9 sector 0", "value" : { "time" : 9, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 10 sector 0", "value" : { "time" : 10, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+> use test_ico_data_29380
+switched to db test_ico_data_29380
+> db.sxt.find()
+{ "_id" : "field sxt time 0 sector 0", "value" : { "time" : 0, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 1", "value" : { "time" : 0, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 10", "value" : { "time" : 0, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 11", "value" : { "time" : 0, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 12", "value" : { "time" : 0, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 13", "value" : { "time" : 0, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 14", "value" : { "time" : 0, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 15", "value" : { "time" : 0, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 16", "value" : { "time" : 0, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 17", "value" : { "time" : 0, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 18", "value" : { "time" : 0, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 19", "value" : { "time" : 0, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 2", "value" : { "time" : 0, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 3", "value" : { "time" : 0, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 4", "value" : { "time" : 0, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 5", "value" : { "time" : 0, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 6", "value" : { "time" : 0, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 7", "value" : { "time" : 0, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 8", "value" : { "time" : 0, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 9", "value" : { "time" : 0, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 1 sector 0", "value" : { "time" : 1, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 1 sector 1", "value" : { "time" : 1, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 1 }, 	{ 	"ro" : 1, 	"value" : 1 }, 	{ 	"ro" : 5, 	"value" : 1 } ] } }
+{ "_id" : "field sxt time 1 sector 10", "value" : { "time" : 1, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 10 }, 	{ 	"ro" : 4, 	"value" : 10 }, 	{ 	"ro" : 9, 	"value" : 10 } ] } }
+{ "_id" : "field sxt time 1 sector 11", "value" : { "time" : 1, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 11 }, 	{ 	"ro" : 3, 	"value" : 11 }, 	{ 	"ro" : 4, 	"value" : 11 } ] } }
+{ "_id" : "field sxt time 1 sector 12", "value" : { "time" : 1, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 12 }, 	{ 	"ro" : 3, 	"value" : 12 }, 	{ 	"ro" : 6, 	"value" : 12 } ] } }
+{ "_id" : "field sxt time 1 sector 13", "value" : { "time" : 1, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 13 }, 	{ 	"ro" : 6, 	"value" : 13 }, 	{ 	"ro" : 8, 	"value" : 13 } ] } }
+{ "_id" : "field sxt time 1 sector 14", "value" : { "time" : 1, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 14 }, 	{ 	"ro" : 8, 	"value" : 14 }, 	{ 	"ro" : 9, 	"value" : 14 } ] } }
+{ "_id" : "field sxt time 1 sector 15", "value" : { "time" : 1, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 15 }, 	{ 	"ro" : 5, 	"value" : 15 }, 	{ 	"ro" : 9, 	"value" : 15 } ] } }
+{ "_id" : "field sxt time 1 sector 16", "value" : { "time" : 1, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 16 }, 	{ 	"ro" : 4, 	"value" : 16 }, 	{ 	"ro" : 11, 	"value" : 16 } ] } }
+{ "_id" : "field sxt time 1 sector 17", "value" : { "time" : 1, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 17 }, 	{ 	"ro" : 6, 	"value" : 17 }, 	{ 	"ro" : 10, 	"value" : 17 } ] } }
+{ "_id" : "field sxt time 1 sector 18", "value" : { "time" : 1, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 18 }, 	{ 	"ro" : 7, 	"value" : 18 }, 	{ 	"ro" : 8, 	"value" : 18 } ] } }
+{ "_id" : "field sxt time 1 sector 19", "value" : { "time" : 1, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 19 }, 	{ 	"ro" : 8, 	"value" : 19 }, 	{ 	"ro" : 9, 	"value" : 19 } ] } }
+{ "_id" : "field sxt time 1 sector 2", "value" : { "time" : 1, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 2 }, 	{ 	"ro" : 1, 	"value" : 2 }, 	{ 	"ro" : 7, 	"value" : 2 } ] } }
+{ "_id" : "field sxt time 1 sector 3", "value" : { "time" : 1, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 3 }, 	{ 	"ro" : 7, 	"value" : 3 }, 	{ 	"ro" : 10, 	"value" : 3 } ] } }
+{ "_id" : "field sxt time 1 sector 4", "value" : { "time" : 1, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 4 }, 	{ 	"ro" : 10, 	"value" : 4 }, 	{ 	"ro" : 11, 	"value" : 4 } ] } }
+{ "_id" : "field sxt time 1 sector 5", "value" : { "time" : 1, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 5 }, 	{ 	"ro" : 5, 	"value" : 5 }, 	{ 	"ro" : 9, 	"value" : 5 } ] } }
+{ "_id" : "field sxt time 1 sector 6", "value" : { "time" : 1, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 6 }, 	{ 	"ro" : 5, 	"value" : 6 }, 	{ 	"ro" : 11, 	"value" : 6 } ] } }
+{ "_id" : "field sxt time 1 sector 7", "value" : { "time" : 1, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 7 }, 	{ 	"ro" : 10, 	"value" : 7 }, 	{ 	"ro" : 11, 	"value" : 7 } ] } }
+{ "_id" : "field sxt time 1 sector 8", "value" : { "time" : 1, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 8 }, 	{ 	"ro" : 7, 	"value" : 8 }, 	{ 	"ro" : 10, 	"value" : 8 } ] } }
+{ "_id" : "field sxt time 1 sector 9", "value" : { "time" : 1, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 9 }, 	{ 	"ro" : 7, 	"value" : 9 }, 	{ 	"ro" : 8, 	"value" : 9 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 2 sector 0", "value" : { "time" : 2, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 2 sector 1", "value" : { "time" : 2, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 2 }, 	{ 	"ro" : 1, 	"value" : 2 }, 	{ 	"ro" : 5, 	"value" : 2 } ] } }
+{ "_id" : "field sxt time 2 sector 10", "value" : { "time" : 2, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 20 }, 	{ 	"ro" : 4, 	"value" : 20 }, 	{ 	"ro" : 9, 	"value" : 20 } ] } }
+{ "_id" : "field sxt time 2 sector 11", "value" : { "time" : 2, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 22 }, 	{ 	"ro" : 3, 	"value" : 22 }, 	{ 	"ro" : 4, 	"value" : 22 } ] } }
+{ "_id" : "field sxt time 2 sector 12", "value" : { "time" : 2, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 24 }, 	{ 	"ro" : 3, 	"value" : 24 }, 	{ 	"ro" : 6, 	"value" : 24 } ] } }
+{ "_id" : "field sxt time 2 sector 13", "value" : { "time" : 2, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 26 }, 	{ 	"ro" : 6, 	"value" : 26 }, 	{ 	"ro" : 8, 	"value" : 26 } ] } }
+{ "_id" : "field sxt time 2 sector 14", "value" : { "time" : 2, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 28 }, 	{ 	"ro" : 8, 	"value" : 28 }, 	{ 	"ro" : 9, 	"value" : 28 } ] } }
+{ "_id" : "field sxt time 2 sector 15", "value" : { "time" : 2, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 30 }, 	{ 	"ro" : 5, 	"value" : 30 }, 	{ 	"ro" : 9, 	"value" : 30 } ] } }
+{ "_id" : "field sxt time 2 sector 16", "value" : { "time" : 2, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 32 }, 	{ 	"ro" : 4, 	"value" : 32 }, 	{ 	"ro" : 11, 	"value" : 32 } ] } }
+{ "_id" : "field sxt time 2 sector 17", "value" : { "time" : 2, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 34 }, 	{ 	"ro" : 6, 	"value" : 34 }, 	{ 	"ro" : 10, 	"value" : 34 } ] } }
+{ "_id" : "field sxt time 2 sector 18", "value" : { "time" : 2, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 36 }, 	{ 	"ro" : 7, 	"value" : 36 }, 	{ 	"ro" : 8, 	"value" : 36 } ] } }
+{ "_id" : "field sxt time 2 sector 19", "value" : { "time" : 2, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 38 }, 	{ 	"ro" : 8, 	"value" : 38 }, 	{ 	"ro" : 9, 	"value" : 38 } ] } }
+{ "_id" : "field sxt time 2 sector 2", "value" : { "time" : 2, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 4 }, 	{ 	"ro" : 1, 	"value" : 4 }, 	{ 	"ro" : 7, 	"value" : 4 } ] } }
+{ "_id" : "field sxt time 2 sector 3", "value" : { "time" : 2, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 6 }, 	{ 	"ro" : 7, 	"value" : 6 }, 	{ 	"ro" : 10, 	"value" : 6 } ] } }
+{ "_id" : "field sxt time 2 sector 4", "value" : { "time" : 2, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 8 }, 	{ 	"ro" : 10, 	"value" : 8 }, 	{ 	"ro" : 11, 	"value" : 8 } ] } }
+{ "_id" : "field sxt time 2 sector 5", "value" : { "time" : 2, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 10 }, 	{ 	"ro" : 5, 	"value" : 10 }, 	{ 	"ro" : 9, 	"value" : 10 } ] } }
+{ "_id" : "field sxt time 2 sector 6", "value" : { "time" : 2, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 12 }, 	{ 	"ro" : 5, 	"value" : 12 }, 	{ 	"ro" : 11, 	"value" : 12 } ] } }
+{ "_id" : "field sxt time 2 sector 7", "value" : { "time" : 2, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 14 }, 	{ 	"ro" : 10, 	"value" : 14 }, 	{ 	"ro" : 11, 	"value" : 14 } ] } }
+{ "_id" : "field sxt time 2 sector 8", "value" : { "time" : 2, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 16 }, 	{ 	"ro" : 7, 	"value" : 16 }, 	{ 	"ro" : 10, 	"value" : 16 } ] } }
+{ "_id" : "field sxt time 2 sector 9", "value" : { "time" : 2, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 18 }, 	{ 	"ro" : 7, 	"value" : 18 }, 	{ 	"ro" : 8, 	"value" : 18 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 3 sector 0", "value" : { "time" : 3, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 3 sector 1", "value" : { "time" : 3, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 3 }, 	{ 	"ro" : 1, 	"value" : 3 }, 	{ 	"ro" : 5, 	"value" : 3 } ] } }
+{ "_id" : "field sxt time 3 sector 10", "value" : { "time" : 3, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 30 }, 	{ 	"ro" : 4, 	"value" : 30 }, 	{ 	"ro" : 9, 	"value" : 30 } ] } }
+{ "_id" : "field sxt time 3 sector 11", "value" : { "time" : 3, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 33 }, 	{ 	"ro" : 3, 	"value" : 33 }, 	{ 	"ro" : 4, 	"value" : 33 } ] } }
+{ "_id" : "field sxt time 3 sector 12", "value" : { "time" : 3, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 36 }, 	{ 	"ro" : 3, 	"value" : 36 }, 	{ 	"ro" : 6, 	"value" : 36 } ] } }
+{ "_id" : "field sxt time 3 sector 13", "value" : { "time" : 3, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 39 }, 	{ 	"ro" : 6, 	"value" : 39 }, 	{ 	"ro" : 8, 	"value" : 39 } ] } }
+{ "_id" : "field sxt time 3 sector 14", "value" : { "time" : 3, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 42 }, 	{ 	"ro" : 8, 	"value" : 42 }, 	{ 	"ro" : 9, 	"value" : 42 } ] } }
+{ "_id" : "field sxt time 3 sector 15", "value" : { "time" : 3, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 45 }, 	{ 	"ro" : 5, 	"value" : 45 }, 	{ 	"ro" : 9, 	"value" : 45 } ] } }
+{ "_id" : "field sxt time 3 sector 16", "value" : { "time" : 3, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 48 }, 	{ 	"ro" : 4, 	"value" : 48 }, 	{ 	"ro" : 11, 	"value" : 48 } ] } }
+{ "_id" : "field sxt time 3 sector 17", "value" : { "time" : 3, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 51 }, 	{ 	"ro" : 6, 	"value" : 51 }, 	{ 	"ro" : 10, 	"value" : 51 } ] } }
+{ "_id" : "field sxt time 3 sector 18", "value" : { "time" : 3, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 54 }, 	{ 	"ro" : 7, 	"value" : 54 }, 	{ 	"ro" : 8, 	"value" : 54 } ] } }
+{ "_id" : "field sxt time 3 sector 19", "value" : { "time" : 3, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 57 }, 	{ 	"ro" : 8, 	"value" : 57 }, 	{ 	"ro" : 9, 	"value" : 57 } ] } }
+{ "_id" : "field sxt time 3 sector 2", "value" : { "time" : 3, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 6 }, 	{ 	"ro" : 1, 	"value" : 6 }, 	{ 	"ro" : 7, 	"value" : 6 } ] } }
+{ "_id" : "field sxt time 3 sector 3", "value" : { "time" : 3, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 9 }, 	{ 	"ro" : 7, 	"value" : 9 }, 	{ 	"ro" : 10, 	"value" : 9 } ] } }
+{ "_id" : "field sxt time 3 sector 4", "value" : { "time" : 3, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 12 }, 	{ 	"ro" : 10, 	"value" : 12 }, 	{ 	"ro" : 11, 	"value" : 12 } ] } }
+{ "_id" : "field sxt time 3 sector 5", "value" : { "time" : 3, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 15 }, 	{ 	"ro" : 5, 	"value" : 15 }, 	{ 	"ro" : 9, 	"value" : 15 } ] } }
+{ "_id" : "field sxt time 3 sector 6", "value" : { "time" : 3, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 18 }, 	{ 	"ro" : 5, 	"value" : 18 }, 	{ 	"ro" : 11, 	"value" : 18 } ] } }
+{ "_id" : "field sxt time 3 sector 7", "value" : { "time" : 3, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 21 }, 	{ 	"ro" : 10, 	"value" : 21 }, 	{ 	"ro" : 11, 	"value" : 21 } ] } }
+{ "_id" : "field sxt time 3 sector 8", "value" : { "time" : 3, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 24 }, 	{ 	"ro" : 7, 	"value" : 24 }, 	{ 	"ro" : 10, 	"value" : 24 } ] } }
+{ "_id" : "field sxt time 3 sector 9", "value" : { "time" : 3, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 27 }, 	{ 	"ro" : 7, 	"value" : 27 }, 	{ 	"ro" : 8, 	"value" : 27 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 4 sector 0", "value" : { "time" : 4, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 4 sector 1", "value" : { "time" : 4, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 4 }, 	{ 	"ro" : 1, 	"value" : 4 }, 	{ 	"ro" : 5, 	"value" : 4 } ] } }
+{ "_id" : "field sxt time 4 sector 10", "value" : { "time" : 4, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 40 }, 	{ 	"ro" : 4, 	"value" : 40 }, 	{ 	"ro" : 9, 	"value" : 40 } ] } }
+{ "_id" : "field sxt time 4 sector 11", "value" : { "time" : 4, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 44 }, 	{ 	"ro" : 3, 	"value" : 44 }, 	{ 	"ro" : 4, 	"value" : 44 } ] } }
+{ "_id" : "field sxt time 4 sector 12", "value" : { "time" : 4, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 48 }, 	{ 	"ro" : 3, 	"value" : 48 }, 	{ 	"ro" : 6, 	"value" : 48 } ] } }
+{ "_id" : "field sxt time 4 sector 13", "value" : { "time" : 4, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 52 }, 	{ 	"ro" : 6, 	"value" : 52 }, 	{ 	"ro" : 8, 	"value" : 52 } ] } }
+{ "_id" : "field sxt time 4 sector 14", "value" : { "time" : 4, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 56 }, 	{ 	"ro" : 8, 	"value" : 56 }, 	{ 	"ro" : 9, 	"value" : 56 } ] } }
+{ "_id" : "field sxt time 4 sector 15", "value" : { "time" : 4, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 60 }, 	{ 	"ro" : 5, 	"value" : 60 }, 	{ 	"ro" : 9, 	"value" : 60 } ] } }
+{ "_id" : "field sxt time 4 sector 16", "value" : { "time" : 4, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 64 }, 	{ 	"ro" : 4, 	"value" : 64 }, 	{ 	"ro" : 11, 	"value" : 64 } ] } }
+{ "_id" : "field sxt time 4 sector 17", "value" : { "time" : 4, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 68 }, 	{ 	"ro" : 6, 	"value" : 68 }, 	{ 	"ro" : 10, 	"value" : 68 } ] } }
+{ "_id" : "field sxt time 4 sector 18", "value" : { "time" : 4, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 72 }, 	{ 	"ro" : 7, 	"value" : 72 }, 	{ 	"ro" : 8, 	"value" : 72 } ] } }
+{ "_id" : "field sxt time 4 sector 19", "value" : { "time" : 4, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 76 }, 	{ 	"ro" : 8, 	"value" : 76 }, 	{ 	"ro" : 9, 	"value" : 76 } ] } }
+{ "_id" : "field sxt time 4 sector 2", "value" : { "time" : 4, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 8 }, 	{ 	"ro" : 1, 	"value" : 8 }, 	{ 	"ro" : 7, 	"value" : 8 } ] } }
+{ "_id" : "field sxt time 4 sector 3", "value" : { "time" : 4, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 12 }, 	{ 	"ro" : 7, 	"value" : 12 }, 	{ 	"ro" : 10, 	"value" : 12 } ] } }
+{ "_id" : "field sxt time 4 sector 4", "value" : { "time" : 4, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 16 }, 	{ 	"ro" : 10, 	"value" : 16 }, 	{ 	"ro" : 11, 	"value" : 16 } ] } }
+{ "_id" : "field sxt time 4 sector 5", "value" : { "time" : 4, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 20 }, 	{ 	"ro" : 5, 	"value" : 20 }, 	{ 	"ro" : 9, 	"value" : 20 } ] } }
+{ "_id" : "field sxt time 4 sector 6", "value" : { "time" : 4, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 24 }, 	{ 	"ro" : 5, 	"value" : 24 }, 	{ 	"ro" : 11, 	"value" : 24 } ] } }
+{ "_id" : "field sxt time 4 sector 7", "value" : { "time" : 4, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 28 }, 	{ 	"ro" : 10, 	"value" : 28 }, 	{ 	"ro" : 11, 	"value" : 28 } ] } }
+{ "_id" : "field sxt time 4 sector 8", "value" : { "time" : 4, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 32 }, 	{ 	"ro" : 7, 	"value" : 32 }, 	{ 	"ro" : 10, 	"value" : 32 } ] } }
+{ "_id" : "field sxt time 4 sector 9", "value" : { "time" : 4, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 36 }, 	{ 	"ro" : 7, 	"value" : 36 }, 	{ 	"ro" : 8, 	"value" : 36 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 5 sector 0", "value" : { "time" : 5, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 5 sector 1", "value" : { "time" : 5, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 5 }, 	{ 	"ro" : 1, 	"value" : 5 }, 	{ 	"ro" : 5, 	"value" : 5 } ] } }
+{ "_id" : "field sxt time 5 sector 10", "value" : { "time" : 5, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 50 }, 	{ 	"ro" : 4, 	"value" : 50 }, 	{ 	"ro" : 9, 	"value" : 50 } ] } }
+{ "_id" : "field sxt time 5 sector 11", "value" : { "time" : 5, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 55 }, 	{ 	"ro" : 3, 	"value" : 55 }, 	{ 	"ro" : 4, 	"value" : 55 } ] } }
+{ "_id" : "field sxt time 5 sector 12", "value" : { "time" : 5, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 60 }, 	{ 	"ro" : 3, 	"value" : 60 }, 	{ 	"ro" : 6, 	"value" : 60 } ] } }
+{ "_id" : "field sxt time 5 sector 13", "value" : { "time" : 5, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 65 }, 	{ 	"ro" : 6, 	"value" : 65 }, 	{ 	"ro" : 8, 	"value" : 65 } ] } }
+{ "_id" : "field sxt time 5 sector 14", "value" : { "time" : 5, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 70 }, 	{ 	"ro" : 8, 	"value" : 70 }, 	{ 	"ro" : 9, 	"value" : 70 } ] } }
+{ "_id" : "field sxt time 5 sector 15", "value" : { "time" : 5, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 75 }, 	{ 	"ro" : 5, 	"value" : 75 }, 	{ 	"ro" : 9, 	"value" : 75 } ] } }
+{ "_id" : "field sxt time 5 sector 16", "value" : { "time" : 5, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 80 }, 	{ 	"ro" : 4, 	"value" : 80 }, 	{ 	"ro" : 11, 	"value" : 80 } ] } }
+{ "_id" : "field sxt time 5 sector 17", "value" : { "time" : 5, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 85 }, 	{ 	"ro" : 6, 	"value" : 85 }, 	{ 	"ro" : 10, 	"value" : 85 } ] } }
+{ "_id" : "field sxt time 5 sector 18", "value" : { "time" : 5, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 90 }, 	{ 	"ro" : 7, 	"value" : 90 }, 	{ 	"ro" : 8, 	"value" : 90 } ] } }
+{ "_id" : "field sxt time 5 sector 19", "value" : { "time" : 5, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 95 }, 	{ 	"ro" : 8, 	"value" : 95 }, 	{ 	"ro" : 9, 	"value" : 95 } ] } }
+{ "_id" : "field sxt time 5 sector 2", "value" : { "time" : 5, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 10 }, 	{ 	"ro" : 1, 	"value" : 10 }, 	{ 	"ro" : 7, 	"value" : 10 } ] } }
+{ "_id" : "field sxt time 5 sector 3", "value" : { "time" : 5, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 15 }, 	{ 	"ro" : 7, 	"value" : 15 }, 	{ 	"ro" : 10, 	"value" : 15 } ] } }
+{ "_id" : "field sxt time 5 sector 4", "value" : { "time" : 5, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 20 }, 	{ 	"ro" : 10, 	"value" : 20 }, 	{ 	"ro" : 11, 	"value" : 20 } ] } }
+{ "_id" : "field sxt time 5 sector 5", "value" : { "time" : 5, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 25 }, 	{ 	"ro" : 5, 	"value" : 25 }, 	{ 	"ro" : 9, 	"value" : 25 } ] } }
+{ "_id" : "field sxt time 5 sector 6", "value" : { "time" : 5, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 30 }, 	{ 	"ro" : 5, 	"value" : 30 }, 	{ 	"ro" : 11, 	"value" : 30 } ] } }
+{ "_id" : "field sxt time 5 sector 7", "value" : { "time" : 5, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 35 }, 	{ 	"ro" : 10, 	"value" : 35 }, 	{ 	"ro" : 11, 	"value" : 35 } ] } }
+{ "_id" : "field sxt time 5 sector 8", "value" : { "time" : 5, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 40 }, 	{ 	"ro" : 7, 	"value" : 40 }, 	{ 	"ro" : 10, 	"value" : 40 } ] } }
+{ "_id" : "field sxt time 5 sector 9", "value" : { "time" : 5, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 45 }, 	{ 	"ro" : 7, 	"value" : 45 }, 	{ 	"ro" : 8, 	"value" : 45 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 6 sector 0", "value" : { "time" : 6, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 6 sector 1", "value" : { "time" : 6, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 6 }, 	{ 	"ro" : 1, 	"value" : 6 }, 	{ 	"ro" : 5, 	"value" : 6 } ] } }
+{ "_id" : "field sxt time 6 sector 10", "value" : { "time" : 6, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 60 }, 	{ 	"ro" : 4, 	"value" : 60 }, 	{ 	"ro" : 9, 	"value" : 60 } ] } }
+{ "_id" : "field sxt time 6 sector 11", "value" : { "time" : 6, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 66 }, 	{ 	"ro" : 3, 	"value" : 66 }, 	{ 	"ro" : 4, 	"value" : 66 } ] } }
+{ "_id" : "field sxt time 6 sector 12", "value" : { "time" : 6, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 72 }, 	{ 	"ro" : 3, 	"value" : 72 }, 	{ 	"ro" : 6, 	"value" : 72 } ] } }
+{ "_id" : "field sxt time 6 sector 13", "value" : { "time" : 6, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 78 }, 	{ 	"ro" : 6, 	"value" : 78 }, 	{ 	"ro" : 8, 	"value" : 78 } ] } }
+{ "_id" : "field sxt time 6 sector 14", "value" : { "time" : 6, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 84 }, 	{ 	"ro" : 8, 	"value" : 84 }, 	{ 	"ro" : 9, 	"value" : 84 } ] } }
+{ "_id" : "field sxt time 6 sector 15", "value" : { "time" : 6, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 90 }, 	{ 	"ro" : 5, 	"value" : 90 }, 	{ 	"ro" : 9, 	"value" : 90 } ] } }
+{ "_id" : "field sxt time 6 sector 16", "value" : { "time" : 6, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 96 }, 	{ 	"ro" : 4, 	"value" : 96 }, 	{ 	"ro" : 11, 	"value" : 96 } ] } }
+{ "_id" : "field sxt time 6 sector 17", "value" : { "time" : 6, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 102 }, 	{ 	"ro" : 6, 	"value" : 102 }, 	{ 	"ro" : 10, 	"value" : 102 } ] } }
+{ "_id" : "field sxt time 6 sector 18", "value" : { "time" : 6, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 108 }, 	{ 	"ro" : 7, 	"value" : 108 }, 	{ 	"ro" : 8, 	"value" : 108 } ] } }
+{ "_id" : "field sxt time 6 sector 19", "value" : { "time" : 6, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 114 }, 	{ 	"ro" : 8, 	"value" : 114 }, 	{ 	"ro" : 9, 	"value" : 114 } ] } }
+{ "_id" : "field sxt time 6 sector 2", "value" : { "time" : 6, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 12 }, 	{ 	"ro" : 1, 	"value" : 12 }, 	{ 	"ro" : 7, 	"value" : 12 } ] } }
+{ "_id" : "field sxt time 6 sector 3", "value" : { "time" : 6, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 18 }, 	{ 	"ro" : 7, 	"value" : 18 }, 	{ 	"ro" : 10, 	"value" : 18 } ] } }
+{ "_id" : "field sxt time 6 sector 4", "value" : { "time" : 6, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 24 }, 	{ 	"ro" : 10, 	"value" : 24 }, 	{ 	"ro" : 11, 	"value" : 24 } ] } }
+{ "_id" : "field sxt time 6 sector 5", "value" : { "time" : 6, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 30 }, 	{ 	"ro" : 5, 	"value" : 30 }, 	{ 	"ro" : 9, 	"value" : 30 } ] } }
+{ "_id" : "field sxt time 6 sector 6", "value" : { "time" : 6, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 36 }, 	{ 	"ro" : 5, 	"value" : 36 }, 	{ 	"ro" : 11, 	"value" : 36 } ] } }
+{ "_id" : "field sxt time 6 sector 7", "value" : { "time" : 6, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 42 }, 	{ 	"ro" : 10, 	"value" : 42 }, 	{ 	"ro" : 11, 	"value" : 42 } ] } }
+{ "_id" : "field sxt time 6 sector 8", "value" : { "time" : 6, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 48 }, 	{ 	"ro" : 7, 	"value" : 48 }, 	{ 	"ro" : 10, 	"value" : 48 } ] } }
+{ "_id" : "field sxt time 6 sector 9", "value" : { "time" : 6, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 54 }, 	{ 	"ro" : 7, 	"value" : 54 }, 	{ 	"ro" : 8, 	"value" : 54 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 7 sector 0", "value" : { "time" : 7, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 7 sector 1", "value" : { "time" : 7, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 7 }, 	{ 	"ro" : 1, 	"value" : 7 }, 	{ 	"ro" : 5, 	"value" : 7 } ] } }
+{ "_id" : "field sxt time 7 sector 10", "value" : { "time" : 7, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 70 }, 	{ 	"ro" : 4, 	"value" : 70 }, 	{ 	"ro" : 9, 	"value" : 70 } ] } }
+{ "_id" : "field sxt time 7 sector 11", "value" : { "time" : 7, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 77 }, 	{ 	"ro" : 3, 	"value" : 77 }, 	{ 	"ro" : 4, 	"value" : 77 } ] } }
+{ "_id" : "field sxt time 7 sector 12", "value" : { "time" : 7, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 84 }, 	{ 	"ro" : 3, 	"value" : 84 }, 	{ 	"ro" : 6, 	"value" : 84 } ] } }
+{ "_id" : "field sxt time 7 sector 13", "value" : { "time" : 7, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 91 }, 	{ 	"ro" : 6, 	"value" : 91 }, 	{ 	"ro" : 8, 	"value" : 91 } ] } }
+{ "_id" : "field sxt time 7 sector 14", "value" : { "time" : 7, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 98 }, 	{ 	"ro" : 8, 	"value" : 98 }, 	{ 	"ro" : 9, 	"value" : 98 } ] } }
+{ "_id" : "field sxt time 7 sector 15", "value" : { "time" : 7, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 105 }, 	{ 	"ro" : 5, 	"value" : 105 }, 	{ 	"ro" : 9, 	"value" : 105 } ] } }
+{ "_id" : "field sxt time 7 sector 16", "value" : { "time" : 7, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 112 }, 	{ 	"ro" : 4, 	"value" : 112 }, 	{ 	"ro" : 11, 	"value" : 112 } ] } }
+{ "_id" : "field sxt time 7 sector 17", "value" : { "time" : 7, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 119 }, 	{ 	"ro" : 6, 	"value" : 119 }, 	{ 	"ro" : 10, 	"value" : 119 } ] } }
+{ "_id" : "field sxt time 7 sector 18", "value" : { "time" : 7, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 126 }, 	{ 	"ro" : 7, 	"value" : 126 }, 	{ 	"ro" : 8, 	"value" : 126 } ] } }
+{ "_id" : "field sxt time 7 sector 19", "value" : { "time" : 7, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 133 }, 	{ 	"ro" : 8, 	"value" : 133 }, 	{ 	"ro" : 9, 	"value" : 133 } ] } }
+{ "_id" : "field sxt time 7 sector 2", "value" : { "time" : 7, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 14 }, 	{ 	"ro" : 1, 	"value" : 14 }, 	{ 	"ro" : 7, 	"value" : 14 } ] } }
+{ "_id" : "field sxt time 7 sector 3", "value" : { "time" : 7, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 21 }, 	{ 	"ro" : 7, 	"value" : 21 }, 	{ 	"ro" : 10, 	"value" : 21 } ] } }
+{ "_id" : "field sxt time 7 sector 4", "value" : { "time" : 7, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 28 }, 	{ 	"ro" : 10, 	"value" : 28 }, 	{ 	"ro" : 11, 	"value" : 28 } ] } }
+{ "_id" : "field sxt time 7 sector 5", "value" : { "time" : 7, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 35 }, 	{ 	"ro" : 5, 	"value" : 35 }, 	{ 	"ro" : 9, 	"value" : 35 } ] } }
+{ "_id" : "field sxt time 7 sector 6", "value" : { "time" : 7, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 42 }, 	{ 	"ro" : 5, 	"value" : 42 }, 	{ 	"ro" : 11, 	"value" : 42 } ] } }
+{ "_id" : "field sxt time 7 sector 7", "value" : { "time" : 7, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 49 }, 	{ 	"ro" : 10, 	"value" : 49 }, 	{ 	"ro" : 11, 	"value" : 49 } ] } }
+{ "_id" : "field sxt time 7 sector 8", "value" : { "time" : 7, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 56 }, 	{ 	"ro" : 7, 	"value" : 56 }, 	{ 	"ro" : 10, 	"value" : 56 } ] } }
+{ "_id" : "field sxt time 7 sector 9", "value" : { "time" : 7, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 63 }, 	{ 	"ro" : 7, 	"value" : 63 }, 	{ 	"ro" : 8, 	"value" : 63 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 8 sector 0", "value" : { "time" : 8, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 8 sector 1", "value" : { "time" : 8, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 8 }, 	{ 	"ro" : 1, 	"value" : 8 }, 	{ 	"ro" : 5, 	"value" : 8 } ] } }
+{ "_id" : "field sxt time 8 sector 10", "value" : { "time" : 8, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 80 }, 	{ 	"ro" : 4, 	"value" : 80 }, 	{ 	"ro" : 9, 	"value" : 80 } ] } }
+{ "_id" : "field sxt time 8 sector 11", "value" : { "time" : 8, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 88 }, 	{ 	"ro" : 3, 	"value" : 88 }, 	{ 	"ro" : 4, 	"value" : 88 } ] } }
+{ "_id" : "field sxt time 8 sector 12", "value" : { "time" : 8, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 96 }, 	{ 	"ro" : 3, 	"value" : 96 }, 	{ 	"ro" : 6, 	"value" : 96 } ] } }
+{ "_id" : "field sxt time 8 sector 13", "value" : { "time" : 8, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 104 }, 	{ 	"ro" : 6, 	"value" : 104 }, 	{ 	"ro" : 8, 	"value" : 104 } ] } }
+{ "_id" : "field sxt time 8 sector 14", "value" : { "time" : 8, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 112 }, 	{ 	"ro" : 8, 	"value" : 112 }, 	{ 	"ro" : 9, 	"value" : 112 } ] } }
+{ "_id" : "field sxt time 8 sector 15", "value" : { "time" : 8, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 120 }, 	{ 	"ro" : 5, 	"value" : 120 }, 	{ 	"ro" : 9, 	"value" : 120 } ] } }
+{ "_id" : "field sxt time 8 sector 16", "value" : { "time" : 8, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 128 }, 	{ 	"ro" : 4, 	"value" : 128 }, 	{ 	"ro" : 11, 	"value" : 128 } ] } }
+{ "_id" : "field sxt time 8 sector 17", "value" : { "time" : 8, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 136 }, 	{ 	"ro" : 6, 	"value" : 136 }, 	{ 	"ro" : 10, 	"value" : 136 } ] } }
+{ "_id" : "field sxt time 8 sector 18", "value" : { "time" : 8, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 144 }, 	{ 	"ro" : 7, 	"value" : 144 }, 	{ 	"ro" : 8, 	"value" : 144 } ] } }
+{ "_id" : "field sxt time 8 sector 19", "value" : { "time" : 8, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 152 }, 	{ 	"ro" : 8, 	"value" : 152 }, 	{ 	"ro" : 9, 	"value" : 152 } ] } }
+{ "_id" : "field sxt time 8 sector 2", "value" : { "time" : 8, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 16 }, 	{ 	"ro" : 1, 	"value" : 16 }, 	{ 	"ro" : 7, 	"value" : 16 } ] } }
+{ "_id" : "field sxt time 8 sector 3", "value" : { "time" : 8, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 24 }, 	{ 	"ro" : 7, 	"value" : 24 }, 	{ 	"ro" : 10, 	"value" : 24 } ] } }
+{ "_id" : "field sxt time 8 sector 4", "value" : { "time" : 8, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 32 }, 	{ 	"ro" : 10, 	"value" : 32 }, 	{ 	"ro" : 11, 	"value" : 32 } ] } }
+{ "_id" : "field sxt time 8 sector 5", "value" : { "time" : 8, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 40 }, 	{ 	"ro" : 5, 	"value" : 40 }, 	{ 	"ro" : 9, 	"value" : 40 } ] } }
+{ "_id" : "field sxt time 8 sector 6", "value" : { "time" : 8, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 48 }, 	{ 	"ro" : 5, 	"value" : 48 }, 	{ 	"ro" : 11, 	"value" : 48 } ] } }
+{ "_id" : "field sxt time 8 sector 7", "value" : { "time" : 8, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 56 }, 	{ 	"ro" : 10, 	"value" : 56 }, 	{ 	"ro" : 11, 	"value" : 56 } ] } }
+{ "_id" : "field sxt time 8 sector 8", "value" : { "time" : 8, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 64 }, 	{ 	"ro" : 7, 	"value" : 64 }, 	{ 	"ro" : 10, 	"value" : 64 } ] } }
+{ "_id" : "field sxt time 8 sector 9", "value" : { "time" : 8, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 72 }, 	{ 	"ro" : 7, 	"value" : 72 }, 	{ 	"ro" : 8, 	"value" : 72 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 9 sector 0", "value" : { "time" : 9, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 9 sector 1", "value" : { "time" : 9, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 9 }, 	{ 	"ro" : 1, 	"value" : 9 }, 	{ 	"ro" : 5, 	"value" : 9 } ] } }
+{ "_id" : "field sxt time 9 sector 10", "value" : { "time" : 9, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 90 }, 	{ 	"ro" : 4, 	"value" : 90 }, 	{ 	"ro" : 9, 	"value" : 90 } ] } }
+{ "_id" : "field sxt time 9 sector 11", "value" : { "time" : 9, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 99 }, 	{ 	"ro" : 3, 	"value" : 99 }, 	{ 	"ro" : 4, 	"value" : 99 } ] } }
+{ "_id" : "field sxt time 9 sector 12", "value" : { "time" : 9, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 108 }, 	{ 	"ro" : 3, 	"value" : 108 }, 	{ 	"ro" : 6, 	"value" : 108 } ] } }
+{ "_id" : "field sxt time 9 sector 13", "value" : { "time" : 9, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 117 }, 	{ 	"ro" : 6, 	"value" : 117 }, 	{ 	"ro" : 8, 	"value" : 117 } ] } }
+{ "_id" : "field sxt time 9 sector 14", "value" : { "time" : 9, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 126 }, 	{ 	"ro" : 8, 	"value" : 126 }, 	{ 	"ro" : 9, 	"value" : 126 } ] } }
+{ "_id" : "field sxt time 9 sector 15", "value" : { "time" : 9, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 135 }, 	{ 	"ro" : 5, 	"value" : 135 }, 	{ 	"ro" : 9, 	"value" : 135 } ] } }
+{ "_id" : "field sxt time 9 sector 16", "value" : { "time" : 9, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 144 }, 	{ 	"ro" : 4, 	"value" : 144 }, 	{ 	"ro" : 11, 	"value" : 144 } ] } }
+{ "_id" : "field sxt time 9 sector 17", "value" : { "time" : 9, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 153 }, 	{ 	"ro" : 6, 	"value" : 153 }, 	{ 	"ro" : 10, 	"value" : 153 } ] } }
+{ "_id" : "field sxt time 9 sector 18", "value" : { "time" : 9, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 162 }, 	{ 	"ro" : 7, 	"value" : 162 }, 	{ 	"ro" : 8, 	"value" : 162 } ] } }
+{ "_id" : "field sxt time 9 sector 19", "value" : { "time" : 9, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 171 }, 	{ 	"ro" : 8, 	"value" : 171 }, 	{ 	"ro" : 9, 	"value" : 171 } ] } }
+{ "_id" : "field sxt time 9 sector 2", "value" : { "time" : 9, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 18 }, 	{ 	"ro" : 1, 	"value" : 18 }, 	{ 	"ro" : 7, 	"value" : 18 } ] } }
+{ "_id" : "field sxt time 9 sector 3", "value" : { "time" : 9, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 27 }, 	{ 	"ro" : 7, 	"value" : 27 }, 	{ 	"ro" : 10, 	"value" : 27 } ] } }
+{ "_id" : "field sxt time 9 sector 4", "value" : { "time" : 9, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 36 }, 	{ 	"ro" : 10, 	"value" : 36 }, 	{ 	"ro" : 11, 	"value" : 36 } ] } }
+{ "_id" : "field sxt time 9 sector 5", "value" : { "time" : 9, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 45 }, 	{ 	"ro" : 5, 	"value" : 45 }, 	{ 	"ro" : 9, 	"value" : 45 } ] } }
+{ "_id" : "field sxt time 9 sector 6", "value" : { "time" : 9, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 54 }, 	{ 	"ro" : 5, 	"value" : 54 }, 	{ 	"ro" : 11, 	"value" : 54 } ] } }
+{ "_id" : "field sxt time 9 sector 7", "value" : { "time" : 9, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 63 }, 	{ 	"ro" : 10, 	"value" : 63 }, 	{ 	"ro" : 11, 	"value" : 63 } ] } }
+{ "_id" : "field sxt time 9 sector 8", "value" : { "time" : 9, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 72 }, 	{ 	"ro" : 7, 	"value" : 72 }, 	{ 	"ro" : 10, 	"value" : 72 } ] } }
+{ "_id" : "field sxt time 9 sector 9", "value" : { "time" : 9, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 81 }, 	{ 	"ro" : 7, 	"value" : 81 }, 	{ 	"ro" : 8, 	"value" : 81 } ] } }
+Type "it" for more
+> it
+{ "_id" : "field sxt time 10 sector 0", "value" : { "time" : 10, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 10 sector 1", "value" : { "time" : 10, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 10 }, 	{ 	"ro" : 1, 	"value" : 10 }, 	{ 	"ro" : 5, 	"value" : 10 } ] } }
+{ "_id" : "field sxt time 10 sector 10", "value" : { "time" : 10, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 100 }, 	{ 	"ro" : 4, 	"value" : 100 }, 	{ 	"ro" : 9, 	"value" : 100 } ] } }
+{ "_id" : "field sxt time 10 sector 11", "value" : { "time" : 10, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 110 }, 	{ 	"ro" : 3, 	"value" : 110 }, 	{ 	"ro" : 4, 	"value" : 110 } ] } }
+{ "_id" : "field sxt time 10 sector 12", "value" : { "time" : 10, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 120 }, 	{ 	"ro" : 3, 	"value" : 120 }, 	{ 	"ro" : 6, 	"value" : 120 } ] } }
+{ "_id" : "field sxt time 10 sector 13", "value" : { "time" : 10, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 130 }, 	{ 	"ro" : 6, 	"value" : 130 }, 	{ 	"ro" : 8, 	"value" : 130 } ] } }
+{ "_id" : "field sxt time 10 sector 14", "value" : { "time" : 10, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 140 }, 	{ 	"ro" : 8, 	"value" : 140 }, 	{ 	"ro" : 9, 	"value" : 140 } ] } }
+{ "_id" : "field sxt time 10 sector 15", "value" : { "time" : 10, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 150 }, 	{ 	"ro" : 5, 	"value" : 150 }, 	{ 	"ro" : 9, 	"value" : 150 } ] } }
+{ "_id" : "field sxt time 10 sector 16", "value" : { "time" : 10, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 160 }, 	{ 	"ro" : 4, 	"value" : 160 }, 	{ 	"ro" : 11, 	"value" : 160 } ] } }
+{ "_id" : "field sxt time 10 sector 17", "value" : { "time" : 10, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 170 }, 	{ 	"ro" : 6, 	"value" : 170 }, 	{ 	"ro" : 10, 	"value" : 170 } ] } }
+{ "_id" : "field sxt time 10 sector 18", "value" : { "time" : 10, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 180 }, 	{ 	"ro" : 7, 	"value" : 180 }, 	{ 	"ro" : 8, 	"value" : 180 } ] } }
+{ "_id" : "field sxt time 10 sector 19", "value" : { "time" : 10, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 190 }, 	{ 	"ro" : 8, 	"value" : 190 }, 	{ 	"ro" : 9, 	"value" : 190 } ] } }
+{ "_id" : "field sxt time 10 sector 2", "value" : { "time" : 10, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 20 }, 	{ 	"ro" : 1, 	"value" : 20 }, 	{ 	"ro" : 7, 	"value" : 20 } ] } }
+{ "_id" : "field sxt time 10 sector 3", "value" : { "time" : 10, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 30 }, 	{ 	"ro" : 7, 	"value" : 30 }, 	{ 	"ro" : 10, 	"value" : 30 } ] } }
+{ "_id" : "field sxt time 10 sector 4", "value" : { "time" : 10, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 40 }, 	{ 	"ro" : 10, 	"value" : 40 }, 	{ 	"ro" : 11, 	"value" : 40 } ] } }
+{ "_id" : "field sxt time 10 sector 5", "value" : { "time" : 10, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 50 }, 	{ 	"ro" : 5, 	"value" : 50 }, 	{ 	"ro" : 9, 	"value" : 50 } ] } }
+{ "_id" : "field sxt time 10 sector 6", "value" : { "time" : 10, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 60 }, 	{ 	"ro" : 5, 	"value" : 60 }, 	{ 	"ro" : 11, 	"value" : 60 } ] } }
+{ "_id" : "field sxt time 10 sector 7", "value" : { "time" : 10, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 70 }, 	{ 	"ro" : 10, 	"value" : 70 }, 	{ 	"ro" : 11, 	"value" : 70 } ] } }
+{ "_id" : "field sxt time 10 sector 8", "value" : { "time" : 10, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 80 }, 	{ 	"ro" : 7, 	"value" : 80 }, 	{ 	"ro" : 10, 	"value" : 80 } ] } }
+{ "_id" : "field sxt time 10 sector 9", "value" : { "time" : 10, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 90 }, 	{ 	"ro" : 7, 	"value" : 90 }, 	{ 	"ro" : 8, 	"value" : 90 } ] } }
+> it
+no cursor
+> it
+no cursor
+> show collections
+point_datas
+sxt
+system.indexes
+> use test_ico_data_46024
+switched to db test_ico_data_46024
+> show collections
+point_datas
+sxt
+system.indexes
+> db.sxt.find();
+{ "_id" : "field sxt time 0 sector 0", "value" : { "time" : 0, "sector" : 0, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 1", "value" : { "time" : 0, "sector" : 1, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 10", "value" : { "time" : 0, "sector" : 10, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 11", "value" : { "time" : 0, "sector" : 11, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 12", "value" : { "time" : 0, "sector" : 12, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 13", "value" : { "time" : 0, "sector" : 13, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 14", "value" : { "time" : 0, "sector" : 14, "data" : [ 	{ 	"ro" : 3, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 15", "value" : { "time" : 0, "sector" : 15, "data" : [ 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 16", "value" : { "time" : 0, "sector" : 16, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 17", "value" : { "time" : 0, "sector" : 17, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 18", "value" : { "time" : 0, "sector" : 18, "data" : [ 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 19", "value" : { "time" : 0, "sector" : 19, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 2", "value" : { "time" : 0, "sector" : 2, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 3", "value" : { "time" : 0, "sector" : 3, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 4", "value" : { "time" : 0, "sector" : 4, "data" : [ 	{ 	"ro" : 0, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 5", "value" : { "time" : 0, "sector" : 5, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 9, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 6", "value" : { "time" : 0, "sector" : 6, "data" : [ 	{ 	"ro" : 4, 	"value" : 0 }, 	{ 	"ro" : 5, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 7", "value" : { "time" : 0, "sector" : 7, "data" : [ 	{ 	"ro" : 2, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 }, 	{ 	"ro" : 11, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 8", "value" : { "time" : 0, "sector" : 8, "data" : [ 	{ 	"ro" : 6, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 10, 	"value" : 0 } ] } }
+{ "_id" : "field sxt time 0 sector 9", "value" : { "time" : 0, "sector" : 9, "data" : [ 	{ 	"ro" : 1, 	"value" : 0 }, 	{ 	"ro" : 7, 	"value" : 0 }, 	{ 	"ro" : 8, 	"value" : 0 } ] } }
+Type "it" for more
+> use test_ico_data_94711
+switched to db test_ico_data_94711
+> show collections
+point_datas
+sxt
+system.indexes
+> db.point_datas.count()
+660
+> db.sxt.count()
+220
+> use ico
+switched to db ico
+> show collections
+faces
+neighbors
+points
+sectors
+system.indexes
+> db.sectors.find({detail: 2})
+{ "_id" : "detail_2_order_5", "orde> db.sectors.find({detail: 2})
+{ "_id" : "detail_2_order_5", "order" : 5, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order61", 	"point_detail_2_order62", 	"point_detail_2_order9", 	"point_detail_2_order32", 	"point_detail_2_order57", 	"point_detail_2_order25", 	"point_detail_2_order59", 	"point_detail_2_order60", 	"point_detail_2_order58", 	"point_detail_2_order63", 	"point_detail_2_order64", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_11", "order" : 11, "detail" : 2, "points" : [ 	"point_detail_2_order109", 	"point_detail_2_order118", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order105", 	"point_detail_2_order112", 	"point_detail_2_order116", 	"point_detail_2_order117", 	"point_detail_2_order114", 	"point_detail_2_order120", 	"point_detail_2_order121", 	"point_detail_2_order115", 	"point_detail_2_order122" ], "__v" : 0 }
+{ "_id" > db.sectors.find({detail: 2})
+{ "_id" : "detail_2_order_5", "order" : 5, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order61", 	"point_detail_2_order62", 	"point_detail_2_order9", 	"point_detail_2_order32", 	"point_detail_2_order57", 	"point_detail_2_order25", 	"point_detail_2_order59", 	"point_detail_2_order60", 	"point_detail_2_order58", 	"point_detail_2_order63", 	"point_detail_2_order64", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_11", "order" : 11, "detail" : 2, "points" : [ 	"point_detail_2_order109", 	"point_detail_2_order118", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order105", 	"point_detail_2_order112", 	"point_detail_2_order116", 	"point_detail_2_order117", 	"point_detail_2_order114", 	"point_detail_2_order120", 	"point_detail_2_order121", 	"point_detail_2_order115", 	"point_detail_2_order122" ], "__v" : 0 }
+{ "_id" : "detail_2_order_15", "order" : 15, "detail" : 2, "points" : [ 	"point_detail_2_order110", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order62", 	"point_detail_2_order70", 	"point_detail_2_order9", 	"point_detail_2_order106", 	"point_detail_2_order113", 	"point_detail_2_order147", 	"point_detail_2_order148", 	"point_detail_2_order73", 	"point_detail_2_order58", 	"point_detail_2_order66", 	"point_detail_2_order149", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_14", "order" : 14, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order136", 	"point_detail_2_order144", 	"point_detail_2_order3", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order142", 	"point_detail_2_order145", 	"point_detail_2_order132", 	"point_detail_2_order139", 	"point_detail_2_order143", 	"point_detail_2_order141", 	"point_detail_2_order146" ], "__v" : 0 }
+{ "_id" : "detail_2_order_10", "order" : 10, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order109", 	"point_detail_2_order110", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order107", 	"point_detail_2_order108", 	"point_detail_2_order105", 	"point_detail_2_order111", 	"point_detail_2_order112", 	"point_detail_2_order106", 	"point_detail_2_order113" ], "__v" : 0 }
+{ "_id" : "detail_2_order_16", "order" : 16, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order4", 	"point_detail_2_order71", 	"point_detail_2_order79", 	"point_detail_2_order67", 	"point_detail_2_order75", 	"point_detail_2_order115", 	"point_detail_2_order122", 	"point_detail_2_order150", 	"point_detail_2_order151", 	"point_detail_2_order82", 	"point_detail_2_order74", 	"point_detail_2_order152" ], "__v" : 0 }
+{ "_id" : "detail_2_order_3", "order" : 3, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order37", 	"point_detail_2_order46", 	"point_detail_2_order47", 	"point_detail_2_order7", 	"point_detail_2_order33", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order50", 	"point_detail_2_order40", 	"point_detail_2_order44", 	"point_detail_2_order45", 	"point_detail_2_order48", 	"point_detail_2_order43" ], "__v" : 0 }
+{ "_id" : "detail_2_order_9", "order" : 9, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order97", 	"point_detail_2_order98", 	"point_detail_2_order34", 	"point_detail_2_order94", 	"point_detail_2_order41", 	"point_detail_2_order95", 	"point_detail_2_order96", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order101", 	"point_detail_2_order99" ], "__v" : 0 }
+{ "_id" : "detail_2_order_7", "order" : 7, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order2", 	"point_detail_2_order54", 	"point_detail_2_order79", 	"point_detail_2_order80", 	"point_detail_2_order51", 	"point_detail_2_order76", 	"point_detail_2_order56", 	"point_detail_2_order75", 	"point_detail_2_order82", 	"point_detail_2_order83", 	"point_detail_2_order77", 	"point_detail_2_order78", 	"point_detail_2_order81" ], "__v" : 0 }
+{ "_id" : "detail_2_order_18", "order" : 18, "detail" : 2, "points" : [ 	"point_detail_2_order137", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order89", 	"point_detail_2_order97", 	"point_detail_2_order133", 	"point_detail_2_order140", 	"point_detail_2_order156", 	"point_detail_2_order157", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order158" ], "__v" : 0 }
+{ "_id" : "detail_2_order_8", "order" : 8, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order47", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order88", 	"point_detail_2_order89", 	"point_detail_2_order50", 	"point_detail_2_order84", 	"point_detail_2_order43", 	"point_detail_2_order86", 	"point_detail_2_order87", 	"point_detail_2_order91", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order90" ], "__v" : 0 }
+{ "_id" : "detail_2_order_1", "order" : 1, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order19", 	"point_detail_2_order28", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order15", 	"point_detail_2_order24", 	"point_detail_2_order31", 	"point_detail_2_order32", 	"point_detail_2_order22", 	"point_detail_2_order26", 	"point_detail_2_order27", 	"point_detail_2_order30", 	"point_detail_2_order25" ], "__v" : 0 }
+{ "_id" : "detail_2_order_6", "order" : 6, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order20", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order70", 	"point_detail_2_order71", 	"point_detail_2_order16", 	"point_detail_2_order67", 	"point_detail_2_order23", 	"point_detail_2_order68", 	"point_detail_2_order69", 	"point_detail_2_order73", 	"point_detail_2_order74", 	"point_detail_2_order66", 	"point_detail_2_order72" ], "__v" : 0 }
+{ "_id" : "detail_2_order_19", "order" : 19, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order144", 	"point_detail_2_order61", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order98", 	"point_detail_2_order57", 	"point_detail_2_order94", 	"point_detail_2_order141", 	"point_detail_2_order146", 	"point_detail_2_order159", 	"point_detail_2_order160", 	"point_detail_2_order161", 	"point_detail_2_order64", 	"point_detail_2_order101" ], "__v" : 0 }
+{ "_id" : "detail_2_order_0", "order" : 0, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order19", 	"point_detail_2_order20", 	"point_detail_2_order5", 	"point_detail_2_order12", 	"point_detail_2_order15", 	"point_detail_2_order14", 	"point_detail_2_order16", 	"point_detail_2_order17", 	"point_detail_2_order18", 	"point_detail_2_order21", 	"point_detail_2_order22", 	"point_detail_2_order23" ], "__v" : 0 }
+{ "_id" : "detail_2_order_2", "order" : 2, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order28", 	"point_detail_2_order37", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order24", 	"point_detail_2_order33", 	"point_detail_2_order31", 	"point_detail_2_order34", 	"point_detail_2_order35", 	"point_detail_2_order36", 	"point_detail_2_order39", 	"point_detail_2_order40", 	"point_detail_2_order41" ], "__v" : 0 }
+{ "_id" : "detail_2_order_13", "order" : 13, "detail" : 2, "points" : [ 	"point_detail_2_order127", 	"point_detail_2_order136", 	"point_detail_2_order137", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order8", 	"point_detail_2_order123", 	"point_detail_2_order130", 	"point_detail_2_order134", 	"point_detail_2_order135", 	"point_detail_2_order132", 	"point_detail_2_order138", 	"point_detail_2_order139", 	"point_detail_2_order133", 	"point_detail_2_order140" ], "__v" : 0 }
+{ "_id" : "detail_2_order_12", "order" : 12, "detail" : 2, "points" : [ 	"point_detail_2_order118", 	"point_detail_2_order127", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order114", 	"point_detail_2_order121", 	"point_detail_2_order125", 	"point_detail_2_order126", 	"point_detail_2_order123", 	"point_detail_2_order129", 	"point_detail_2_order130", 	"point_detail_2_order124", 	"point_detail_2_order131" ], "__v" : 0 }
+{ "_id" : "detail_2_order_17", "order" : 17, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order6", 	"point_detail_2_order80", 	"point_detail_2_order88", 	"point_detail_2_order76", 	"point_detail_2_order84", 	"point_detail_2_order124", 	"point_detail_2_order131", 	"point_detail_2_order153", 	"point_detail_2_order154", 	"point_detail_2_order83", 	"point_detail_2_order91", 	"point_detail_2_order155" ], "__v" : 0 }
+{ "_id" : "detail_2_order_4", "order" : 4, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order46", 	"point_detail_2_order54", 	"point_detail_2_order12", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order51", 	"point_detail_2_order14", 	"point_detail_2_order56", 	"point_detail_2_order52", 	"point_detail_2_order55", 	"point_detail_2_order53" ], "__v" : 0 }
+>: "detail_2_order_15", "order" : 15, "detail" : 2, "points" : [ 	"point_detail_2_order110", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order62", 	"point_detail_2_order70", 	"point_detail_2_order9", 	"point_detail_2_order106", 	"point_detail_2_order113", 	"point_detail_2_order147", 	"point_detail_2_order148", 	"point_detail_2_order73", 	"point_detail_2_order58", 	"point_detail_2_order66", 	"point_detail_2_order149", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_14", "order" : 14, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order136", 	"point_detail_2_order144", 	"point_detail_2_order3", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order142", 	"point_detail_2_order145", 	"point_detail_2_order132", 	"point_detail_2_order139", 	"point_detail_2_order143", 	"point_detail_2_order141", 	"point_detail_2_order146" ], "__v" : 0 }
+{ "_id" : "detail_2_order_10", "order" : 10, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order109", 	"point_detail_2_order110", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order107", 	"point_detail_2_order108", 	"point_detail_2_order105", 	"point_detail_2_order111", 	"point_detail_2_order112", 	"point_detail_2_order106", 	"point_detail_2_order113" ], "__v" : 0 }
+{ "_id" : "detail_2_order_16", "order" : 16, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order4", 	"point_detail_2_order71", 	"point_detail_2_order79", 	"point_detail_2_order67", 	"point_detail_2_order75", 	"point_detail_2_order115", 	"point_detail_2_order122", 	"point_detail_2_order150", 	"point_detail_2_order151", 	"point_detail_2_order82", 	"point_detail_2_order74", 	"point_detail_2_order152" ], "__v" : 0 }
+{ "_id" : "detail_2_order_3", "order" : 3, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order37", 	"point_detail_2_order46", 	"point_detail_2_order47", 	"point_detail_2_order7", 	"point_detail_2_order33", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order50", 	"point_detail_2_order40", 	"point_detail_2_order44", 	"point_detail_2_order45", 	"point_detail_2_order48", 	"point_detail_2_order43" ], "__v" : 0 }
+{ "_id" : "detail_2_order_9", "order" : 9, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order97", 	"point_detail_2_order98", 	"point_detail_2_order34", 	"point_detail_2_order94", 	"point_detail_2_order41", 	"point_detail_2_order95", 	"point_detail_2_order96", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order101", 	"point_detail_2_order99" ], "__v" : 0 }
+{ "_id" : "detail_2_order_7", "order" : 7, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order2", 	"point_detail_2_order54", 	"point_detail_2_order79", 	"point_detail_2_order80", 	"point_detail_2_order51", 	"point_detail_2_order76", 	"point_detail_2_order56", 	"point_detail_2_order75", 	"point_detail_2_order82", 	"point_detail_2_order83", 	"point_detail_2_order77", 	"point_detail_2_order78", 	"point_detail_2_order81" ], "__v" : 0 }
+{ "_id" : "detail_2_order_18", "order" : 18, "detail" : 2, "points" : [ 	"point_detail_2_order137", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order89", 	"point_detail_2_order97", 	"point_detail_2_order133", 	"point_detail_2_order140", 	"point_detail_2_order156", 	"point_detail_2_order157", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order158" ], "__v" : 0 }
+{ "_id" : "detail_2_order_8", "order" : 8, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order47", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order88", 	"point_detail_2_order89", 	"point_detail_2_order50", 	"point_detail_2_order84", 	"point_detail_2_order43", 	"point_detail_2_order86", 	"point_detail_2_order87", 	"point_detail_2_order91", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order90" ], "__v" : 0 }
+{ "_id" : "detail_2_order_1", "order" : 1, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order19", 	"point_detail_2_order28", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order15", 	"point_detail_2_order24", 	"point_detail_2_order31", 	"point_detail_2_order32", 	"point_detail_2_order22", 	"point_detail_2_order26", 	"point_detail_2_order27", 	"point_detail_2_order30", 	"point_detail_2_order25" ], "__v" : 0 }
+{ "_id" : "detail_2_order_6", "order" : 6, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order20", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order70", 	"point_detail_2_order71", 	"point_detail_2_order16", 	"point_detail_2_order67", 	"point_detail_2_order23", 	"point_detail_2_order68", 	"point_detail_2_order69", 	"point_detail_2_order73", 	"point_detail_2_order74", 	"point_detail_2_order66", 	"point_detail_2_order72" ], "__v" : 0 }
+{ "_id" : "detail_2_order_19", "order" : 19, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order144", 	"point_detail_2_order61", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order98", 	"point_detail_2_order57", 	"point_detail_2_order94", 	"point_detail_2_order141", 	"point_detail_2_order146", 	"point_detail_2_order159", 	"point_detail_2_order160", 	"point_detail_2_order161", 	"point_detail_2_order64", 	"point_detail_2_order101" ], "__v" : 0 }
+{ "_id" : "detail_2_order_0", "order" : 0, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order19", 	"point_detail_2_order20", 	"point_detail_2_order5", 	"point_detail_2_order12", 	"point_detail_2_order15", 	"point_detail_2_order14", 	"point_detail_2_order16", 	"point_detail_2_order17", 	"point_detail_2_order18", 	"point_detail_2_order21", 	"point_detail_2_order22", 	"point_detail_2_order23" ], "__v" : 0 }
+{ "_id" : "detail_2_order_2", "order" : 2, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order28", 	"point_detail_2_order37", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order24", 	"point_detail_2_order33", 	"point_detail_2_order31", 	"point_detail_2_order34", 	"point_detail_2_order35", 	"point_detail_2_order36", 	"point_detail_2_order39", 	"point_detail_2_order40", 	"point_detail_2_order41" ], "__v" : 0 }
+{ "_id" : "detail_2_order_13", "order" : 13, "detail" : 2, "points" : [ 	"point_detail_2_order127", 	"point_detail_2_order136", 	"point_detail_2_order137", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order8", 	"point_detail_2_order123", 	"point_detail_2_order130", 	"point_detail_2_order134", 	"point_detail_2_order135", 	"point_detail_2_order132", 	"point_detail_2_order138", 	"point_detail_2_order139", 	"point_detail_2_order133", 	"point_detail_2_order140" ], "__v" : 0 }
+{ "_id" : "detail_2_order_12", "order" : 12, "detail" : 2, "points" : [ 	"point_detail_2_order118", 	"point_detail_2_order127", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order114", 	"point_detail_2_order121", 	"point_detail_2_order125", 	"point_detail_2_order126", 	"point_detail_2_order123", 	"point_detail_2_order129", 	"point_detail_2_order130", 	"point_detail_2_order124", 	"point_detail_2_order131" ], "__v" : 0 }
+{ "_id" : "detail_2_order_17", "order" : 17, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order6", 	"point_detail_2_order80", 	"point_detail_2_order88", 	"point_detail_2_order76", 	"point_detail_2_order84", 	"point_detail_2_order124", 	"point_detail_2_order131", 	"point_detail_2_order153", 	"point_detail_2_order154", 	"point_detail_2_order83", 	"point_detail_2_order91", 	"point_detail_2_order155" ], "__v" : 0 }
+{ "_id" : "detail_2_order_4", "order" : 4, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order46", 	"point_detail_2_order54", 	"point_detail_2_order12", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order51", 	"point_detail_2_order14", 	"point_detail_2_order56", 	"point_detail_2_order52", 	"point_detail_2_order55", 	"point_detail_2_order53" ], "__v" : 0 }
+>r" : 5, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order61", 	"point_detail_2_order62", 	"point_detail_2_order9", 	"point_detail_2_order32", 	"point_detail_2_order57", 	"point_detail_2_order25", 	"point_detail_2_order59", 	"point_detail_2_order60", 	"point_detail_2_order58", 	"point_detail_2_order63", 	"point_detail_2_order64", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_11", "order" : 11, "detail" : 2, "points" : [ 	"point_detail_2_order109", 	"point_detail_2_order118", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order105", 	"point_detail_2_order112", 	"point_detail_2_order116", 	"point_detail_2_order117", 	"point_detail_2_order114", 	"point_detail_2_order120", 	"point_detail_2_order121", 	"point_detail_2_order115", 	"point_detail_2_order122" ], "__v" : 0 }
+{ "_id" : "detail_2_order_15", "order" : 15, "detail" : 2, "points" : [ 	"point_detail_2_order110", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order62", 	"point_detail_2_order70", 	"point_detail_2_order9", 	"point_detail_2_order106", 	"point_detail_2_order113", 	"point_detail_2_order147", 	"point_detail_2_order148", 	"point_detail_2_order73", 	"point_detail_2_order58", 	"point_detail_2_order66", 	"point_detail_2_order149", 	"point_detail_2_order65" ], "__v" : 0 }
+{ "_id" : "detail_2_order_14", "order" : 14, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order136", 	"point_detail_2_order144", 	"point_detail_2_order3", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order142", 	"point_detail_2_order145", 	"point_detail_2_order132", 	"point_detail_2_order139", 	"point_detail_2_order143", 	"point_detail_2_order141", 	"point_detail_2_order146" ], "__v" : 0 }
+{ "_id" : "detail_2_order_10", "order" : 10, "detail" : 2, "points" : [ 	"point_detail_2_order103", 	"point_detail_2_order109", 	"point_detail_2_order110", 	"point_detail_2_order3", 	"point_detail_2_order4", 	"point_detail_2_order9", 	"point_detail_2_order102", 	"point_detail_2_order104", 	"point_detail_2_order107", 	"point_detail_2_order108", 	"point_detail_2_order105", 	"point_detail_2_order111", 	"point_detail_2_order112", 	"point_detail_2_order106", 	"point_detail_2_order113" ], "__v" : 0 }
+{ "_id" : "detail_2_order_16", "order" : 16, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order119", 	"point_detail_2_order2", 	"point_detail_2_order4", 	"point_detail_2_order71", 	"point_detail_2_order79", 	"point_detail_2_order67", 	"point_detail_2_order75", 	"point_detail_2_order115", 	"point_detail_2_order122", 	"point_detail_2_order150", 	"point_detail_2_order151", 	"point_detail_2_order82", 	"point_detail_2_order74", 	"point_detail_2_order152" ], "__v" : 0 }
+{ "_id" : "detail_2_order_3", "order" : 3, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order37", 	"point_detail_2_order46", 	"point_detail_2_order47", 	"point_detail_2_order7", 	"point_detail_2_order33", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order50", 	"point_detail_2_order40", 	"point_detail_2_order44", 	"point_detail_2_order45", 	"point_detail_2_order48", 	"point_detail_2_order43" ], "__v" : 0 }
+{ "_id" : "detail_2_order_9", "order" : 9, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order97", 	"point_detail_2_order98", 	"point_detail_2_order34", 	"point_detail_2_order94", 	"point_detail_2_order41", 	"point_detail_2_order95", 	"point_detail_2_order96", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order101", 	"point_detail_2_order99" ], "__v" : 0 }
+{ "_id" : "detail_2_order_7", "order" : 7, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order2", 	"point_detail_2_order54", 	"point_detail_2_order79", 	"point_detail_2_order80", 	"point_detail_2_order51", 	"point_detail_2_order76", 	"point_detail_2_order56", 	"point_detail_2_order75", 	"point_detail_2_order82", 	"point_detail_2_order83", 	"point_detail_2_order77", 	"point_detail_2_order78", 	"point_detail_2_order81" ], "__v" : 0 }
+{ "_id" : "detail_2_order_18", "order" : 18, "detail" : 2, "points" : [ 	"point_detail_2_order137", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order8", 	"point_detail_2_order89", 	"point_detail_2_order97", 	"point_detail_2_order133", 	"point_detail_2_order140", 	"point_detail_2_order156", 	"point_detail_2_order157", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order93", 	"point_detail_2_order100", 	"point_detail_2_order158" ], "__v" : 0 }
+{ "_id" : "detail_2_order_8", "order" : 8, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order47", 	"point_detail_2_order6", 	"point_detail_2_order7", 	"point_detail_2_order88", 	"point_detail_2_order89", 	"point_detail_2_order50", 	"point_detail_2_order84", 	"point_detail_2_order43", 	"point_detail_2_order86", 	"point_detail_2_order87", 	"point_detail_2_order91", 	"point_detail_2_order92", 	"point_detail_2_order85", 	"point_detail_2_order90" ], "__v" : 0 }
+{ "_id" : "detail_2_order_1", "order" : 1, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order19", 	"point_detail_2_order28", 	"point_detail_2_order29", 	"point_detail_2_order5", 	"point_detail_2_order15", 	"point_detail_2_order24", 	"point_detail_2_order31", 	"point_detail_2_order32", 	"point_detail_2_order22", 	"point_detail_2_order26", 	"point_detail_2_order27", 	"point_detail_2_order30", 	"point_detail_2_order25" ], "__v" : 0 }
+{ "_id" : "detail_2_order_6", "order" : 6, "detail" : 2, "points" : [ 	"point_detail_2_order11", 	"point_detail_2_order20", 	"point_detail_2_order4", 	"point_detail_2_order5", 	"point_detail_2_order70", 	"point_detail_2_order71", 	"point_detail_2_order16", 	"point_detail_2_order67", 	"point_detail_2_order23", 	"point_detail_2_order68", 	"point_detail_2_order69", 	"point_detail_2_order73", 	"point_detail_2_order74", 	"point_detail_2_order66", 	"point_detail_2_order72" ], "__v" : 0 }
+{ "_id" : "detail_2_order_19", "order" : 19, "detail" : 2, "points" : [ 	"point_detail_2_order1", 	"point_detail_2_order144", 	"point_detail_2_order61", 	"point_detail_2_order8", 	"point_detail_2_order9", 	"point_detail_2_order98", 	"point_detail_2_order57", 	"point_detail_2_order94", 	"point_detail_2_order141", 	"point_detail_2_order146", 	"point_detail_2_order159", 	"point_detail_2_order160", 	"point_detail_2_order161", 	"point_detail_2_order64", 	"point_detail_2_order101" ], "__v" : 0 }
+{ "_id" : "detail_2_order_0", "order" : 0, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order19", 	"point_detail_2_order20", 	"point_detail_2_order5", 	"point_detail_2_order12", 	"point_detail_2_order15", 	"point_detail_2_order14", 	"point_detail_2_order16", 	"point_detail_2_order17", 	"point_detail_2_order18", 	"point_detail_2_order21", 	"point_detail_2_order22", 	"point_detail_2_order23" ], "__v" : 0 }
+{ "_id" : "detail_2_order_2", "order" : 2, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order1", 	"point_detail_2_order28", 	"point_detail_2_order37", 	"point_detail_2_order38", 	"point_detail_2_order7", 	"point_detail_2_order24", 	"point_detail_2_order33", 	"point_detail_2_order31", 	"point_detail_2_order34", 	"point_detail_2_order35", 	"point_detail_2_order36", 	"point_detail_2_order39", 	"point_detail_2_order40", 	"point_detail_2_order41" ], "__v" : 0 }
+{ "_id" : "detail_2_order_13", "order" : 13, "detail" : 2, "points" : [ 	"point_detail_2_order127", 	"point_detail_2_order136", 	"point_detail_2_order137", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order8", 	"point_detail_2_order123", 	"point_detail_2_order130", 	"point_detail_2_order134", 	"point_detail_2_order135", 	"point_detail_2_order132", 	"point_detail_2_order138", 	"point_detail_2_order139", 	"point_detail_2_order133", 	"point_detail_2_order140" ], "__v" : 0 }
+{ "_id" : "detail_2_order_12", "order" : 12, "detail" : 2, "points" : [ 	"point_detail_2_order118", 	"point_detail_2_order127", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order3", 	"point_detail_2_order6", 	"point_detail_2_order114", 	"point_detail_2_order121", 	"point_detail_2_order125", 	"point_detail_2_order126", 	"point_detail_2_order123", 	"point_detail_2_order129", 	"point_detail_2_order130", 	"point_detail_2_order124", 	"point_detail_2_order131" ], "__v" : 0 }
+{ "_id" : "detail_2_order_17", "order" : 17, "detail" : 2, "points" : [ 	"point_detail_2_order10", 	"point_detail_2_order128", 	"point_detail_2_order2", 	"point_detail_2_order6", 	"point_detail_2_order80", 	"point_detail_2_order88", 	"point_detail_2_order76", 	"point_detail_2_order84", 	"point_detail_2_order124", 	"point_detail_2_order131", 	"point_detail_2_order153", 	"point_detail_2_order154", 	"point_detail_2_order83", 	"point_detail_2_order91", 	"point_detail_2_order155" ], "__v" : 0 }
+{ "_id" : "detail_2_order_4", "order" : 4, "detail" : 2, "points" : [ 	"point_detail_2_order0", 	"point_detail_2_order10", 	"point_detail_2_order11", 	"point_detail_2_order13", 	"point_detail_2_order46", 	"point_detail_2_order54", 	"point_detail_2_order12", 	"point_detail_2_order42", 	"point_detail_2_order49", 	"point_detail_2_order51", 	"point_detail_2_order14", 	"point_detail_2_order56", 	"point_detail_2_order52", 	"point_detail_2_order55", 	"point_detail_2_order53" ], "__v" : 0 }
+>
