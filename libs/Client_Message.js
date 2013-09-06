@@ -4,6 +4,8 @@ var path = require('path');
 var fs = require('fs');
 
 var client_message_id = 0;
+var _DEBUG_HANGS = false;
+
 /**
  * This handled the clients' receipt and response of a message from a manager.
  *
@@ -17,7 +19,7 @@ function Client_Message(client, message) {
     this.id = ++client_message_id;
     var self = this;
     this.t = setTimeout(function () {
-        console.log('hanging timeout for client %s message id %s:  %s', client.sector, self.id, util.inspect(message));
+      if (_DEBUG_HANGS)  console.log('hanging timeout for client %s message id %s:  %s', client.sector, self.id, util.inspect(message));
     }, 1000 * 10);
     this.client = client;
     if (!_.isString(message)) {

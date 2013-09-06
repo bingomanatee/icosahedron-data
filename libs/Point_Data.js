@@ -13,8 +13,11 @@ var mongoose = require('mongoose');
 var model;
 function Point_Data() {
 
+    var schema = mongoose.Schema(require('./Point_Data.json'));
+    schema.index({detail: 1, ro: 1, time: 1, field: 1});
+
     if (!model){
-        model = mongoose.model('point_data', require('./Point_Data.json'));
+        model = mongoose.model('point_data', schema);
     }
 
     return model;

@@ -1,6 +1,6 @@
 {
   "name": "icosahedron-data",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Data management for icosahedron information",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "mongoose": "~3.6.18",
     "async": "~0.2.9",
     "three": "~0.58.9",
-    "icosahedron-draw": "0.0.1",
+    "icosahedron-draw": "0.0.3",
     "pad": "0.0.4",
     "color": "~0.4.4"
   },

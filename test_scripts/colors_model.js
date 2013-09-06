@@ -11,9 +11,13 @@ var child_process = require('child_process');
 
 /* ------------ CLOSURE --------------- */
 
+var WIDTH = 500;
+var HEIGHT = 250;
+
 var Colors;
 
 function draw_sector_colors(time, DETAIL, done) {
+    var cache_file = path.resolve(__dirname, '../util/' + DETAIL + '_' + WIDTH + '_' + HEIGHT + '.json');
 
     var time_file = path.resolve(__dirname, '../test_output', 'sectors_' + pad(4, time, '0') + '.png');
 
@@ -42,10 +46,10 @@ function draw_sector_colors(time, DETAIL, done) {
                     return _.extend({color: colors[point.ro]}, point);
                 })
 
-                var polysphere = new ico_draw.Polysphere(1000, 500, colored_points);
+                var polysphere = new ico_draw.Polysphere(WIDTH, HEIGHT, colored_points);
                 ico_draw.render_poly(polysphere, faces, function (err, canvas) {
                     ico_draw.canvas_to_file(canvas, time_file, done);
-                });
+                }, cache_file);
 
             }, DETAIL);
 
